@@ -2,7 +2,7 @@
 name: Project proposal
 about: A proposal/brief/pitch for a significant project to be undertaken by a team
 title: ''
-labels: ''
+labels: project
 assignees: ''
 
 ---

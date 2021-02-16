@@ -95,7 +95,8 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 1. Study the user flow in detail. Inventorise the specific elements that are confusing users.
 2. Initiate discussions about user-friendlier terminology.
 3. Design a new CLI UX, prototype it, iterate.
-4. Implement CLI UX changes (and underlying code changes and JSON-RPC API required)
+4. Implement CLI UX changes (and underlying code changes)
+5. One-stop set of JSON-RPC operations that encapsulate the new behaviour with no frills (without leaking implementation details as much as possible).
 
 **Technical reliability track**
 
@@ -112,12 +113,18 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 _What specific deliverables should completed to consider this project done?_
 
-1. A new version of Lotus (and associated modules) that achieves 80% deal success rate, under a variety of conditions.
-2. A new interactive CLI command (`lotus store`) to 
+1. A new version of Lotus (and associated modules) that achieves the success criteria.
+2. A new interactive CLI command (`lotus store`) that guides the user through the process of performing a storage deal, and provides visibility and a polished flow.
+3. A simplified, porcelain S3-like JSON-RPC API that covers the deals flow and provides the logical sequence of steps outlined in previous sections, under a refined, well-documented, and opaque API that doesn't leak Filecoin implementation details.
+4. (Optionally) A prototype for a deals dashboard web UI (in collaboration with The Spark).
 
 #### What does success look like?
 
 _Success means impact. How will we know we did the right thing?_
+
+- 80% of deals initiated via the CLI result in success, as long as prerequisites are met (enough balance, synced node, etc.) under a variety of conditions (e.g. connection losses, slow bandwidth, concurrent deals).
+- Most open issues related to deals on the Filecoin issue tracker are closed, and not reopened, and new ones related to deals are not created shortly thereafter (i.e. we don't introduce new problems).
+- Users give consistent positive feedback about the usability and visibility characteristics of deal-making.
 
 #### Counterpoints & pre-mortem
 

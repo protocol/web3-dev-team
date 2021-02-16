@@ -45,7 +45,7 @@ Explain why you have chosen this rating
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
 
-#### Leverage
+#### Internal leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
 🎯🎯🎯 = 0-3 emoji rating

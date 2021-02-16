@@ -1,6 +1,6 @@
 # IPFS Gateway HTTP API
 Authors: @anorth
-Initial PR: TBD
+Initial PR: https://github.com/protocol/web3-dev-team/pull/1
 
 ## Purpose &amp; impact 
 #### Background &amp; intent

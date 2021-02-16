@@ -17,8 +17,8 @@ This way, one code push elevates the documentation and user experience across
 all our offerings and the popularity of one offering can "boost" another as we
 begin to show the integration points.
 
-Building a mental model of Web3 development is the primary adoption barrier that
-pairs very poorly with the difficulty inherent in experimenting with the tech
+Building a mental model of Web3 development is a primary adoption barrier for us,
+one that pairs very poorly with the difficulty inherent in experimenting with the tech
 itself. We need a place where we talk with a unified voice about how it's
 different, what its benefits are, why you would and wouldn't use it, how it
 compares to Web2, what good metaphors are in the current world for where we

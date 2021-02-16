@@ -2,7 +2,7 @@
 
 Authors: @yusefnapora
 
-Initial PR: TBD 
+Initial PR: [#11](https://github.com/protocol/web3-dev-team/pull/11) 
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.

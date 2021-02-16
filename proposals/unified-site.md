@@ -103,7 +103,7 @@ There is one website and one repo with all the documentation in it.
 
 ####  What does success look like?
 
-If the project is successfuly, we should be able to say "yes" to these questions:
+If the project is successful, we should be able to say "yes" to these questions:
 
 - Does traffic, forking/stars, and page ratings for docs on poorly-maintained projects get better?
 - Do we know where to post something that relates to the whole stack that teaches people high-level Web3 concepts?

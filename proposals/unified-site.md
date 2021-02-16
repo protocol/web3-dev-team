@@ -105,7 +105,7 @@ There is one website and one repo with all the documentation in it.
 
 If the project is successful, we should be able to say "yes" to these questions:
 
-- Does traffic, forking/stars, and page ratings for docs on poorly-maintained projects get better?
+- Has traffic, forking/stars, and page ratings for docs on poorly-maintained projects gotten better?
 - Do we know where to post something that relates to the whole stack that teaches people high-level Web3 concepts?
 - Are we spending less time maintaining various sites, repos, and documentation sets and more time creating content?
 - Do we have greater awareness and understanding of the stack amongst ourselves and find ourselves more willing and able to pitch in across projects other than the ones we were working on previously?

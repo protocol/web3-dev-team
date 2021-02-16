@@ -22,7 +22,9 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 
 ## Purpose &amp; impact 
 #### Background &amp; intent
-There should be a site/API that enables easy pinning for NFT creators to store IPFS-addressed NFTs to Filecoin similar to ipfs2arweave.com 
+There should be a site/API that enables easy pinning for NFT creators to store IPFS-addressed NFTs to Filecoin similar to [ipfs2arweave.com](http://ipfs2arweave.com). 
+
+An NFT, or non-fungible token, is a cryptocurrency token that is indivisible and unique. NFTs enable creating and trading **digital assets** — such as original artwork, fonts, or blockchain-integrated collectibles like CryptoKitties.
 
 There is a huge explosion in NFTs happening this year, most of which are content addressed off-chain data that are a perfect fit for IPFS -- but the persistence of those NFTs (so the font or video you bought doesn’t vanish) needs long-term, decentralized resiliency not well supported by IPFS alone. To fill this need, Filecoin needs to offer a very simple pinning endpoint that NFT devs can trust will continuously back up their data resiliently to Filecoin without having to worry about choosing specific miners, running a node, handling the batching of many small files, etc.
 

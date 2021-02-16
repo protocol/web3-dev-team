@@ -10,7 +10,7 @@ Initial PR: #5
 Currently all information about our "stack" is siloed across multiple websites
 that are in various states of maintenance. There is no place to learn how the
 various pieces of the stack such as libp2p, IPFS, Filecoin, IPNS, etc work
-together. There is also no place where the benefits of the W3DT site can be
+together. There is also no place where the benefits of the W3DT stack can be
 expressed in a definitive and reliable place. The tech that drives our site
 (built on Vuepress) has to be kept in sync manually across multiple websites.
 This way, one code push elevates the documentation and user experience across

@@ -2,23 +2,7 @@
 
 Authors: johndmulhausen
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
-
-<!--
-This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.
-The goal of project proposals is to help us decide which work to take on, which things are more valuable than other things.
--->
-<!--
-A proposal should contain enough detail for others to understand how this project contributes to our team’s mission of product-market fit
-for our unified stack of protocols, what is included in scope of the project, where to get started if a project team were to take this on,
-and any other information relevant for prioritizing this project against others.
-It does not need to describe the work in much detail. Most technical design and planning would take place after a proposal is adopted.
-Good project scope aims for ~3-5 engineers for 1-3 months (though feel free to suggest larger-scoped projects anyway).
-Projects do not include regular day-to-day maintenance and improvement work, e.g. on testing, tooling, validation, code clarity, refactors for future capability, etc.
--->
-<!--
-For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
--->
+Initial PR: #5
 
 ## Purpose &amp; impact
 #### Background &amp; intent

@@ -2,7 +2,7 @@
 
 Author: @jessicaschilling
 
-Initial PR: https://github.com/protocol/web3-dev-team/pull/TBD
+Initial PR: https://github.com/protocol/web3-dev-team/pull/10
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.

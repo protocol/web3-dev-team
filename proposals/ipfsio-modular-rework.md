@@ -28,7 +28,7 @@ This project will enable us to finally have a concise, up-to-date, clearly-pathe
 
 This matters because:
 - It enables us to have an entry point to our PMF measurement funnel that doesn't itself detract or muddy our metrics
-- With the Jan 2020 paradigm shift, we now have *massive* "comms debt" about how IFPS fits into the w3dt stack as a whole
+- With the Jan 2020 paradigm shift, we now have *massive* "comms debt" about how IPFS fits into the w3dt stack as a whole
 
 Happy side effect: If we build this correctly, even though our messaging is for prospective devs, it also makes it *much* more likely for non-devs (media, engineering managers, CTOs, etc) to understand w3dt and its potential.
 <!--

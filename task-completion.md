@@ -8,6 +8,7 @@ Initial PR: https://github.com/protocol/web3-dev-team/pull/38
 ## Purpose &amp; impact 
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
+
 We don't know why people come to our websites and how succesful they are with the things we care about. In order to prioritize our efforts and track progress, we need to survey our users regularly and make that available to the teams that can take action.
 
 

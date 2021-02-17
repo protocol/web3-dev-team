@@ -2,7 +2,7 @@
 
 Authors: @hannahhoward, template edit by @mvdan
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/25
 
 ## Purpose &amp; impact 
 #### Background &amp; intent
@@ -81,7 +81,7 @@ Impact 3: Top user request: https://github.com/ipfs/go-ipfs/issues/7909
 #### Brief plan of attack
 
 go-IPFS primarily uses legacy IPLD libraries -- go-ipld-format -- in the context of working primarily with UnixFS v1.
-Use of IPLD primarily flows through the [DAGService](https://github.com/ipfs/go-ipld-format/blob/master/merkledag.go), which sits on the BlockService, which is hardcoded to fetch through Bitswap, among other things.
+Use of IPLD primarily flows through the [`DAGService`](https://github.com/ipfs/go-ipld-format/blob/master/merkledag.go), which sits on the BlockService, which is hardcoded to fetch through Bitswap, among other things.
 
 Several things sit on top of `DAGService` -- most prominently UnixFS.
 

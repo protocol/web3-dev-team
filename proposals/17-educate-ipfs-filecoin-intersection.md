@@ -2,7 +2,7 @@
 
 Authors: @terichadbourne
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/17 <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.
@@ -100,7 +100,7 @@ Think through the variety of user profiles we need to reach and where we'll reac
 
 Spread out the timeline for publishing, but don't be afraid to hit multiple mediums at once. 
 
-Save the pieces that have engineering as a pre-req for later, but scope them now and identify the triggers that we'll indicate we're ready to proceed. 
+Save the pieces that have engineering as a pre-req for later, but scope them now and identify the triggers that will indicate we're ready to proceed. 
 
 
 #### What does done look like?
@@ -112,7 +112,7 @@ Essential deliverables:
 - Revised Filcoin docs page on IPFS & Filecoin intersection
 - New IPFS docs page on IPFS & Filecoin intersection
 - Ability to store/retrieve a file on Filecoin using its existing IPFS CID (incl API docs)
-- A tutorial describing how to store/retrieve on Filecoin using IPFS CIDs (docs and/or ProtoSchool)
+- A tutorial describing how to store/retrieve on Filecoin using IPFS CIDs (docs and ProtoSchool)
 
 Publications in as many of these as we have bandwidth to tackle:
 - IPFS blog post

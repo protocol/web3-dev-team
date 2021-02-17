@@ -84,7 +84,7 @@ High. For seeveral reasons: this project will likely land a bunch of refactors t
 
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
-10. We have very solid evidence that the deals flow is... suboptimal.
+3. We have very solid evidence that the deals flow is... suboptimal. We've used this input to design our action plan. Note that this doc is just a draft and indexes mostly on the problem and not so much in the solution. We'll discover more action items as we execute on the project, but we're confident in the trajectory and themes we're setting.
 
 ## Project definition
 

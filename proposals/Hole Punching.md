@@ -45,7 +45,7 @@ Note that Hole Punching fails if either peer is behind what is known as a _[Symm
 
 Also, based on anecdotal evidence in the wild and engineering war stories (see [Tailscales’s blog](https://tailscale.com/blog/how-nat-traversal-works/)), **Cone NATs are much more pervasive in Home ISPs over Symmetric NATs, which justifies the~60-80% success for Hole Punching**. \
 \
-Given that libp2p is a library to build peer to peer applications,** implementing Hole Punching in libp2p will allow any application/network that builds on top of libp2p to also benefit from Hole Punching**. This will be a significant step forward in the ease of building well connected p2p networks and will be a major added motivation for developers to build on top of our stack. Based on our research, **no such library that comes with out of the box NAT traversal via Hole Punching exists out in the wild today and we have the opportunity to provide the first such library & infra to herald the age of better connectivity in Web3 apps**.
+Given that libp2p is a library to build peer to peer applications,**implementing Hole Punching in libp2p will allow any application/network that builds on top of libp2p to also benefit from Hole Punching**. This will be a significant step forward in the ease of building well connected p2p networks and will be a major added motivation for developers to build on top of our stack. Based on our research, **no such library that comes with out of the box NAT traversal via Hole Punching exists out in the wild today and we have the opportunity to provide the first such library & infra to herald the age of better connectivity in Web3 apps**.
 
 
 ### <ins>Assumptions & hypotheses</ins>
@@ -167,7 +167,7 @@ Better connectivity via Hole Punching in the IPFS & Filecoin networks.
 
 ### <ins>Estimated Scope</ins>
 
-*   4-5 weeks i.e. Medium for a team of 2 people i.e. AND  with some help from the Dev Onboarding Team for landing some kickass documentation/user education.
+*   4-5 weeks i.e. **Medium for a team of 2 people** AND with some help from the Dev Onboarding Team for landing some kickass documentation/user education.
 *   Uncertainty is reviews NOT getting completed on time as we would ideally like the important aspects of our work (Limited Relays, Hole Punching Protocol, AutoRelay changes and Hydra Booster changes) to be reviewed by the Project Captain and/or someone from the Stewards team.
 
 

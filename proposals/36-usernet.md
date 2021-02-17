@@ -2,7 +2,7 @@
 
 Authors: @raulk.
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/36
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.
@@ -20,9 +20,9 @@ Projects do not include regular day-to-day maintenance and improvement work, e.g
 For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
 -->
 
-## Purpose &amp; impact
+## Purpose & impact
 
-#### Background &amp; intent
+#### Background & intent
 _Describe the desired state of the world after this project? Why does that matter?_
 
 <!--
@@ -87,7 +87,7 @@ Some attributes of this network:
 * Fake sealing: real sealing should not be necessary as long as we reproduce the behaviour seen in mainnet (or we provide appropriate disclaimers), so as to not mislead users and create false expectations.
 * Limited list of miners, instead of the very many that exist in mainnet.
 
-#### Assumptions &amp; hypotheses
+#### Assumptions & hypotheses
 _What must be true for this project to matter?_
 <!--(bullet list)-->
 
@@ -161,7 +161,7 @@ Provide success criteria. These might include particular metrics, desired change
 
 TBD.
 
-#### Counterpoints &amp; pre-mortem
+#### Counterpoints & pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
 One more network to monitor/operate.

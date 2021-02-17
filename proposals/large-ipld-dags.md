@@ -33,7 +33,7 @@ preserving the DAG structure.
 _How would a developer or user use this new capability?_
 
 * `lotus client deal` should accept an IPLD selector.
-* `lotus cleint deal` should automatically split large DAGs between multiple sectors.
+* `lotus client deal` should automatically split large DAGs between multiple sectors.
 * `lotus client retrieve` should support retrieving IPLD selectors (dag subsets).
 
 #### Impact
@@ -78,6 +78,7 @@ _Success means impact. How will we know we did the right thing?_
 
 1. Developers can easily store large directory trees on Filecoin.
 2. Developers can easily retrieve individual files from large datasets on Filecoin.
+3. Snapshots of English Wikipedia can be stored on Filecoin.
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

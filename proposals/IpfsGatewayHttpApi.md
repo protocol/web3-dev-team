@@ -89,6 +89,7 @@ _What specific deliverables should completed to consider this project done?_
 Our gateway serves arbitrary DAGs over simple HTTP requests. 
 Web-apps can fetch, manipulate, and render IPLD data with the standard JS XHR or [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) without the need for any client library. 
 Backends that embed/extend the gateway also support publishing and pinning arbitrary IPLD data.
+Built-in mechanism for access control exist and makes it easy to limit POST/PUT/pinning capability to specific origins.
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_

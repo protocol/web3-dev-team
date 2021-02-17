@@ -1,5 +1,5 @@
 # IPFS Gateway HTTP API
-Authors: @anorth
+Authors: @anorth, @lidel
 Initial PR: https://github.com/protocol/web3-dev-team/pull/1
 
 ## Purpose &amp; impact 
@@ -50,12 +50,13 @@ It’s fast, like a consumer app should be.
 #### Impact
 _How directly important is the outcome to web3 dev stack product-market fit?_
 
-🔥🔥🔥. If Dapp development is a strong market segment, but adoption is difficult, then reducing barriers to use is of highest importance.
+If Dapp development is a strong market segment, but adoption is difficult, then reducing barriers to use is very important.
+This API may not be the one ultimately used by complex projects, but an entry point that's powerful enough for a great many simple cases.
 
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
-🎯🎯 . The rating of 2 is motivated by the benefits of more rapid prototyping and iteration with low-friction APIs. 
+More rapid prototyping and iteration with low-friction APIs (both us and community). 
 If we remove the need for learning intricate, non-intuitive HTTP API and leverage HTTP semantics so that JS “fetch” or curl is all you need, 
 we may see many more people experimenting with IPFS. 
 The [existing API](https://docs.ipfs.io/reference/http/api/) was not designed to be exposed on the web and introduces
@@ -102,9 +103,10 @@ Infura and others provide hosting services for gateways, as well as nodes.
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
-- Hypotheses about Dapps being an important market, or HTTP being a more accessible API might prove false
-- API design could get stuck in a morass of discussion about standards
-- Hard-core decentralization people object to the imperfect decentralization of using a gateway
+- Hypotheses about Dapps being an important market, or HTTP being a more accessible API might prove false.
+- API design could get stuck in a morass of discussion about standards.
+- Hard-core decentralization people object to the imperfect decentralization of using a gateway.
+- This API will likely be limited by HTTP capabilities: request/response pairs or possibly unidirectional streaming. May limit upload/download sizes, use of pubsub etc. Deeper IPFS integration may require an RPC-stype websocket API. If the capabilities of HTTP are too limiting for any project, this won't have much impact.
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_

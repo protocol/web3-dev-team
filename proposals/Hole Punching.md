@@ -9,11 +9,11 @@
 # Purpose & Impact
 
 
-###### **<span style="text-decoration:underline;">Background</span>**
+### <ins>Background</ins>
 
 Given the pervasiveness of IPV4 peers that are behind NATs on the internet, NAT traversal is an essential requirement for a peer to peer application. The inability to traverse around NATs means that such NATT’d peers are NOT reachable on the network and are thus unable to provide any meaningful service to the network, nor interact with network participants under protocol patterns that require inbound connections (e.g. dialbacks). \
 \
-Libp2p currently executes NAT traversal using[ Circuit Relays](https://docs.libp2p.io/concepts/circuit-relay/) wherein publicly dialable Relay servers relay the entirety of user traffic to peers that are NATT’d. This approach does NOT scale because: \
+Libp2p currently executes NAT traversal using[ Circuit Relays](https://docs.libp2p.io/concepts/circuit-relay/) wherein publicly dialable Relay servers relay the entirety of user traffic to peers that are NATT’d. This approach does NOT scale because:
 
 
 
@@ -37,7 +37,7 @@ Based on [metrics that we collected](https://protocollabs.grafana.net/d/lNGQTv9Z
 We posit that implementing hole punching will enable direct connectivity for a significant portion of the network, and will improve overall QoS of the network by increasing the connectivity. In combination with future efforts to strengthen WebRTC support, it will also enable browser-centric use cases to be reliably built on libp2p.
 
 
-###### **<span style="text-decoration:underline;">Intent</span>**
+### <ins>Intent</ins>
 
 By implementing a _[Limited Relay](https://docs.google.com/document/d/1bhoVGitiB2rr6i8cVKvwkQONHvsfBxqcK76ePVW_JVs/edit#heading=h.s248pnlqjmsm)_ protocol that ONLY provides the resources and bandwidth needed to coordinate a hole punch instead of acting as full fledged data transfer Relays, we can get public DHT servers to run the Limited Relay protocol without costing them too much bandwidth/resources and thus ALSO get a pervasive & large scale Hole Punching co-ordination infrastructure that can help scale hole punching to the size of the network. \
 \
@@ -45,11 +45,10 @@ Note that Hole Punching fails if either peer is behind what is known as a _[Symm
 
 Also, based on anecdotal evidence in the wild and engineering war stories (see [Tailscales’s blog](https://tailscale.com/blog/how-nat-traversal-works/)), **Cone NATs are much more pervasive in Home ISPs over Symmetric NATs, which justifies the~60-80% success for Hole Punching**. \
 \
-Given that libp2p is a library to build peer to peer applications,** implementing Hole Punching in libp2p will allow any application/network that builds on top of libp2p to also benefit from Hole Punching**. This will be a significant step forward in the ease of building well connected p2p networks and will be a major added motivation for developers to build on top of our stack. Based on our research, **no such library that comes with out of the box NAT traversal via Hole Punching exists out in the wild today and we have the opportunity to provide the first such library & infra to herald the age of better connectivity in Web3 apps**. \
+Given that libp2p is a library to build peer to peer applications,** implementing Hole Punching in libp2p will allow any application/network that builds on top of libp2p to also benefit from Hole Punching**. This will be a significant step forward in the ease of building well connected p2p networks and will be a major added motivation for developers to build on top of our stack. Based on our research, **no such library that comes with out of the box NAT traversal via Hole Punching exists out in the wild today and we have the opportunity to provide the first such library & infra to herald the age of better connectivity in Web3 apps**.
 
 
-
-###### **<span style="text-decoration:underline;">Assumptions & hypotheses</span>**
+### <ins>Assumptions & hypotheses</ins>
 
 
 
@@ -59,14 +58,13 @@ Given that libp2p is a library to build peer to peer applications,** implementin
 *   Enabling better connectivity in IPFS, Filecoin and other applications that build on top of Libp2p in a world suffering from the tyranny of NATs is a success metric/priority for us.
 
 
-###### **<span style="text-decoration:underline;">User workflow example</span>**
+### <ins>User workflow example</ins>
 
-The User builds an application such as IPFS, Filecoin, Ethereum etc. on top of Libp2p and gets _direct_ connectivity between NATT’d peers (albeit ~60% for TCP & ~80% for QUIC) out of the box without bringing up additional infrastructure and with minimal configuration.   \
+The User builds an application such as IPFS, Filecoin, Ethereum etc. on top of Libp2p and gets _direct_ connectivity between NATT’d peers (albeit ~60% for TCP & ~80% for QUIC) out of the box without bringing up additional infrastructure and with minimal configuration.
 
 
-
-###### <span style="text-decoration:underline;">Impact \
-</span>🔥🔥🔥
+### <ins>Impact</ins> 
+🔥🔥🔥
 
 
 
@@ -75,12 +73,11 @@ The User builds an application such as IPFS, Filecoin, Ethereum etc. on top of L
 *   Important projects such as Eth2, 0x etc that build on top of libp2p will ALSO get this huge benefit should they choose to use it. Eth2 is likely to need this feature in Phase 2, which introduces browser-based light clients.
 *   New browser-centric use cases will be possible when this functionality is implemented in js-libp2p.
 
-\
-**Summary: The idea of a peer to peer library that makes NAT traversal via Hole Punching easy and pervasive is a very important & exciting development in the world of peer to peer applications. \
-**
+
+**Summary: The idea of a peer to peer library that makes NAT traversal via Hole Punching easy and pervasive is a very important & exciting development in the world of peer to peer applications.**
 
 
-###### **<span style="text-decoration:underline;">Leverage</span>**
+### <ins>Leverage</ins>
 
 How much would nailing this project improve our knowledge and ability to execute future projects?
 
@@ -90,7 +87,7 @@ How much would nailing this project improve our knowledge and ability to execute
 *   Lack of dialability between peers has been a repeated blocker, in libp2p DHT, pubsub, bitswap, Filecoin deals, and more.
 
 
-###### **<span style="text-decoration:underline;">Confidence</span>**
+### <ins>Confidence</ins>
 
 **Medium.**
 
@@ -98,7 +95,7 @@ How much would nailing this project improve our knowledge and ability to execute
 
 *   The [MIT paper ](https://pdos.csail.mit.edu/papers/p2pnat.pdf)that studied Hole Punching concludes a ~60% success for TCP and ~80% success for QUIC. [Tailscale](https://tailscale.com/), a large-scale VPN that  i[mplemented NAT traversal ](https://tailscale.com/blog/how-nat-traversal-works/)via Hole Punching also achieved similar results. This is because of the pervasiveness of Cone NATs (the good NATs) among Home ISPs.
 *   Both IPFS and Filecoin currently suffer in terms of connectivity as they do NOT have Hole Punching and based on the metrics we collected, ~80% peers on the DHT network are NOT reachable/dialable.
-*   We already have a working PoC for hole punching and based on the limited testing we’ve done so far, we are able to successfully hole punch and connect Cone NATT’d peers that would otherwise be unreachable. \
+*   We already have a working PoC for hole punching and based on the limited testing we’ve done so far, we are able to successfully hole punch and connect Cone NATT’d peers that would otherwise be unreachable.
 
 
 **Confidence can be reassessed after the dog-fooding and alpha testing phase are complete within a community of Labbers that use Home ISPs and have NATT’d machines. Refer to the Project Definition section for details.**
@@ -107,9 +104,7 @@ How much would nailing this project improve our knowledge and ability to execute
 # Project Definition
 
 
-###### **<span style="text-decoration:underline;">Brief plan of attack</span>**
-
-
+### <ins>Brief plan of attack</ins>
 
 *   Implement the _[Limited Relay](https://docs.google.com/document/d/1bhoVGitiB2rr6i8cVKvwkQONHvsfBxqcK76ePVW_JVs/edit#heading=h.s248pnlqjmsm)_ protocol in Libp2p.
 *   Implement the _[Hole Punching protocol ](https://github.com/libp2p/specs/pull/173)_to achieve direct connectivity with a NATT’d peer after coordinating a hole punch.
@@ -119,11 +114,10 @@ How much would nailing this project improve our knowledge and ability to execute
 *   Once we conclude that PL hosted Limited Relays are stable,  ship a release that turns on the Limited Relay protocol in public DHT servers but continues to use the statically configured Limited Relays.
 *   Once ~30% of public DHT servers upgrade to support the Limited Relay protocol(measure using Hydra Boosters), ship automated discovery & use of Limited Relays to coordinate a hole-punch rather than using statically configured Limited Relays servers.
 *   Achieve ~90% hole punching success if both peers are behind a Cone NAT  in the second dog-fooding phase that uses AutoRelay to discover and connect to  Limited Relays in the wild.
-*   Massive focus on usability, user education and evangelizing the feature by writing blog posts discussing a “how we got here”/internals/engineering journey of Hole Punching in libp2p with metrics and blog posts and demo videos on how to configure, use and debug Hole Punching.
+*   Massive focus on usability, user education and evangelizing the feature by writing blog posts discussing a “how we got here”/ internals / engineering journey of Hole Punching in libp2p with metrics and blog posts and demo videos on how to configure, use and debug Hole Punching.
 
 
-###### **<span style="text-decoration:underline;">Technical deliverables</span>**
-
+### <ins>Technical deliverables</ins>
 
 
 *   ~90% hole punching success if both peers are behind a Cone NAT in the first dog-fooding phase using PL hosted Limited Relays.
@@ -133,9 +127,7 @@ How much would nailing this project improve our knowledge and ability to execute
 *   ~90% hole punching success if both peers are behind a Cone NAT  in the second dog-fooding phase that uses AutoRelay to discover and connect to Limited Relays in the wild rather than using statically configured Limited Relays.
 
 
-###### **<span style="text-decoration:underline;">Success criteria</span>**
-
-
+### <ins>Success criteria</ins>
 
 *   Dog-fooding phases deliver ~90% success for labbers using Home ISPs with Cone NATs (TCP & QUIC).
 *   No bugs related to Hole Punching failures if both peers involved in a Hole Punch are behind a Cone NAT (we have good PRs for and will ship code/tools for users to detect their NAT type).
@@ -143,29 +135,29 @@ How much would nailing this project improve our knowledge and ability to execute
 *   We receive great traction and feedback on the ease of use and robustness of Hole Punching on channels such as Twitter, user surveys and from our community of users/partners.
 
 
-###### **<span style="text-decoration:underline;">Long Term Success criteria (~ 6 months in as network will take time to upgrade)</span>**
+### <ins>Long Term Success criteria</ins> (~ 6 months in as network will take time to upgrade)
 
 
 
 *   We are able to remove static configuration of  PL hosted Limited Relays in lieu of discovering Limited Relays. And better still, completely shut them down without causing disruptions to the Hole Punching abilities of the network (disruptions can be measured using Github issues, bug reports and PL hosted Cone NATT’d nodes that scrap the network for unreachable peers with Cone NATs, attempt Hole Punching with them and report corresponding metrics).
 
 
-###### **<span style="text-decoration:underline;">Counterpoints & pre-mortem</span>**
+### <ins>Counterpoints & pre-mortem</ins>
 
 Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?
 
 
-###### **<span style="text-decoration:underline;">Alternatives</span>**
+### <ins>Alternatives</ins>
 
 Maybe implementing a WebRTC transport in go-libp2p that performs signalling/co-ordination via Limited Relay servers can help solve the connectivity problems that hole punching seeks to address but that means that we get tied to using WebRTC as a transport. Compared to that, implementing hole punching as a first class feature in Libp2p makes the whole feature transport agnostic.
 
 
-###### **<span style="text-decoration:underline;">Dependencies/prerequisites</span>**
+### <ins>Dependencies/prerequisites</ins>
 
 None.
 
 
-###### **<span style="text-decoration:underline;">Future opportunities</span>**
+### <ins>Future opportunities</ins>
 
 Better connectivity via Hole Punching in the IPFS & Filecoin networks.
 
@@ -173,15 +165,13 @@ Better connectivity via Hole Punching in the IPFS & Filecoin networks.
 # Required Resources
 
 
-###### **<span style="text-decoration:underline;">Estimated Scope</span>**
-
-
+### <ins>Estimated Scope</ins>
 
 *   4-5 weeks i.e. Medium for a team of 2 people i.e. AND  with some help from the Dev Onboarding Team for landing some kickass documentation/user education.
 *   Uncertainty is reviews NOT getting completed on time as we would ideally like the important aspects of our work (Limited Relays, Hole Punching Protocol, AutoRelay changes and Hydra Booster changes) to be reviewed by the Project Captain and/or someone from the Stewards team.
 
 
-###### **<span style="text-decoration:underline;">Roles / skills needed</span>**
+### <ins>Roles / skills needed</ins>
 
 
 

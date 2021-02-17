@@ -2,7 +2,7 @@
 
 Authors: @lidel
 
-Initial PR: https://github.com/protocol/web3-dev-team/pull/41 <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/42 <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
 ## Purpose &amp; impact 
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_

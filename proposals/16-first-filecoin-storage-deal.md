@@ -1,4 +1,4 @@
-# Proposal: Reduce friction and time to first verified deal for new Filecoin storage clients
+# Proposal: Reduce friction and time to first finalized deal for new Filecoin storage clients
 
 Authors: @terichadbourne
 

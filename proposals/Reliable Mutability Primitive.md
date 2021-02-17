@@ -1,8 +1,12 @@
+# Reliable Mutability Primitive
+
+Authors: [@gozala](https://github.com/gozala)
+
+Initial PR: https://github.com/protocol/web3-dev-team/pull/19/
 <!--
 This template is intended to be used by those who would like to pitch a new project for one of the Web3 Dev project teams to take on. It should contain sufficient detail that others can understand how this project contributes to our team’s mission of  product-market fit for our unified stack of protocols, what is included in scope of the project, where to get started if a project team were to take this on, and any other information relevant for prioritizing this project against others.
 Good project scope aims for ~3-5 engineers for 1-3 months (though feel free to suggest larger-scoped projects anyway). Projects do not include regular day-to-day maintenance and improvement work, e.g. on testing, tooling, validation, code clarity, refactors for future capability, etc.
 -->
-# Reliable Mutability Primitive
 
 ### Purpose &amp; impact 
 ##### Background &amp; intent
@@ -14,14 +18,14 @@ Outline the status quo, including any relevant context on the problem you’re s
 
 Today ecosystem has to work around the lack of functional mutability primitives. [IPNS][] does not provide reliable solution forcing community to adopt different custom solutions.
 
-- [Pinata][] gets asked about how to chaneg content for CID onec every few weeks _(Most of the time they find that is not what the users actually need)_.
+- [Pinata][] gets asked about how to change content for CID once every few weeks _(Most of the time they find that is not what the users actually need)_.
 - [fission.codes](https://fission.codes/) found IPNS persistance unreliable and had to build custom solution that updates [DNSLink][] records (**TODO**: Get a quote / link from Boris)
 - **TODO**: Survey textile, last time we talked they found IPNS to be unreliable for propagating thread updates.
 - ...
 - Protocol Labs uses dns simple API to [publish site updates](https://github.com/filecoin-project/specs/blob/71f37208a1f4f56b33ea307d7cbdb4b06996b115/.github/workflows/main.yml#L40). 
 
 
-This gap in the stack makes building software which runs on end user computers and meets modern expectations more difficult than traditional hosted solutions. This creates a hardle for adoption of the technology.
+This gap in the stack makes building software which runs on end user computers and meets modern expectations more difficult than traditional hosted solutions. This creates a hurdle for adoption of the technology.
 
 
 
@@ -32,7 +36,7 @@ _What must be true for this project to matter?_
 - Applications want to provide a canonical address for a current state.
 - Application authors will prefer built-in mutability primitive over custom solutions. 
 - Developed solution would provide simpler mechanism for publishing updates (than DNSLink updates)
-- Developed solution would work provide reliable mechanism for producing updates on not always connected end user computers (think browsers, phones)
+- Developed solution would provide a reliable mechanism for producing updates on not always connected end user computers (think browsers, phones)
 - Solution should not require shipping secret keys or tokens with devices.
 
 ##### User workflow example

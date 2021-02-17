@@ -35,6 +35,7 @@ _What must be true for this project to matter?_
 - go/js-ipfs is slower and more difficult to interact with than an HTTP API
 - Dapp developers are satisfied with the imperfect decentralization of using a gateway as an intermediate step.
 - Having the same, more powerful HTTP API on localhost removes obstacles towards a deeper interaction with vendors like Brave
+- Low-powered IoT devices can leverage gateways as less expensive way of moving data around, with true p2p kicking in only in LAN or as a fallback when centralized gateways are down.
 
 #### User workflow example
 _How would a developer or user use this new capability?_

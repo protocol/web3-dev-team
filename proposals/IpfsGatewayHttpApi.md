@@ -23,7 +23,7 @@ The PL-operated gateway is read-only, but a Dapp provider can host their own for
 
 "No API is the best API".
 Related ideas are in [Verifiable HTTP Gateway Responses](https://github.com/ipfs/in-web-browsers/issues/128), 
-[CAR export from HTTP Gateways](https://github.com/ipfs/in-web-browsers/issues/170).
+[CAR export from HTTP Gateways](https://github.com/ipfs/in-web-browsers/issues/170), [Writable Gateway experiment](https://discuss.ipfs.io/t/writeable-http-gateways/210?u=lidel).
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
@@ -131,4 +131,3 @@ Some uncertainty until the API design is complete, but low uncertainty in execut
 #### Roles / skills needed
 - REST API design
 - Backend (Go) development
-

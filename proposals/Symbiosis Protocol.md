@@ -1,5 +1,11 @@
 # Symbiosis protocol
 
+Authors:
+  - [@gozala](https://github.com/gozala)
+  - [@hugomrdias](https://github.com/hugomrdias)
+
+Initial PR: https://github.com/protocol/web3-dev-team/pull/18
+
 <!--
 This template is intended to be used by those who would like to pitch a new project for one of the Web3 Dev project teams to take on. It should contain sufficient detail that others can understand how this project contributes to our team’s mission of  product-market fit for our unified stack of protocols, what is included in scope of the project, where to get started if a project team were to take this on, and any other information relevant for prioritizing this project against others.
 Good project scope aims for ~3-5 engineers for 1-3 months (though feel free to suggest larger-scoped projects anyway). Projects do not include regular day-to-day maintenance and improvement work, e.g. on testing, tooling, validation, code clarity, refactors for future capability, etc.
@@ -12,7 +18,7 @@ _Describe the desired state of the world after this project? Why does that matte
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
 -->
 
-There is an inherent asymmetry in node capabilities imposed by the [constraints of the operating environment](##constraints-of-the-operating-environment). Attempts to overcome these limitations often lead to [ad-hoc stop-gap solutions that introduce centralization](#ad-hoc-stop-gap-solutions) into the system. Teams building products on IPFS are required to fill capability gaps with [(unintentionally) incompatible infrastructure](#Unintentionally-Incompatible-infrastructure) of their own.
+There is an inherent asymmetry in node capabilities imposed by the [constraints of the operating environment](#constraints-of-the-operating-environment). Attempts to overcome these limitations often lead to [ad-hoc stop-gap solutions that introduce centralization](#ad-hoc-stop-gap-solutions) into the system. Teams building products on IPFS are required to fill capability gaps with [(unintentionally) incompatible infrastructure](#Unintentionally-Incompatible-infrastructure) of their own.
 
 [IPFS HTTP API provides inadequate solution](#HTTP-API-provides-inadequate-solution) for constrained environments as it is designed to give a single client an **absolute control** of the host node as opposed to coordinating access of multiple tenants.
 
@@ -42,7 +48,7 @@ _How would a developer or user use this new capability?_
 
 #### Example: Symbiont leveraging multiple hosts
 
-A symbiont on a phone may be paired with a host on a laptop to leverage improved capabilities when the two are on a same wifi network. At the same time a symbiont on the phone can be paired with a remote host over the internet to allowing all user devices to sync on the go.
+A symbiont on a phone may be paired with a host on a laptop to leverage improved capabilities when the two are on a same wifi network. At the same time a symbiont on the phone can be paired with a remote host over the internet to allow all user devices to sync on the go.
 
 
 #### Example: Web content leveraging IPFS Desktop 

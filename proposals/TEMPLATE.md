@@ -36,21 +36,18 @@ _How would a developer or user use this new capability?_
 <!--(short paragraph)-->
 
 #### Impact
-_How directly important is the outcome to web3 dev stack product-market fit?_
-
-🔥🔥🔥 = 0-3 emoji rating
+_How would this directly contribute to web3 dev stack product-market fit?_
 
 <!--
-Explain why you have chosen this rating
+Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
 
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
-🎯🎯🎯 = 0-3 emoji rating
-
-<!-- Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
+<!--
+Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
 -->
 
 #### Confidence

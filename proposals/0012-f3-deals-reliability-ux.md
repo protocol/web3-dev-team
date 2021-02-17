@@ -60,9 +60,9 @@ However, if we consider the end-to-end flow to span all the way through to on-ch
 
 Alternatively, the CLI could produce a ticket number, and through a different command, the user could enquire about progress on that ticket number.
 
-Taking a step back, user-friendly CLI commands are nice, but if we want to push the UX even further, it would be  desirable to have a companion graphical web-based deals dashboard that one can point to a node to display the status and details of all deals. An interface like could be enriched with instructional cues to educate the user progressively.
+Taking a step back, user-friendly CLI commands are nice, but if we want to push the UX even further, it would be desirable to have a companion graphical web-based deals dashboard that one can point to a node to display the status and details of all deals. An interface like this could be enriched with instructional cues to educate the user progressively.
 
-The Spark time could help prototype this web UI ;-)
+The Spark team could help prototype this web UI ;-)
 
 #### Impact
 
@@ -105,7 +105,7 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 2. Fix memory footprint issues.
 3. Fix resumability of data transfers.
 4. Consider p2p file-oriented transfer protocol to cut out complexity for now.
-5. Identify areas of the deals flow code that need more informative logging (eg data transfer restarts / connection retries)
+5. Identify areas of the deals flow code that need more informative logging (eg data transfer restarts / connection retries).
 6. Add logs and journal events.
 7. Fix miner datastore bloat.
 

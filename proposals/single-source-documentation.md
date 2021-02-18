@@ -41,7 +41,7 @@ I don't understand this section. I'm very confident that what I've written so fa
 
 ### Brief plan of attack
 
-[There's a project available in the ipfs-docs GitHub repo.](https://github.com/ipfs/ipfs-docs/projects/3).
+[There's a project available in the ipfs-docs GitHub repo](https://github.com/ipfs/ipfs-docs/projects/3). This project includes a one week discovery phase where the team bounces around the internet, finding IPFS documentation, and determining whether it's still relevant or needs updating.
 
 ### What does done look like?
 
@@ -77,4 +77,3 @@ Medium: 3-6 weeks. This rating assumes we have 100% of my (@johnnymatthews) time
 
 - Docs
 - PM
-

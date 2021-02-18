@@ -1,6 +1,6 @@
 # Mock implementations for our key services
 
-Authors: @rvagg
+Authors: @rvagg, @vasco-santos
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/50
 
@@ -9,6 +9,8 @@ Initial PR: https://github.com/protocol/web3-dev-team/pull/50
 #### Background &amp; intent
 
 _Describe the desired state of the world after this project? Why does that matter?_
+
+Filecoin and IPFS aim to become the foundation for a decentralized Internet. This is a complex mission, and consequently is composed of several complex systems with different characteristics and extensibility angles. The web3/dweb community are thrilled to build on top of these technologies, but need to focus on the application layer rather than on all the services and infrastructure around the web3 stack to run.
 
 Web3 app developers should have access to quality and up-to-date mock implementations of our key, and complex services that can be used for fast integration and unit testing.
 
@@ -21,6 +23,7 @@ We should offer simple, efficient, accurate and up-to-date mock versions of our 
 _What must be true for this project to matter?_
 
  * Testing against our stack is complex and is likely avoided until the very last step, or actively replaced with mocks and stubs managed by users who may not be in the best position to maintain up-to-date and accurate replacements
+ * Testing against our stack is expensive. Lotus nodes require an expensive machine
 
 #### User workflow example
 
@@ -91,4 +94,4 @@ Medium - Large depending on the scope we choose (just one service, or all the th
 
  * Understanding of our key API endpoints and their nuances
  * (probably) JavaScript development for mock services and libraries
- * (maybe) Go developmenr for mock libraries
+ * (maybe) Go development for mock libraries

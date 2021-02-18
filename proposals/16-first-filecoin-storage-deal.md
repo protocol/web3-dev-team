@@ -36,7 +36,7 @@ A developer using Filecoin for the first time would visit docs.filecoin.io and s
 
 #### Impact
 🔥🔥🔥  
-The Filecoin network currently appears to be used primarily by miners, with more supply than demand for storage space, and many docs are focused (explicitly or not) on miner needs with respect to hardware equipment, etc. Developers are unable to quickly and confidently store a file on Filecoin while experimenting with the product, which may lead them to settle for an IPFS pinning service or resort to 3rd party storage solutions. After their first bad experience, they're unlikely to return and try Filecoin again in the future, which makes the situation urgent: we need to either make Filecoin an easy-to-use storage solution now for developers or intentionally pause advertising it as one until it meets expectations.
+The Filecoin network currently appears to be used primarily by miners, with more supply than demand for storage space, and many docs are focused (explicitly or not) on miner needs with respect to hardware equipment, etc. Developers are unable to quickly and confidently store a file on Filecoin while experimenting with the product, which may lead them to settle for an IPFS pinning service or resort to 3rd party storage solutions. After their first bad experience, they're unlikely to return and try Filecoin again in the future, which makes the situation urgent: we need to either make Filecoin a more reliable and easy-to-use storage solution for devs or intentionally pause advertising it as one until it meets expectations.
 
 #### Leverage
 🎯 🎯 

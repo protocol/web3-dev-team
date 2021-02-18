@@ -10,7 +10,7 @@ Initial PR: #6
 It's hard for developers to start using web3 tech and contextualizing IPFS, libp2p and Filecoin in their own needs can go a long way to make them feel at home.
 Building a hello world cli chat app is a good fun exercise, but it's not the end game.
 
-For more complex use cases, it might not be easy to understand if our stack can really pull it off. We need to put it to the test, show everyone how we did it and how they can do it to.
+For more complex use cases, it might not be easy to understand if our stack can really pull it off. We need to put it to the test, show everyone how we did it and how they can do it too.
 
 Developing POC Projects along with tutorials can provide just that: proof that our stack works and how devs can go ahead and use it for their specific use cases.
 An example of this is [Share IPFS](https://share.ipfs.io).

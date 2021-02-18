@@ -120,11 +120,16 @@ How much would nailing this project improve our knowledge and ability to execute
 ### <ins>Technical deliverables</ins>
 
 
-*   ~90% hole punching success if both peers are behind a Cone NAT in the first dog-fooding phase using PL hosted Limited Relays.
-*   Optimise based on Dogfooding results and metrics and ship the feature using statically configured PL hosted Limited Relays.
-*   Once we conclude that PL hosted Limited Relays are stable,  ship a release that turns on the Limited Relay protocol in public DHT servers.
-*   Once ~30% of public DHT servers upgrade to support the Limited Relay protocol (measure using Hydra Boosters), ship automated discovery & use of Limited Relays to coordinate a hole-punch rather than using statically configured Limited Relays servers.
-*   ~90% hole punching success if both peers are behind a Cone NAT  in the second dog-fooding phase that uses AutoRelay to discover and connect to Limited Relays in the wild rather than using statically configured Limited Relays.
+*   **Phase1**
+    - ~90% hole punching success if both peers are behind a Cone NAT in the first dog-fooding phase using PL hosted Limited Relays.
+*   **Phase 2**
+    - Optimise based on Dogfooding results and metrics and ship the feature using statically configured PL hosted Limited Relays.
+*   **Phase 3**
+    - Once we conclude that PL hosted Limited Relays are stable,  ship a release that turns on the Limited Relay protocol in public DHT servers.
+*   **Phase 4**   
+    - Once ~30% of public DHT servers upgrade to support the Limited Relay protocol (measure using Hydra Boosters), ship automated discovery & use of Limited Relays to coordinate a hole-punch rather than using statically configured Limited Relays servers.
+*   **Phase 5**
+    - ~90% hole punching success if both peers are behind a Cone NAT  in the second dog-fooding phase that uses AutoRelay to discover and connect to Limited Relays in the wild rather than using statically configured Limited Relays.
 
 
 ### <ins>Success criteria</ins>

@@ -190,4 +190,5 @@ Medium.
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
 
-Someone to introduce testground and help with questions.
+* 1-2 developers with golang experience.
+* Someone to introduce testground and help with questions.

@@ -1,4 +1,4 @@
-# [outcome or objective here] 
+# Integrate IPLD Prime into go-ipfs
 
 Authors: @hannahhoward, template edit by @mvdan
 

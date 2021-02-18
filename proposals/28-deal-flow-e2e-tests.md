@@ -55,6 +55,7 @@ Some ideas:
 * Run nightly as a separate project to collect and graph data such as:
     * Average "time to deal".
     * Minimum number of commands to store data.
+    * Time per command (for identifying bottlenecks).
 
 #### Impact
 <!--

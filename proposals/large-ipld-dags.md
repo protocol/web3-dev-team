@@ -71,7 +71,7 @@ _What specific deliverables should completed to consider this project done?_
 
 All three of the above commands have been implemented.
 
-NOTE: stopping anywhere along the way will yield a useful result. As long as the first step is finished (selector support for `lotus client deal`) the 
+NOTE: stopping anywhere along the way will yield a useful result. As long as the first step is finished (selector support for `lotus client deal`), we'll be able to store large structured IPFS data on-chain.
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_

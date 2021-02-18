@@ -22,21 +22,21 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 
 ## Purpose &amp; impact 
 #### Background &amp; intent
-As demonstrated in recent walkthroughs by Andrew Nesbitt and Jonathan Victor, there are a number of critical hurdles blocking an easy path to storing files on Filecoin, including both engineering issues (e.g. Powergate doesn't work), UX issues (lack of description in CLI about what stages exist, showing miners who aren't actually accepting deals, etc.), and documentation issues (incorrect or incomplete instructions for steps in the process that otherwise are functional).
+As demonstrated in recent walkthroughs by Andrew Nesbitt and Jonathan Victor, there are a number of critical hurdles blocking an easy path to storing files on Filecoin, including both engineering issues (e.g. helpful improvements to Powergate), UX issues (lack of description in CLI about what stages exist, showing miners who aren't actually accepting deals, etc.), and documentation issues (incorrect or incomplete instructions for steps in the process that otherwise are functional).
 
-Since our goal is to promote use of the full W3DT stack by developers with storage needs (as opposed to miners), and we aim to include Filecoin in that journey, most paths to adoption are blocked until it's possible to quickly and easily make one's first storage deal. 
+Since our goal is to promote use of the full W3DT stack by developers with storage needs (as opposed to miners), and we aim to include Filecoin in that journey, most paths to general adoption are blocked until it's easier and faster to make one's first storage deal. 
 
 #### Assumptions &amp; hypotheses
 - It should be possible to store a file on Filecoin
 - Documentation should accurately reflect the recommended actions
-- Developers who attempt to use our product now and fail are unlikely to trust us in the future, once the experience has improved
+- Developers who attempt to use our Filecoin for storage now and are frustrated by an unclear process are unlikely to trust us in the future, once the experience has improved
 
 #### User workflow example
 A developer using Filecoin for the first time would visit docs.filecoin.io and successfully follow instructions there to acquire Filecoin to use for the deal, sync or copy the chain (with an understanding of trade-offs in this decision), view available miners with useful information about pricing and availability for storage deals, negotiate a deal, transfer their file, and receive confirmation that the data has been stored successfully. 
 
 #### Impact
 🔥🔥🔥  
-The Filecoin network currently appears to be used primarily by miners, with more supply than demand for storage space, and many docs are focused (explicitly or not) on miner needs with respect to hardware equipment, etc. Developers are unable to quickly and confidently store a file on Filecoin while experimenting with the product, which may lead them to settle for an IPFS pinning service or resort to 3rd party storage solutions. After their first bad experience, they're unlikely to return and try Filecoin again in the future, which makes the situation urgent: we need to either make Filecoin a valid storage solution now for developers or intentionally pause advertising it as one until it meets expectations.
+The Filecoin network currently appears to be used primarily by miners, with more supply than demand for storage space, and many docs are focused (explicitly or not) on miner needs with respect to hardware equipment, etc. Developers are unable to quickly and confidently store a file on Filecoin while experimenting with the product, which may lead them to settle for an IPFS pinning service or resort to 3rd party storage solutions. After their first bad experience, they're unlikely to return and try Filecoin again in the future, which makes the situation urgent: we need to either make Filecoin an easy-to-use storage solution now for developers or intentionally pause advertising it as one until it meets expectations.
 
 #### Leverage
 🎯 🎯 
@@ -55,7 +55,7 @@ Nailing the onboarding process for Filecoin won't guarantee successful adoption,
 ## Project definition
 #### Brief plan of attack
 
-Step 1: _DONE!_ Have sample users attempt to store a file on Filecoin by walking through existing available documention, with no help from fellow Labbers. 
+Step 1: _BEGUN!_ Have sample users attempt to store a file on Filecoin by walking through existing available documention, with no help from fellow Labbers. 
 
 Step 2: PM creates a system for tracking and assinging the critical tasks on this path, using Andrew's video and [JV's slides](https://docs.google.com/presentation/d/1UbO7LKo47KTZcPL8xK41ubFEZwJ7MeFnnAT0_y1yIII/edit?usp=sharing) as a starting point, particularly slide 42 where he outlines which problems can be solved by documentation and which require engineering (and presumably subsequent changes to documentation).
 
@@ -77,7 +77,7 @@ NEED HELP HERE
 
 ####  What does success look like?
 
-If we succeed, a developer new to Filecoin will find all the information they need to make a storage deal within docs.filecoin.io. They will not have to reference external resources unless clearly linked from the docs (e.g. how to set up a Droplet with Digital Ocean), and they won't have to ask questions of Labbers or seek hellp in Slack or other forums. They won't receive any CLI messages that make them feel they're left hanging; instead they'll see progress indicators (step 3 of 5) or an indication of how long to expect something to take (syncing the chain, etc.) to make them feel confident they're on the right path, even when the path takes longer than they'd like. (Such delays will also be explained in docs, but I believe it's insufficient to only share in docs and not in the CLI.) 
+If we succeed, a developer new to Filecoin will find all the information they need to make a storage deal within docs.filecoin.io. They will not have to reference external resources unless clearly linked from the docs (e.g. how to set up a Droplet with Digital Ocean), and they won't have to ask questions of Labbers or seek help in Slack or other forums. They won't receive any CLI messages that make them feel they're left hanging; instead they'll see progress indicators (step 3 of 5) or an indication of how long to expect something to take (syncing the chain, etc.) to make them feel confident they're on the right path, even when the path takes longer than they'd like. (Such delays will also be explained in docs, but I believe it's insufficient to only share in docs and not in the CLI.) 
 
 Metrics to track:
 - time to do X 

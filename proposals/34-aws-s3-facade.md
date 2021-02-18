@@ -1,8 +1,8 @@
-# AWS Facade to Filecoin
+# AWS S3 Facade to Filecoin
 
 Authors: @alanshaw
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/34
 
 Instead of the whole world switching to Filecoin. Why doesn't AWS and Google make the switch instead? Would that be easier?
 
@@ -30,6 +30,10 @@ _Describe the desired state of the world after this project? Why does that matte
 <!--
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
 -->
+
+There are many companies, organizations and individuals that use AWS S3 in their applications. Using Filecoin to store data could yield a cost saving, but perhaps cannot be justified because of the amount of work that would be involved to refactor code to interface with a different storage provider.
+
+In this document we propose a facade to AWS S3 that would allow companies, organizations and individuals to simply and easily switch to using Filecoin for storage, with minimal code changes to their applications.
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_

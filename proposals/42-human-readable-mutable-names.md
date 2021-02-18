@@ -4,6 +4,13 @@ Authors: @lidel
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/42 <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
 ## Purpose &amp; impact 
+
+Improve the way mutable names work in our stack.
+
+- Empower developers with reliable mechanisms for publishing updates
+  - Make IPNS useful on its own, and inside of DNSLink records
+  - Future-proof the way we do human readable names via DNS interop
+
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
 <!--
@@ -24,13 +31,16 @@ There are three distinct types of addresses:
 - IPNS records are only published by the original author, which severely limits the utility of our mutable names
     - It is not possible to pin/republish `/ipns/{libp2p-key-cid}` names by other peers, so when original publisher disappears, IPNS links no longer resolve and we see "IPNS rot". 
     - **Due to IPNS rot people simply don't use it:**
-        - Instead publishing updates via `ipfs name publish {cid}`, website operators are forced to constantly update DNSLink's DNS TXT record to point at reliable immutable paths(`dnslink=/ipfs/{cid}`). 
+        - Instead publishing updates via `ipfs name publish {cid}`, website operators choose to constantly update DNSLink's DNS TXT record
+            - They point at reliable immutable paths (`dnslink=/ipfs/{cid}`) (no IPNS record means it resolves fast and never break).
             - It works around the need for running a service responsible for constant republishing of IPNS record.
-            - This is especially bad for security-sensitive use cases where human-readable names are not required. Effectively means DNS is used in contexts where cryptographic addressing should be used instead.
+            - This is a pragmatic choice, however:
+              - adds admin related to DNS updates (need to learn DNS provider's API for automating this, which introduces soft vendor-lock-in)
+              - most likely not the best choice for security-sensitive use cases where human-readable names are not required: means DNS is used in contexts where cryptographic addressing should be used instead.
 - **OS-level DNS resolver is used for all DNS TXT record lookups.** 
   - IPFS node is unable to control which DNS resolver is used for specific TLD, all queries go to global DNS server configured in the operating system
-    - This harms competition and forces picking "winners" prematurely. For example, if user changes their DNS resolver to one that is capable of resolving all TLDs over ENS, they are unable to resolve TLDs from OpenNIC or UnstoppableDomains. 
-  - DNS queries are most likely sent in plain text and can be spoofed in LAN or MITMd at the ISP level. At the same time DNS over HTTPS is not supported, and it is not trivial for regular user to set up a custom DNS server to change this behavior.
+    - This harms competition and slows down innovation in the decentralized naming space. For example, if user changes their DNS resolver to one that is capable of resolving all TLDs over ENS, they are unable to resolve TLDs from OpenNIC or UnstoppableDomains. 
+  - Given how DNS is implemented in OS and ISPs, queries are most likely sent in plain text and can be spoofed in LAN or MITMd at the ISP level. At the time of writing this proposal DNS over HTTPS is not supported, and it is not trivial for regular user to set up a custom DNS server to change this behavior.
 
 **TLDR:** **We need to fix and future-proof the way mutable names work in our stack:**
 - Make IPNS useful on its own, and inside of DNSLink records.
@@ -57,7 +67,7 @@ _What must be true for this project to matter?_
         - Updating `ipfs-ns` `contenthash` is a chore and costs extra (gas etc). 
         - Using `ipns-ns` means setting `contenthash` only once, introduces cost savings and simplifies publishing. 
     - We see multiple actors in the space providing either own TLDs or attempting to replace ICANN as the top-level authority: https://unstoppabledomains.com , http://opennic.org, https://handshake.org etc.
-    - We don't want to pick winners too early.
+    - We want to enable innovation in the decentralized naming space. This means removing ourselves as gatekeepers of what a valid domain name is.
     - When embedded in user agent (Brave) we want to follow user choices regarding DNS resolution.
     
 

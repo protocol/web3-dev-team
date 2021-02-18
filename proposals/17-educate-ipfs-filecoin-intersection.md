@@ -23,7 +23,7 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 ## Purpose &amp; impact 
 #### Background &amp; intent
 
-As we become a W3DT team, we're looking for ways to encourage people--especially exisiting IPFS users--to adopt Filecoin as a piece of our larger stack. However, there's no information published about how to use Filecoin with IPFS, and very few materials describing Filecoin and IPFS in relation to each other to answer questions like: 
+As we become a W3DT team, we're looking for ways to encourage people--especially exisiting IPFS users--to adopt Filecoin as a piece of our larger stack. However, there's no information (that I'm aware of) published about how to use Filecoin with existing IPFS nodes, and very few materials describing Filecoin and IPFS in relation to each other to answer questions like: 
 - If Filecoin incentivizes IPFS, does that mean I pay people to store my files on the existing IPFS network? 
 - If I already have a file on IPFS and I want to pay someone to store it to Filecoin, can I just reference its CID, or do I have to somehow upload or send it to them? 
 - How do I add a file from the IPFS network to Filecoin? (Can I reference a CID? Are the chunking requirements the same?)
@@ -33,22 +33,21 @@ As we become a W3DT team, we're looking for ways to encourage people--especially
 
 Some of these questions are hard to answer even for Labbers, especially those who haven't been working on the Filecoin team. 
 
-There's currently internal resistance to publishing docs, blog posts, ProtoSchool tutorials, etc. about the intersection of Filecoin and IPFS. These efforts are sometimes postponed because someone knows the message isn't quite right but doesn't have time to weigh in to correct, sometimes postponed on the grounds that "no one is asking for that information right now," and sometimes postponed because it's too soon to cover the topic we'd like to (eg. we haven't figured out the path for a certain aspect of interoperability that we'd like to build a tutorial about). We have blog drafts and tutorial proposals stacking up which we don't feel empowered to work on.
+Folks have proposed and/or drafted a number of docs updates, blog posts, ProtoSchool tutorials, etc. about the intersection of Filecoin and IPFS, but most have not been published. These efforts are sometimes postponed because the message isn't quite right but the folks with the necessary knowledge don't have time to weigh in to correct, sometimes postponed on the grounds that "no one is asking for that information right now," and sometimes postponed because it's too soon to cover the topic we'd like to (eg. we haven't figured out the technical path for a certain aspect of interoperability that we'd like to build a tutorial about). We have blog drafts and tutorial proposals stacking up which we don't feel empowered to work on.
 
-By establishing the W3DT team, we've prioritized focusing on the interoperability and adoption of our full stack and -- I hope-- committed to addressing questions about the intersections of its components head on. In a company without a strong marketing or sales culture, education and press are our primary routes to attracting and onboarding users. While we may need to wait on teaching about features or flows that don't yet exist, it's time to commit to clarifying--both internally and externally--everything we can about how IPFS and Filecoin differ, how they're alike, and how they can work together to accomplish users' goals. I'd argue that the nature of the intersection of IPFS and Filecoin is the biggest unanswered question in our stack as a whole right now, and avoiding or postponing the effort to answer it is a tremendous blocker to much other onboarding work for W3DT. 
+By establishing the W3DT team, we've prioritized focusing on the interoperability and adoption of our full stack and -- I hope-- committed to addressing questions about the intersections of its components head on. In an open-source project, education and external communications are primary routes to attracting and onboarding users. While we may need to wait on teaching about features or flows that don't yet exist, it's time to commit to clarifying--both internally and externally--everything we can about how IPFS and Filecoin differ, how they're alike, and how they can work together to accomplish users' goals. I'd argue that the nature of the intersection of IPFS and Filecoin is the biggest unanswered question in our stack as a whole right now, and avoiding or postponing the effort to answer it is a tremendous blocker to much other onboarding work for the W3DT stack. 
 
 
 #### Assumptions &amp; hypotheses
-- It's important for the public to use the right product names when referring to IPFS and Filecoin
-- There's a high level of brand confusion between IPFS and Filecoin, especially in China, where companies based on Filecoin are named IPFS Something-or-other.
-- We want developers to choose the protocol that best meets their needs, and they need to understand the differences between protocols in order to do that. 
+- It's important for the public to use the right product names when referring to IPFS and Filecoin.
+- There's a high level of brand confusion between IPFS and Filecoin, especially in China, where companies based on Filecoin are often named "IPFS _______."
+- We want developers to choose the storage network that best meets their needs, and they need to understand the differences between networks in order to do that. 
 - We want a subset of existing IPFS users to start using Filecoin in coordination with IPFS (or perhaps instead of using IPFS directly?). These users won't spontaneously start using Filecoin without education about benefits it provides that their current usage of IPFS doesn't.
 - Existing IPFS users for whom Filecoin makes sense will want to access add/retrieve files from Filecoin using IPFS CIDs, without re-"uploading" their files.
-- Some of our IPFS users - including high-name collabs - came to IPFS as a result of actually wanting to use Filecoin but it not being ready yet. It might be worth explicitly addressing these folks: to let them know what of their initial assumptions about Filecoin turned out to be true, what changed, what's possible now, what's not possible yet, etc.
-- If we surveyed Labbers about the differences/dependencies/nteroperablity between IPFS & Filecoin, both in their current state and future intended state, we'd get a wide range of conflicting answers.
+- Some of our IPFS users - including valuable collabs - came to IPFS as a result of actually wanting to use Filecoin but it not being quite ready yet for their specific use case. 
+- If we surveyed Labbers and the broader Web3 community about the differences/dependencies/interoperablity between IPFS & Filecoin, both in their current state and future intended state, we'd get a wide range of conflicting answers.
+- Users in public forums often answer each other's questions about the IPFS and Filecoin connection incorrectly, due to a lack of documentation or misinterpretation of existing documentation.
 - We're unable to explain concepts to users before understanding them ourselves.
-- There are things that are true about Filecoin that don't make sense to include in marketing or education materials.
-
 
 #### User workflow example
 
@@ -58,7 +57,7 @@ By establishing the W3DT team, we've prioritized focusing on the interoperabilit
 🔥🔥 
 
 - Interop engineering and tutorials on how to use IPFS & Filecoin together will allow us to target new use cases and convince more IPFS users to try Filecoin.
-- Improved education and reference materials on the intersection and IPFS and Filecoin will reduce negative vibes in community forums where we don't have enough bandwidth to address these questions and misconceptions one-off.
+- Improved education and reference materials on the intersection of IPFS and Filecoin will improve vibes community forums and reduce the need to address these questions and misconceptions one-off.
 
 #### Leverage
 🎯🎯 
@@ -79,9 +78,9 @@ The interviews that our PMs are doing with trusted IPFS users show that they (an
 
 Share questions internally, giving people a place to anonymously ask questions that they or their users have. What are the common misconceptions about Filecoin and IPFS? What interoperability is planned but not yet realized (eg retrieval using IPFS CIDs?)?
 
-Share knowledge internally. Have the folks who actually know the answers plan an All Hands preso. Have the people who specialize in beginner-friendly content proof it and ask for clarification as it's developed. Use language that doesn't require an engineering background. Present at an All Hands.  Follow up with a ProtoSchool quiz? 
+Share knowledge internally. Have the folks who actually know the answers plan an All Hands preso. Have the people who specialize in beginner-friendly content proof it and ask for clarification as it's developed. Use language that doesn't require an engineering background. Present at an All Hands. Follow up with a ProtoSchool quiz? 
 
-The questions asked by our team and answers provided (minus PL-private info) could provide a starting point to incubate a public-facing FAQ without having to do a bunch of initial surveying and testing: we can then use the testing to iterate on the questions raised internally *as well as* add new ones from the public.
+The questions asked by our team and answers provided could provide a starting point to incubate a public-facing FAQ without having to do a bunch of initial surveying and testing: we can then use the testing to iterate on the questions raised internally *as well as* add new ones from the public.
 
 **Step 2: Prioritize engineering issues to unblock interop** 
 
@@ -91,7 +90,7 @@ Ensure engineers know how/where they'll communicate when their projects are comp
 
 **Step 3: Make a comms/education plan**
 
-Gather folks from a few specialties (PM, engineering, docs, ProtoSchool, PR, etc.) to discuss messaging that's acceptable now and messaging we're excited to use once X features are unblocked by engineering. If there are people whose input is required, be sure to get their input here rather than after we've spent time writing in the wrong direction. 
+Gather folks from a few specialties (PM, engineering, docs, ProtoSchool, PR, etc.) to discuss messaging that makes sense now and messaging we're excited to use once X features are unlocked by new engineering projects. If there are people whose input is required, be sure to get their input here rather than after we've spent time writing in the wrong direction. 
 
 Think through the variety of user profiles we need to reach and where we'll reach them, identifying content approaches right for each audience (different tone, vocab, and specifics for press for the general public vs a developer, etc.): 
 - Websites, ProtoSchool & docs
@@ -111,7 +110,7 @@ We can make this project as big or medium as we need to, but I would recommend g
 Essential deliverables:
 - Revised Filcoin docs page on IPFS & Filecoin intersection
 - New IPFS docs page on IPFS & Filecoin intersection
-- Ability to store/retrieve a file on Filecoin using its existing IPFS CID (incl API docs)
+- Ability to store/retrieve a file on Filecoin using its existing IPFS CID (incl API docs) 
 - A tutorial describing how to store/retrieve on Filecoin using IPFS CIDs (docs and ProtoSchool)
 
 Publications in as many of these as we have bandwidth to tackle:
@@ -129,9 +128,9 @@ Existing IPFS users will be able to store and retrieve on the Filecoin network b
 
 Existing IPFS users will see Filecoin surfaced prominently as an option for them to consider. No matter which established resource they turn to first -- our websites, blogs, docs sites, etc. -- users and prospective users will easily find their way to information that helps them determine whether IPFS, Filecoin, or the combo is right for them. 
 
-Every Labber will be able to confidently explain the difference between Filecoin (the storage network, not the token) and IPFS in terms that match their own technical level. Some will be able to tell stories about two different use cases, some will use words like hot and cold storage, some will use fancy crypto words that the rest of us don't understand. 
+Every Labber will be able to confidently explain the difference between Filecoin (the storage network, not the token) and IPFS in terms that match their own technical level. Some will be able to tell stories about two different use cases, some will use words like hot and cold storage, some will use fancy crypto words. 🤓
 
-Labbers responsible for W3DT education will feel empowered to talk about Filecoin and IPFS without facing internal blockers to progress. 
+Labbers responsible for W3DT education will feel empowered to talk about Filecoin and IPFS. 
 
 Labbers on the Ecosystem team can reach out to high-value collabs who have chosen IPFS over Filecoin or used IPFS + pinning as a workaround and update them on our new capabilities, letting them know which of their initial assumptions about Filecoin turned out to be true, what's changed, what's possible now, what's not possible yet, etc.
 
@@ -157,10 +156,9 @@ If we were to start this project with the wrong team in place, and miss critical
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
 
-
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
-Documentation of any feature/interop method that doesn't yet exist is blocked by implementation of that same feature/method. However, there's plenty of content to unlock and present immediately, so we can take the work in chunks, tackling more conceptual and well-cemented pieces now and creating tutorials on IPFS & Filecoin interop when we're able.  
+Documentation of any feature/interop method that doesn't yet exist is blocked by implementation of that same feature/method. However, there's plenty of content to clarify and present immediately, so we can take the work in chunks, tackling more conceptual and well-cemented pieces now and creating tutorials on new features of IPFS & Filecoin interop when we're able.  
 
 This project will require input from the parties most interested in messaging to unblock the written work before we get started, rather than raising flags on individual projects only as we go along.
 
@@ -182,7 +180,7 @@ Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty i
 -->
 L b/c of engineering work but modular? **NEED HELP HERE**
 
-I don't have a clear understanding of the engineering needs to acheive useful interop (to unblock tutorials on that subject), but there's lots of conceptual content we could get started on right away. 
+I don't have a clear understanding of the engineering needs to certain requested interop features (to unblock tutorials on that subject), but there's lots of conceptual content we could get started on right away. 
 
 
 #### Roles / skills needed

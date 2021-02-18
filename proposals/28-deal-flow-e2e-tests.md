@@ -28,7 +28,7 @@ _Describe the desired state of the world after this project? Why does that matte
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
 -->
 
-People who use the Lotus CLI for making storage deals face significant hurdles that make the experience painful, time consuming and unsuccessful. The experience report by Andrew Nesbitt is the case in point. In this report Andrew recorded himself attempting to store data on Filecoin. It took a very long time and he was ultimately unsuccessful.
+People who use the Lotus CLI for making storage deals have been seen to face hurdles that can make the experience difficult, time consuming and unsuccessful. The experience report by Andrew Nesbitt is the case in point. In this report Andrew recorded himself attempting to store data on Filecoin. It took a long time and he was ultimately unsuccessful.
 
 After this project is completed, a set of end to end (E2E) tests will exist that can be run in CI to verify users are able to use the Lotus CLI to store data in Filecoin by successfully negotiating deals with storage providers. The tests will verify that users continue to be able to do so in the future.
 

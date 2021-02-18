@@ -113,10 +113,10 @@ ICE Score = 7.333
 1. Decide on runner (BYO or testground?).
 1. Build a runner/learn a testground.
 1. Write the tests.
-    a. Observe the pain points.
-    b. Experience the bugs and open issues.
-    c. Note the bottlenecks and open issues.
-    d. Ensure tests with obvious bottlenecks generate benchmarking data.
+    * Observe the pain points.
+    * Experience the bugs and open issues.
+    * Note the bottlenecks and open issues.
+    * Ensure tests with obvious bottlenecks generate benchmarking data.
 1. Integrate the suite (CI in Lotus/run nightly etc.).
 1. Collect/graph the metrics.
 1. Create new project(s) to streamline the flow.

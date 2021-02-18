@@ -7,7 +7,7 @@ Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-
 ## Purpose &amp; impact
 #### Background &amp; intent
 
-We are currently flying blind in terms of block propagation and
+We currently have little visibility in terms of block propagation and
 network health in the filecoin network.  We are also lacking a
 reputation system for filecoin peers.
 

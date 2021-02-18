@@ -35,7 +35,7 @@ There's plenty of extensions that could be made to this, turning it into a genui
 
 _What must be true for this project to matter?_
 
- * Deal-making is difficult
+ * when attempting to do deal, frequently it is difficult to get it completed
  * Building applications that perform simple & small storage deals to Filecoin is currently difficult
  * Web3 developers want solid but grokkable example applications they can copy (fork-and-go!)
 

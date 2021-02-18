@@ -29,7 +29,7 @@ Since our goal is to promote use of the full W3DT stack by developers with stora
 #### Assumptions &amp; hypotheses
 - It should be possible to store a file on Filecoin
 - Documentation should accurately reflect the recommended actions
-- Developers who attempt to use our Filecoin for storage now and are frustrated by an unclear process are unlikely to trust us in the future, once the experience has improved
+- Developers who attempt to use Filecoin for storage now and are frustrated by an unclear process are unlikely to trust us in the future, once the experience has improved
 
 #### User workflow example
 A developer using Filecoin for the first time would visit docs.filecoin.io and successfully follow instructions there to acquire Filecoin to use for the deal, sync or copy the chain (with an understanding of trade-offs in this decision), view available miners with useful information about pricing and availability for storage deals, negotiate a deal, transfer their file, and receive confirmation that the data has been stored successfully. 

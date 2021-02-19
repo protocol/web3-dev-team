@@ -1,4 +1,4 @@
-# [outcome or objective here] 
+# Improve IPFS Content Providing
 
 Authors: @aschmahmann
 

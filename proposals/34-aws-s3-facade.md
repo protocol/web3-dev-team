@@ -1,6 +1,6 @@
 # AWS S3 Facade to Filecoin
 
-Authors: @alanshaw
+Authors: [@alanshaw](https://github.com/alanshaw)
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/34
 

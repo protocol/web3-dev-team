@@ -72,11 +72,17 @@ Automate anonymous data collection to analyze impact.
 1. Have a plan for releasing the POCs and tutorials on a frequent schedule.
 1. Streamlined process for analyzing impact with specific metrics
     - Since we will own the apps, we can easily track the user journey from the tutorial to the app and request feedback from the user.
+    - We can track tutorial links that go to our deployed app (the app itself will have tracking) and maybe even feedback surveys (if they make sense in the context).
+    - We can then encourage developers to fork the app repo from both the tutorial and the app with a fork-me button
+    - The number of forks in the repo will be the indicator of the last step of the user completing the tracking flow.
 
 
 ####  What does success look like?
 
-POC apps get good traffic and response from the tutorials are mostly positive.
+- Time to build a capable POC is shortened
+- Positive developer adoption by reducing bounces
+- Good completion rate for completing the tutorial
+
 
 
 #### Counterpoints &amp; pre-mortem

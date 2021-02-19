@@ -71,11 +71,10 @@ This a project whose greatest impact may be unblocking other projects. Among the
 
 #### Confidence
 
-On the scale: 1 -- Low
+Low - Medium (1-3)
 
-Impact: 1 -- We have anecdotal examples of users who are frustrated with their inability to put semantic data into IPFS (todo: collect examples from Eric Myhre, Adin Schmahmann)
-
-Impact 3: Top user request: https://github.com/ipfs/go-ipfs/issues/7909
+* We have anecdotal examples of users who are frustrated with their inability to put semantic data into IPFS
+* It is a recurring user request: https://github.com/ipfs/go-ipfs/issues/7909
 
 ## Project definition
 #### Brief plan of attack
@@ -83,22 +82,26 @@ Impact 3: Top user request: https://github.com/ipfs/go-ipfs/issues/7909
 go-IPFS primarily uses legacy IPLD libraries -- go-ipld-format -- in the context of working primarily with UnixFS v1.
 Use of IPLD primarily flows through the [`DAGService`](https://github.com/ipfs/go-ipld-format/blob/master/merkledag.go), which sits on the BlockService, which is hardcoded to fetch through Bitswap, among other things.
 
-Several things sit on top of `DAGService` -- most prominently UnixFS.
+[Several things](https://hackmd.io/KnC0cZGPRvSQG0g8Z9OMXw) sit on top of `DAGService` -- most prominently UnixFS.
 
 The first goal here is to get to a go-ipld-prime based `DAGService`, as close in interface to the existing DAGService, so that libraries dependent on this service would require only minimal changes.
 
-A first step is proposing an ipld-prime interface for this revamp’d DAG service, and to write a minimal scaffold translating from that interface to the current implementation.
+A first step is proposing ipld-prime interfaces for this revamp’d DAG service, and to write a minimal scaffold translating from that interface to the current implementation.
 
 At that point, two people will continue working within the `dag service -> block service -> bitswap` and plumb through IPLD in that direction, while others will add more IPLD commands to the IPFS command line and handle propagating it to the various top level interfaces.
 
-We can also decide if we want to pursue updating some services that sit on top of `DAGService`.
+There is also a triage for which services that sit on top of `DAGService` are updated to what extent.
+
+There will be work on updating IPFS and IPLD documentation to reflect these changes and describe the new interface.
 
 #### What does done look like?
 
 * P0: I can build IPFS without go-ipld-format
+  * P1: Deprecate go-ipld-format
 * P1: I can import structured data (following links of generic codecs) directly from the IPFS command line
 * P1: structured data is importable and can be queried over the IPFS HTTP API 
 * P2: I can query structured data directly from the IPFS command line
+* P1: Documentation allows plugin authors to update to the new interfaces
 
 ####  What does success look like?
 

@@ -37,7 +37,7 @@ As of this writing [pubsub][IPFS pubsub] is considered experimental and is disab
 
 In practice however many teams building products on IPFS use and depend on pubsub:
 
-- Textile uses pubsub to publish thread updates among it's participants.
+- Textile nodes have pubsub enabled.
 - 3Box uses pubsub for log replication.
 - [OrbitDB][] depends on pubsub to do replication.
 - Fission team would like to use pubsub (has user requests, but found it unreliable)

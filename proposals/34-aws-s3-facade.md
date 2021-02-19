@@ -4,9 +4,11 @@ Authors: @alanshaw
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/34
 
-Instead of the whole world switching to Filecoin. Why doesn't AWS and Google make the switch instead? Would that be easier?
+Problem Addressed: New developers have to spend too much time and money to go through a simple storage/retrieval workflow. (P1)
 
-An AWS API facade to a Lotus.
+> Instead of the whole world switching to Filecoin. Why doesn't AWS and Google make the switch instead? Would that be easier?
+> 
+> An AWS S3 API facade to a Lotus.
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.

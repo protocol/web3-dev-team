@@ -122,7 +122,7 @@ _What specific deliverables should completed to consider this project done?_
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
 
-- Various projects (like OrbitDB) no longer have to explain with instructions how to enable pubsub.
+- Various projects (like OrbitDB, [Forest](https://github.com/forestpm/forest)) no longer have to explain with instructions how to enable pubsub.
 - Teams like fission deliver pubsub to their users requesting it.
 - Pubsub becomes more reliable due to increased number of enabled nodes. 
 

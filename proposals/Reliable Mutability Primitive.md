@@ -105,7 +105,9 @@ _Success means impact. How will we know we did the right thing?_
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
-People and teams are storing IPNS keys in [DNSLink][] records as opposed to CIDs, because that provides a more effective and simpler way to publish updates. We see new projects are leveraging IPNS over working around it via things like [DNSLink][].
+- People and teams are storing IPNS keys in [DNSLink][] records as opposed to CIDs, because that provides a more effective and simpler way to publish updates.
+- We see people storing IPNS addresses in ENS to save on blockchain transactions costs.
+- We see new projects leveraging IPNS (when human readable name is not a concern) instead of working around it wit [DNSLink][].
 
 
 ##### Counterpoints &amp; pre-mortem

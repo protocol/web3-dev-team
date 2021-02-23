@@ -85,7 +85,7 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
-- Implement third party IPNS republishing (TODO: Find a relevant issue link)
+- Implement third party IPNS republishing (see [ipfs/go-ipfs#4435](https://github.com/ipfs/go-ipfs/issues/4435))
 - Collaborate with Pinning Services to make this part of the API.
 - Fix IPNS publishing in browsers.
 - Enable pubsub by default + IPNS over pubsub.

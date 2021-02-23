@@ -1,0 +1,104 @@
+on:
+  pull_request:
+    types: [opened, reopened]
+name: Assign Reviewers
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Mikeal Rogers
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('["alanshaw", "olizilla", "gozala", "terichadbourne"]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "mikeal"
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Rod Vagg
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "rvagg"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Molly Mackinlay
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "momack2"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Alex North
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "anorth"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Pooja Shah
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "pooja"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Oli Evans
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "olizilla"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Steve Loeppky
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "BigLep"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Alan Shaw
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "alanshaw"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Mike Goelzer
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "mgoelzer"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Steven Allen
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "stebalien"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Will Scott
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "willscott"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Kadir Topal
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "atopal"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Jacob Heun
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "jacobheun"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: David Choi
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "dchoi27"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Jonathan Victor
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "jnthnvctr"
+        token: ${{ secrets.GITHUB_TOKEN }}  
+    - name: Raul Kripalani
+      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      with:
+        reviewers: "raulk"
+        token: ${{ secrets.GITHUB_TOKEN }}  

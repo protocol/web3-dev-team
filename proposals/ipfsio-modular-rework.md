@@ -19,8 +19,8 @@ Happy side effect: If we build this correctly, even though our messaging is for 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
 - ✓ There must be existing confusion around IPFS use cases and value proposition
-- ✓ There must be existing frustration around the effectiveness of the existing ipfs.io
-- ✓ ipfs.io must be a common search result for those curious about the dweb, w3dt, and/or IPFS
+- ✓ There must be existing frustration around the effectiveness of the existing ipfs.io site
+- ✓ ipfs.io must be a common search result for those curious about the dweb and/or IPFS
 
 #### User workflow example
 _How would a developer or user use this new capability?_
@@ -41,7 +41,7 @@ _How directly important is the outcome to web3 dev stack product-market fit?_
 🔥🔥🔥
 
 - We'll finally clearly convey value propositions for important use cases, explictly communicating product-market fit
-- We'll have a clearly-defined, explicitly measurable funnel entry that we can use to measure and validate our progress in w3dt PMF over time
+- We'll have a clearly-defined, explicitly measurable funnel entry that we can use to measure and validate our PMF progress over time
 
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
@@ -57,9 +57,9 @@ _How much would nailing this project improve our knowledge and ability to execut
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
 
-**Impact = 10** (top of funnel is presently neglected and fundamentally leaky, and this project acts both as a data source and as a lever for many other developer-adoption efforts)
-**Confidence = 8** (abundance of internal/external feedback the current site isn't doing its job)
-**Ease = 5** (lots of moving parts, but few outright technical challenges in the work itself)
+- **Impact = 10** (top of funnel is presently neglected and fundamentally leaky, and this project acts both as a data source and as a lever for many other developer-adoption efforts)
+- **Confidence = 8** (abundance of internal/external feedback the current site isn't doing its job)
+- **Ease = 5** (lots of moving parts, but few outright technical challenges in the work itself)
 
 
 ## Project definition
@@ -69,7 +69,7 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 1. 🚧 **(In progress with MOXY, ETA end Q1)** 🚧  [Rebuild IPFS blog](https://github.com/ipfs/ipfs-blog/issues) with additional news/events/links functionality, improved search, Forestry CMS publishing, and consistency with org usage of VuePress platform.
 2. **(MOXY to begin after blog work complete)** "Lift-and-shift" migration of existing ipfs.io content alongside the new blog/news site. This enables us to maintain a baseline-functional public-facing site while working and implementing the remaining project "modules" in parallel.
-3. Parallel creation and as-done implementation of the remaining "modules" in the [ipfs.io IA outline](https://docs.google.com/document/d/1ni0kQNTLJ8VcpCu-zvpyWceZ3qbZWTJSJVRLCsOxvbY/edit#):
+3. Parallel creation and as-done implementation of the remaining "modules" in the [ipfs.io IA outline](https://docs.google.com/document/d/1ni0kQNTLJ8VcpCu-zvpyWceZ3qbZWTJSJVRLCsOxvbY/edit#). **IMPORTANT: Items that risk substantial reworking when reframed in a w3dt mental model will not be tackled until that model is solidified.**
     - 🚧 **(In progress with PL video team, ETA early Q2)** 🚧  First in “Builders Series” testimonial videos, featuring Pinata ([PRD](https://docs.google.com/document/d/1zOahZK2268i96o3JooiCf8rXBvFgXhUBtQhrSG1pnWg/edit#))
     - 🚧 **(In progress [with Agency Undone](https://github.com/ipfs/website/issues/410), ETA early/mid Q2)** 🚧 Interactive ecosystem directory *(note: this codebase will also be used for Filecoin ecosystem showcase)*
     - “About IPFS” video & interactive explainer ([PRD](https://docs.google.com/document/d/1Av70fWel_BkpPEZ-aQFg3AenW0xfCfaZ6zvC409IoLQ/edit#))

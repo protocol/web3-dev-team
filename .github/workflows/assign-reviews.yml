@@ -80,7 +80,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}  
     - name: Jacob Heun
       uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
-      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      if: contains(fromJSON('["achingbrain","vasco-santos","dirkmc","rvagg","acruikshank","hannahhoward","gammazero","mvdan","willscott"]'), github.event.pull_request.user.login)
       with:
         reviewers: "jacobheun"
         token: ${{ secrets.GITHUB_TOKEN }}  

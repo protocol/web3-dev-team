@@ -15,10 +15,18 @@ After this project, these specific pain-points will be resolved:
 
 This project is critical for continued growth of users such as Pinata, as the current GC implementation is a significant obstacle for them.  The project is also important to users who need to remove specific content from their nodes, but do not want complete GC.
 
+#### Related discussions
+- [Call with Matt Ober (Pinata) about GC](https://www.notion.so/Pinata-5157fa6d2a4741a593bb8ff32bfdb08e)
+- [Github tracking of related issues](https://github.com/ipfs/go-ipfs/issues/7752)
+- https://protocollabs.slack.com/archives/G01KZD3FETY/p1613779249428300
+
 ### Assumptions and Hypotheses
 
 For this project to matter, it must significantly improve operations for highly impacted customers like Pinata. Faster GC will have a directly improve Pinata’s use of IPFS.  Having the ability to remove content when it becomes unpinned will further enhance the improvement for Pinata’s use case, as GC can avoid looking at all blocks and can operate on only those that became unpinned. 
+
 For users who do not see or care about the GC performance issues, this project will still matter to users who need to remove specific content from nodes, but do not want to remove all unpinned content.
+
+It is assumed that the overall time to examine the reference count of each block is less that the time to load all pinned blocks, store their CIDs in memory, and then search those CIDs for every block to see the block can be removed.
 
 ### User workflow example
 
@@ -54,22 +62,31 @@ Medium (level 5) confidence, according to [this scale](https://medium.com/@nimay
 2. Implement reference counting of blocks in the blockstore.  Counts  are updated by pinner and MFS.
 3. Implement new garbage collector that operates on reference counts instead of pinned CIDs
 4. Implement targeted GC (GC that follows a DAG and deletes associated unreferenced blocks)
-5. Optional, if it adds value: Implement command to remove pin and then immediately GC the unpinned CID
-6. Distribute an experimental version of go-ipfs for evaluation and feedback.
+5. Implement metrics for both new and old GC to compare performance.
+6. Optional, if it adds value: Implement command to remove pin and then immediately GC the unpinned CID
+7. Distribute an experimental version of go-ipfs for evaluation and feedback.
 
 Garbage collection performance issues arise because GC attempts to remove blocks by loading a set of all pinned CIDs into memory and searching for each block’s CID in this set.  The plan attack operates on the following premises:
 
-- Maintaining reference counts for blocks will make it quick to determine if a block can be removed, because it is not necessary to load all pinned CID into memory and search this.
+- Maintaining reference counts for blocks will make it quick to determine if a block can be removed, because it is not necessary to load all pinned CIDs into memory and search this.
 - Specific content can be removed by performing GC on the blocks associated with a IPLD DAG identified by CID.
 
 ### What does done look like?
+#### Functional
+- Bulk GC should be faster and use less memory. 
+- Targeted GC: Ability for GC to remove content identified by CID
+  - New `--cid` option: `ipfs repo gc --cid=<cid>`
+- Metrics for new and old GC: time to complete GC, blocks examined, blocks removed
+
+These metrics should also be implemented for the old GC so that when running in "verify" mode the overall performance of the both GC implementations can be compared.
+#### Implementation
 - Block reference counts stored in datastore
 - Block reference counts updated by pinning, unpinning, adding to MFS, removing from MFS. 
-- New GC implementation that operates on block reference counts  instead of on  set of all pinned CIDs
-- Ability for GC to remove content identified by CID
-  - New `--cid` option: `ipfs repo gc --cid=<cid>`
+- New GC implementation that operates on block reference counts instead of on set of all pinned CIDs
 
-Removing pins will be slower because it requires walking DAG to decrement reference counts. Adding items to MFS and removing items from MFS will be slower due to needing to update reference counts.  Hopefully any increase in execution time will be insignificant.
+Targeted GC will allow users like Pinata to remove specific content that has been unpinned, instead of doing bulk GC to search the entire blockstore for content to remove. When combined with a reference-counted GC that does not require loading all other pinned content into memory and searchin it, this will result in hugely significant improvement in the GC time.
+
+Removing pins will be slower because it requires walking DAG to decrement reference counts. Adding items to MFS and removing items from MFS will be slower due to needing to update reference counts. These increases should not be significant.  Datastore will use more space, one key-value entry per block in blockstore.  This may be significant, but should not cause problems for most users.
 
 ### What does success look like?
 Success, for Pinata, means that they can remove unpinned content with significant reduction in time that node is unavailable during GC.  Best case is that this allows Pinata to perform GC without having to take a node offline, and with little or no impact to IPFS running on the node.

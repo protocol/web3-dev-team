@@ -14,7 +14,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Rod Vagg
       uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
-      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      if: contains(fromJSON('["achingbrain","vasco-santos","dirkmc"]'), github.event.pull_request.user.login)
       with:
         reviewers: "rvagg"
         token: ${{ secrets.GITHUB_TOKEN }}  

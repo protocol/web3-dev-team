@@ -68,7 +68,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}  
     - name: Will Scott
       uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
-      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      if: contains(fromJSON('["acruikshank","hannahhoward","gammazero","mvdan"]'), github.event.pull_request.user.login)
       with:
         reviewers: "willscott"
         token: ${{ secrets.GITHUB_TOKEN }}  

@@ -19,6 +19,7 @@ This project is critical for continued growth of users such as Pinata, as the cu
 - [Call with Matt Ober (Pinata) about GC](https://www.notion.so/Pinata-5157fa6d2a4741a593bb8ff32bfdb08e)
 - [Github tracking of related issues](https://github.com/ipfs/go-ipfs/issues/7752)
 - https://protocollabs.slack.com/archives/G01KZD3FETY/p1613779249428300
+- [Alternative GC approach](https://hackmd.io/0T8z0ex8RWmI8BmFNPSafQ?view)
 
 ### Assumptions and Hypotheses
 
@@ -26,7 +27,10 @@ For this project to matter, it must significantly improve operations for highly 
 
 For users who do not see or care about the GC performance issues, this project will still matter to users who need to remove specific content from nodes, but do not want to remove all unpinned content.
 
-It is assumed that the overall time to examine the reference count of each block is less that the time to load all pinned blocks, store their CIDs in memory, and then search those CIDs for every block to see the block can be removed.
+Garbage collection performance issues arise because GC attempts to remove blocks by loading a set of all pinned CIDs into memory and then searching for each block’s CID in this set.  The feasibility of a new reference counting GC implementation makes the following assumptions:
+- Maintaining reference counts for blocks will make it quick to determine if a block can be removed, because it is not necessary to load all pinned CIDs into memory and search this set for each block. This will make GC very fast to GC a small set of blocks. 
+- Specific content can be removed by performing GC on the blocks associated with a specific IPLD DAG.
+- Overall time to examine the reference count of each block is less that the time to load all pinned blocks, store their CIDs in memory, and then search those CIDs for every block to see the block can be removed.
 
 ### User workflow example
 
@@ -66,11 +70,6 @@ Medium (level 5) confidence, according to [this scale](https://medium.com/@nimay
 6. Optional, if it adds value: Implement command to remove pin and then immediately GC the unpinned CID
 7. Distribute an experimental version of go-ipfs for evaluation and feedback.
 
-Garbage collection performance issues arise because GC attempts to remove blocks by loading a set of all pinned CIDs into memory and searching for each block’s CID in this set.  The plan attack operates on the following premises:
-
-- Maintaining reference counts for blocks will make it quick to determine if a block can be removed, because it is not necessary to load all pinned CIDs into memory and search this.
-- Specific content can be removed by performing GC on the blocks associated with a IPLD DAG identified by CID.
-
 ### What does done look like?
 #### Functional
 - Bulk GC should be faster and use less memory. 
@@ -91,7 +90,7 @@ Removing pins will be slower because it requires walking DAG to decrement refere
 ### What does success look like?
 Success, for Pinata, means that they can remove unpinned content with significant reduction in time that node is unavailable during GC.  Best case is that this allows Pinata to perform GC without having to take a node offline, and with little or no impact to IPFS running on the node.
 
-Success also means that this functionality does not have a significant negative impact, such as consuming large amounts of storage space, or impairing the performance of operations outside of GC  This must be true for all usersA user should be able to remove only content that becomes un 
+Success also means that this functionality does not have a significant negative impact, such as consuming such large amounts of storage space that it presents a problem to users, or impairing the performance of operations outside of GC.
 
 ### Counterpoints and pre-mortem
 If high performance GC results in reduced performance elsewhere, users not affected by GC performance issues will see this as a negative impact. The following areas could be negatively affected by the new GC, but hopefully none will be significant for any user

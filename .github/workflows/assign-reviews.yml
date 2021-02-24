@@ -44,7 +44,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}  
     - name: Steve Loeppky
       uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
-      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      if: contains(fromJSON('["arajasek ","aschmahmann ","lidel","magic6k","marten-seemann","schomatis ","stebalien","warpfork","ZenGround0"]'), github.event.pull_request.user.login)
       with:
         reviewers: "BigLep"
         token: ${{ secrets.GITHUB_TOKEN }}  

@@ -98,7 +98,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}  
     - name: Raul Kripalani
       uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
-      if: contains(fromJSON('[]'), github.event.pull_request.user.login)
+      if: contains(fromJSON('["nonsense", "kubuxu", "dirkmc", "vyzo", "aarshkshah1992"]'), github.event.pull_request.user.login)
       with:
         reviewers: "raulk"
         token: ${{ secrets.GITHUB_TOKEN }}  

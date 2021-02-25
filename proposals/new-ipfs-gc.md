@@ -70,22 +70,31 @@ Medium (level 5) confidence, according to [this scale](https://medium.com/@nimay
 6. Optional, if it adds value: Implement command to remove pin and then immediately GC the unpinned CID
 7. Distribute an experimental version of go-ipfs for evaluation and feedback.
 
+Prior work and related issues are captured here, and should be re-examined to help ensure issues are addressed as much as possible: [Github tracking of related issues](https://github.com/ipfs/go-ipfs/issues/7752)
+
+An alternative approach to GC is described here.  If possible, some early prototyping could help evaluate it in comparison to the reference counted implementation described by this pitch: [Alternative GC approach](https://hackmd.io/0T8z0ex8RWmI8BmFNPSafQ?view)
+
 ### What does done look like?
-#### Functional
+Targeted GC will allow users like Pinata to remove specific content that has been unpinned, instead of doing bulk GC to search the entire blockstore for content to remove. When combined with a reference-counted GC that does not require loading all other pinned content into memory and searchin it, this will result in significant improvement in the GC time.
+
+Esitmated time impact for typical Pinata node: TBD
+
+Estimated operational impact of Pinata:
+- If GC can be done without taking a node offline, this is huge:
+  - 2-4 days offline per month per node --> 0 days offline
+  - Enterprise customers no longer need two nodes
+  - Large amounts of storage available that would otherwise be unrecoverable until offline unpinning
+
+#### Functional Changes
 - Bulk GC should be faster and use less memory. 
 - Targeted GC: Ability for GC to remove content identified by CID
   - New `--cid` option: `ipfs repo gc --cid=<cid>`
 - Metrics for new and old GC: time to complete GC, blocks examined, blocks removed
 
-These metrics should also be implemented for the old GC so that when running in "verify" mode the overall performance of the both GC implementations can be compared.
-#### Implementation
+#### Implementation Changes
 - Block reference counts stored in datastore
 - Block reference counts updated by pinning, unpinning, adding to MFS, removing from MFS. 
 - New GC implementation that operates on block reference counts instead of on set of all pinned CIDs
-
-Targeted GC will allow users like Pinata to remove specific content that has been unpinned, instead of doing bulk GC to search the entire blockstore for content to remove. When combined with a reference-counted GC that does not require loading all other pinned content into memory and searchin it, this will result in hugely significant improvement in the GC time.
-
-Removing pins will be slower because it requires walking DAG to decrement reference counts. Adding items to MFS and removing items from MFS will be slower due to needing to update reference counts. These increases should not be significant.  Datastore will use more space, one key-value entry per block in blockstore.  This may be significant, but should not cause problems for most users.
 
 ### What does success look like?
 Success, for Pinata, means that they can remove unpinned content with significant reduction in time that node is unavailable during GC.  Best case is that this allows Pinata to perform GC without having to take a node offline, and with little or no impact to IPFS running on the node.
@@ -96,7 +105,7 @@ Success also means that this functionality does not have a significant negative 
 If high performance GC results in reduced performance elsewhere, users not affected by GC performance issues will see this as a negative impact. The following areas could be negatively affected by the new GC, but hopefully none will be significant for any user
 - Removing pins will be slower because it requires walking DAG to decrement reference counts.
 - Adding items to MFS and removing items from MFS will be slower due to needing to update reference counts.
-- Keeping reference counts will consume for storage space
+- Keeping reference counts will consume for storage space, one key-value entry per block in blockstore.
 
 The project could fail, or fail to be deliverable in the proposed time if reference counting incurs unforseen complexity in its implementation or changes required to other subsystems.  The risk of the will be mitigated by early review of reference counting design and prototyping.
 

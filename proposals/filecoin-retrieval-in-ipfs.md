@@ -2,7 +2,7 @@
 
 Authors: @hannahhoward
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/57
 
 Problems Addressed:
 

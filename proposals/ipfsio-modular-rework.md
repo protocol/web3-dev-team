@@ -3,6 +3,7 @@
 Author: @jessicaschilling
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/10
+Project tracking board: https://github.com/orgs/ipfs/projects/11
 
 ## Purpose &amp; impact 
 #### Background &amp; intent

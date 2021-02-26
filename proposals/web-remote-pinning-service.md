@@ -22,13 +22,16 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 -->
 
 ## Purpose &amp; impact 
+
+-  Smooth developer experience around remote pinning in JS apps (PWA, Dapps for managing NFTs etc)
+
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
 <!--
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
 -->
 
-go-ipfs 0.8.0 and [IPFS HTTP Client][] have shipped support for [remote pinning services][]. [Pinata][] has shipped support and [Textile is commited][] to doing it as well. This enables users to persist and ensure their data is available without having to invest into own infrastructure. 
+go-ipfs 0.8.0 and [IPFS HTTP Client][] have shipped support for vendor-agnostic [remote pinning services][]. [Pinata][] has shipped support and [Textile is commited][] to doing it as well. This enables users to persist and ensure their data is available without having to invest into own infrastructure, nor risking a vendor lock-in. 
 
 Support has not been implemented in js-ipfs making this feature unavailable for web nodes, so teams building web3 products will need to contiune providing persistence through a backend as opposed to letting their users choose where their data gets persisted.
 
@@ -45,14 +48,15 @@ _What must be true for this project to matter?_
 
 - Teams building products would like an ability of not having to build persistence layer.
 - Pinning services will deploy support for this API.
+- Dapp / NFT developers see value in empowering users with ability to use custom / third party pinning services.
 
 #### User workflow example
 _How would a developer or user use this new capability?_
 <!--(short paragraph)-->
 
-App delevloper will have a choice to not build their own storage, instead allowing a user connect app with their pinata, textile or any other pinning service account _(with a flow similar to login with twitter/facebook/google)_ to register remote pininng service into app embedded IPFS node.
+App developer will have a choice to not build their own storage, instead allowing a user connect app with their Pinata, Textile, or any other pinning service account _(with a flow similar to login with twitter/facebook/google)_ to register remote pinning service into app embedded IPFS node.
 
-This would allow application to pin data at  pinning service of users choosing with a built-in remote pinning API.
+This would allow application to pin data at  pinning service of developer's or user's choosing, increasing user agency over their data, and simplifying long term storage story for web apps, dapps  and NFTs.
 
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
@@ -65,6 +69,7 @@ What awesome potential impact/outcomes/results will we see if we nail this proje
 - Web3 is all about making users in charge of their data. This makes it possible out of the box without any additional effort.
 - Enables a class of web3 applications that run all of the business logic at the edge to be backend free (app is deployed as a static bundle of html+js, users bring their data storage through pinning services).
 - Creates a potential to grow user base of pinning services by making them viable option for end users.
+- Increases surface for real-life use of Filecoin-backed pinning services for long-term storage.
 
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
@@ -82,7 +87,7 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 <!--Explain why this rating-->
 
-Level 3 - Apps already use pinnig services through proprietary APIs making it difficult to support multiple different services as each one requires additional development. Enabling them to use single API to support all existing and future pinning services creates a high value / low risk proposition.
+Level 3 - Apps (including NFTs) already use pinnig services through proprietary APIs making it difficult to support multiple different services as each one requires additional development. Enabling them to use single API to support all existing and future pinning services creates a high value / low risk proposition.
 
 
 ## Project definition
@@ -90,12 +95,14 @@ Level 3 - Apps already use pinnig services through proprietary APIs making it di
 
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
-- Just implement & land it.
+- Audit implementation in go-ipfs (`pin remote` commands and [automatic MFS pinning policy](https://github.com/ipfs/go-ipfs/blob/master/docs/config.md#pinningremoteservices-policiesmfs))
+- Implement in an idiomatic way that feels native to JS ecosystem
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
-- Version of js-ipfs is shipped with remote pinning API.
+- Version of js-ipfs is shipped with remote pinning API client under `pin.remote` commands. 
+- App developer can enable MFS autopinning.
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
@@ -121,7 +128,8 @@ _How might this project’s intent be realized in other ways (other than this pr
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
-- none
+- go-ipfs [v0.8.0](https://github.com/ipfs/go-ipfs/releases/v0.8.0) (done)
+- pinning-services-api-spec [v1.0.0](https://github.com/ipfs/pinning-services-api-spec/releases/tag/v1.0.0) (done)
 
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->

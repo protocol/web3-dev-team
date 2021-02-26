@@ -32,7 +32,7 @@ go-ipfs 0.8.0 and [IPFS HTTP Client][] have shipped support for [remote pinning 
 
 Support has not been implemented in js-ipfs making this feature unavailable for web nodes, so teams building web3 products will need to contiune providing persistence through a backend as opposed to letting their users choose where their data gets persisted.
 
-By implemnting support in js-ipfs we can enable ecosystem of web applications in which product users are empowered to choose where their data is persisted with almost no effort on teams building them.
+By implementing `pin remote` commands in js-ipfs we can enable ecosystem of web applications in which product users are empowered to choose where their data is persisted with almost no effort on teams building them.
 
 [remote pinning services]:https://ipfs.github.io/pinning-services-api-spec/
 [pinata]:https://pinata.cloud

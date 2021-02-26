@@ -89,7 +89,6 @@ Explain the opportunity or leverage point for our subsequent velocity/impact (e.
 -->
 
 - Improves velocity of teams building products requiring pubsub by removing additional burden.
-- Improves pubsub reliability by adding more enabled nodes to the network.
 - Enables development of new features that require pubsub.
 
 #### Confidence

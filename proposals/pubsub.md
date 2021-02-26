@@ -111,6 +111,7 @@ Level 3
 - Measure what is the overhead on nodes that do not directly use pubsub
 - If overhead is neglegable ship a release of go-ipfs with pubsub enabled (see [ipfs/go-ipfs#6621][])
 - Enable / upgrade IPFS nodes operated by PL.
+- Measure overhead & reliability on node operated by PL.
 - Raise awareness (blog, tweet, support community transition)
 
 #### What does done look like?

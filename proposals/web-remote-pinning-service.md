@@ -28,7 +28,7 @@ _Describe the desired state of the world after this project? Why does that matte
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
 -->
 
-go-ipfs 0.8.0 and [IPFS HTTP Client][] have shipped support for [remote pinning services][]. [Pinata][] is implementing support and [Textile is commited][] to doing it as well. This enables users to persist and ensure their data is available without having to invest into own infrastructure. 
+go-ipfs 0.8.0 and [IPFS HTTP Client][] have shipped support for [remote pinning services][]. [Pinata][] has shipped support and [Textile is commited][] to doing it as well. This enables users to persist and ensure their data is available without having to invest into own infrastructure. 
 
 Support has not been implemented in js-ipfs making this feature unavailable for web nodes, so teams building web3 products will need to contiune providing persistence through a backend as opposed to letting their users choose where their data gets persisted.
 

@@ -125,7 +125,7 @@ _Why might this project be lower impact than expected? How could this project fa
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
-Attacking this from the other angle and upgrading IPFS with abilities to store and retrieve from Filecoin. e.g. [myel.network](https://myel.network/).
+Attacking this from the other angle and upgrading IPFS with abilities to store and retrieve from Filecoin. e.g. [myel.network](https://myel.network/), [proposal #57](https://github.com/protocol/web3-dev-team/pull/57).
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->

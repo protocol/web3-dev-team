@@ -1,4 +1,4 @@
-# Reliable and extensible resolution of human-readable mutable names
+# Configurable DNS resolvers for human-readable mutable names
 
 Authors: @lidel
 
@@ -7,9 +7,9 @@ Initial PR: https://github.com/protocol/web3-dev-team/pull/42 <!-- Reference the
 
 Improve the way mutable names work in our stack.
 
-- Empower developers with reliable mechanisms for publishing updates
-  - Make IPNS useful on its own, and inside of DNSLink records
-  - Future-proof the way we do human readable names via DNS interop
+- Empower developers with reliable primitive for publishing updates on human-readable names
+- Future-proof the way we do human readable names via DNS interop
+- Reduce privacy risks related to DNS leaks  in plaintext 
 
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
@@ -45,9 +45,11 @@ There are three distinct types of addresses:
 **TLDR:** **We need to fix and future-proof the way mutable names work in our stack:**
 - Make IPNS useful on its own, and inside of DNSLink records.
     - DNS TXT record should be set only once, updates should be published over IPNS.
+    - This is out of the scope of this proposal, for IPNS improvements see [Proposal #19: Proposal: Reliable Mutability Primitive](https://github.com/protocol/web3-dev-team/pull/19)
 - Future-proof the way we do human readable names by
     - leveraging DNS protocol (not the DNS network run by ICANN) for interop with existing and future user agents and naming systems
     - allowing flexible configuration to improve security (DoH) and interop (DNSLink)
+
 
 
 
@@ -55,8 +57,9 @@ There are three distinct types of addresses:
 _What must be true for this project to matter?_
 <!--(bullet list)-->
 
-- Browser is the  main distribution channel for dapps.
-- Dapps are simply a subset of all static websites loaded from IPFS.
+- **NFTs require dedicated, user-friendly dapps .**
+- Browser is the  main distribution channel for dapps and NFTs.
+- **Dapps are simply a subset of all static websites loaded from IPFS.**
 - Most of websites hosted on IPFS have DNSLink set up for human-readable name.
 - We have mainstream browsers like Opera and [Brave](https://brave.com/ipfs-support/) ship support for `ipfs://` and `ipns://` URIs. 
     - Human readable names like `ipns://en.wikipedia-on-ipfs.org` work thanks to DNSLink
@@ -67,6 +70,7 @@ _What must be true for this project to matter?_
         - Updating `ipfs-ns` `contenthash` is a chore and costs extra (gas etc). 
         - Using `ipns-ns` means setting `contenthash` only once, introduces cost savings and simplifies publishing. 
     - We see multiple actors in the space providing either own TLDs or attempting to replace ICANN as the top-level authority: https://unstoppabledomains.com , http://opennic.org, https://handshake.org etc.
+    - Brave is looking into using DNS over HTTPS to resolve DNSLin for  non-ICANN TLDs like ENS (resolve `*.eth` via `https://eth.link/dns-query` etc)
     - We want to enable innovation in the decentralized naming space. This means removing ourselves as gatekeepers of what a valid domain name is.
     - When embedded in user agent (Brave) we want to follow user choices regarding DNS resolution.
     
@@ -77,10 +81,17 @@ _What must be true for this project to matter?_
 _How would a developer or user use this new capability?_
 <!--(short paragraph)-->
 
-- Improving human-readable naming removes huge DX/UX friction for dapp users and developers. 
-    - Messaging collapses to "Install Brave or Opera and open ipns://example.com"
-    - They use IPNS for publishing updates without ever touching DNS/ENS etc beyond initial setup. Most likely save money on gas and/or admin time.
-    - One-liner for setting up a custom DNSLink resolver improves onboarding for naming systems not supported by default and enables vendors like Brave to provide UI for changing resolution settings in more user-friendly manner.
+- Opening `ipns://mydapp.tld` "just works" in Brave
+- go-ipfs ships with implicit resolvers for non-ICANN naming systems (where feasible)
+    - OS-level resolver as the default
+    - https://eth.link/dns-query for `*.eth`
+    - TBD for UnstoppableDomains 
+- User or user agent is able to override implicit resolver for all or specific TLDs
+    - use encrypted DoH resolver for all DNS lookups
+      (eg. for privacy reasons,  or lack of trust for OS-level resolver from ISP)
+    - run local Ethereum client and set up IPNS node to resolve ENS natively via localhost resolver (removing the need for trusting eth.link)
+
+
 
 
 #### Impact
@@ -91,15 +102,19 @@ Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
 
-- IPNS provides a reliable solution for  cryptographically-verifiable mutable names that won't break, as long someone is re-publishing the latest record.
-    - Just Works (TM)
-    - There is no PKI, no centralization, full transparency and ownership.
-- DNSLink provides interop for human-readable names and enables independence from PKI and ICANN.
-    - Just Works (TM)
-    - No vendor-specific client is included. 
-    - No proprietary APIs or formats. RFC-compliant DNS only.
-    - We promote competition, letting the best solution win.
-    - User agency is respected. 
+- Human-readable naming removes huge DX/UX friction for multiple  stakeholders:
+  - Dapp developers can focus on dev instead of onboarding story
+    - Dapp marketing/onboarding collapses to:
+      > Install Brave or Opera and open ipns://mydapp.eth
+  - Alternative naming systems have way lower barier of entry
+    - Interop story with the old web and the entire IPFS ecosystem collapses to "repeat https://eth.link story":
+      > Expose DNS endpoint that returns A (gateway) and TXT (DNSLink) records
+    - One-liner for setting up a custom DNSLink resolver for specific TLD removes adoption barriers and improves onboarding for new naming systems, as those are no longer blocked by the lack of IPFS stewards blessing.
+  - Browser vendors have more confidence in running IPFS node
+    - Vendors like Brave are able to provide unified UI for changing name resolution settings in a single place, without fear that IPFS node will ignore user's choice and be responsible for any privacy leaks
+    - IPFS involvement is no longer needed when browser vendor wants to support new naming system
+
+
 
 
 #### Leverage
@@ -109,14 +124,19 @@ _How much would nailing this project improve our knowledge and ability to execut
 Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
 -->
 
-
+- NFT dapp developers need marketable names and a clear user onboarding story.
 - Brave wants to support alternatives to ICANN  out of the box. 
-    - By having resolver configurable per TLD namespace, we will be able to integrate with their resolution logic, providing seamless experience on `ipns://` out-of-the-box 
+    - By having resolver configurable per TLD namespace, we will be able to integrate with their resolution logic, providing seamless experience on `ipns://` out-of-the-box, acting as a template for others vendors who want to follow.
 - Every new project can experiment with IPFS via DNSLink integration without our involvement.
     - We no longer need to say "no" just to keep our code base small or worry about optics of "picking winners and losers".
-- Fixing IPNS rot would enable use of `dnslink=/ipns/{libp2p-key-cid}`
-    - Improved UX because DNS record needs to be set only once
-    - Reduced cost for blockchain-based alternatives to ICANN (like ENS), owner uses IPNS for publishing updates, saving on gas.
+- DNSLink provides interop for human-readable names and enables independence from PKI and ICANN.
+    - Just Works (TM)
+    - No vendor-specific client is included. 
+    - No proprietary APIs or formats. RFC-compliant DNS only.
+    - We promote competition, letting the best solution win.
+    - User agency is respected. 
+
+
 
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
@@ -130,24 +150,25 @@ Medium.
     - Cloudflare embraced DNSlink years ago, and they took over [the eth.link ENS resolver/gateway](https://blog.cloudflare.com/cloudflare-distributed-web-resolver/).
     - `ipns://` in address bar of Brave is an extremely powerful visual and a confidence booster about entire stack
 - We see alternatives to ENS popping up, but enabling them requires changes to our code bases and is not a trivial task.
-- Unfortunately, `dnslink=/ipns/` is a rare sight, due to IPNS rot, and people default to DNSLink even in cases where use of cryptographic identifiers would be a better choice.
+- Brave confirmed they will use DNS over HTTPS and expects go-ipfs to provide configuration option per TLD.
 
 ## Project definition
 #### Brief plan of attack
 
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
-- Tackle IPNS and DNS fixes in parallel, in both Go and JS
-- Introduce configurable DNS resolver per TLD while adding DNS over HTTPS support to entire stack
+- Adding DNS over HTTPS support to entire stack
+- Make if possible to configura different DNS resolver per TLD
+- Decide on short list of mature systems that don't collide with ICANN TLDs and can be included as implicit defaults
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
 - DNS over HTTPS is supported in js/go-ipfs/libp2p
-    - User agency around DNS is respected: every code path doing a DNS lookup (resolving DNSLink, `/dnsaddr`, `/dns*` multiaddrs) should use either explicit or implicit DNS resolvers defined in IPFS node configuration file.
+    - User agency around DNS is respected: every code path doing a DNS lookup (resolving DNSLink, `/dnsaddr`, `/dns*` multiaddrs) should use either explicit or implicit DNS resolvers defined in  configuration file / constructor params.
       - By default OS-level DNS resolver is used as catch-all, but the user can delegate resolution of all or specific TLDs to specific DoH resolvers.
       - Node tries to resolve with the most specific resolver (if present for TLD), and then fall back to the global one.
-    - Visual Aid / config mock-up
+    - Visual Aid: a config mock-up for go-ipfs
       ```json
         "DNS": {
           "Resolvers": {
@@ -158,15 +179,9 @@ _What specific deliverables should completed to consider this project done?_
           }
         }
       ```
-- DNSLink provides interop for human-readable names and enables independence from PKI and ICANN.
+- DNSLink provides interop for human-readable names and enables independence from ICANN.
     - Anyone can set up and run own naming system without our involvement, blessing or endorsement.
     - No vendor-specific client is included. 
-- IPNS provides a reliable solution for cryptographically-verifiable mutable names that won't break, as long someone is re-publishing the latest record.
-    - IPNS re-publishing works seamlessly, out of the box, just like providing CIDs for blocks in local datastore (pinned or not).
-    - It is possible to pin IPNS address to keep it around and ensure it resolves even when original publisher is gone.
-        - Node follows IPNS record updates and keeps re-publishing latest one if original author disappears.
-        - Node follows content updates behind the IPNS record, and update content pin every time IPNS record changes. 
-            - It is possible to opt-out from this behavior to re-publish IPNS record for `en.wikipedia-on-ipfs.org` without pinning all the data.
 
 
 ####  What does success look like?
@@ -176,15 +191,18 @@ _Success means impact. How will we know we did the right thing?_
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
 
-- We see % of `dnslink=/ipns/` going up.
-- We see more IPNS records on DHT
-- We no longer see requests for supporting new naming systems.
+- Brave ships support for more than one alternative TLD backed by local IPFS node
+- We see % of requests to non-ICANN TLDs going up (Brave / dweb.link)
+- We no longer see requests for supporting new naming systems 
+- We no longer see issues filled about our stack leaking DNS names in plaintext
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
  
-- Configurable per TLDs [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) resolver for  may be not enough to mitigate concerns around centralized nature of ICANN's DNS.
-- IPNS may have other problems that block it from practical use in DNSLink records (eg. resolution still taking way longer than immutable path, making initial page load slow).
+- Mainstream browser vendors may decide supporting alternative TLDs is not worth future headache when ICANN decides to sell same name.
+- Per TLDs [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) resolver may be not enough to mitigate concerns around centralized nature of ICANN's DNS, namely most of users or user agents  pointing their nodes at DoH endpoint from Google or Cloudflare.
+- This is necessary gruntwork, but we may not see DNSLink adoption going up until we provide truly decentralized solution (see Future opportunities).
+
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
@@ -196,21 +214,27 @@ _How might this project’s intent be realized in other ways (other than this pr
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
+- Remove hardcoding of `.eth` → `.eth.link`  from go-ipfs
 - DNS over HTTPS support in go/js-ipfs and go-/js-libp2p
-- IPNS record republishing/pinning
 
 
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
 
-- Dev grants / collabs with  various naming projects to provide DNSLink gateway (similar to https://eth.link) and DNS over HTTPS endpoint for resolving them securely, including JS in browsers.
+- User agents like Brave looking into deeper integration of IPFS into their UI and network stack
+    - Every Dapp with DNSLink could get [Open from IPFS](https://github.com/brave/brave-browser/issues/13609) badge etc
+- Collaborations with various naming projects to provide DNSLink gateway (similar to https://eth.link) and DNS over HTTPS endpoint for resolving them securely in user agents and JS in browsers.
     - Supporting competition, providing venue for rapid adoption and user onboarding, seeing what sticks.
-- P2P swarm resolvers and quorum acceptance criteria 
+- Implement [content routing hint via DNS records](https://github.com/ipfs/go-ipfs/issues/6516) and act on it with more confidence
+- Look into replacing semi-centralized DoH endpoints with P2P swarm resolvers and quorum acceptance criteria 
     - We should look into a way to harden DNS resolution without introducing any dependency on any complex public PKI (DNSLink should not require DNSSEC).
     - Instead of delegating DNS lookup to some DoH endpoint, leverage swarm of peers to increase trust in DNS lookup results.
-        - Ask a subset of peers (from different networks, jurisdictions etc) to resolve name for you, and pick record passing some quorum criteria.
-- Pinning Services support for IPNS pinning
-    - Follow IPNS record, ensure latest data is pinned, keep last-seen IPNS record available.
+      - Ask a subset of peers (from different networks, jurisdictions etc) to resolve name for you, and pick record passing some quorum criteria.
+- End-to-end website publishing and persistence with our stack
+    - Pinning Services support for DNSLink update as part of pinning
+    - Updating CID for a pin named `mysite.example.eth`  triggers DNSlink update (or IPNS update)
+- Leveraging DNSLink for petnames in private swarms
+
 
 ## Required resources
 
@@ -232,4 +256,3 @@ Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty i
 - js-ipfs/libp2p dev
 - go-ipfs/libp2p dev
 - DNSlink / DNS / DoH expertise
-- IPNS / DHT expertise

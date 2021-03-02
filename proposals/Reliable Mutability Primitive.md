@@ -96,7 +96,12 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 ##### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
-Publishing IPNS record takes just a few miliseconds. Shutting laptop and loading `https://ipfs.io/ipns/{key}` week later on other device loads the content published as fast as loading corresponding `https://ipfs.io/ipfs/{cid}`.
+- Publishing IPNS record takes just a few miliseconds. 
+- Shutting laptop and loading `https://ipfs.io/ipns/{key}` week later on other device loads the content published as fast as loading corresponding `https://ipfs.io/ipfs/{cid}`.
+- It is possible to pin IPNS address to keep it around and ensure it resolves even when original publisher is gone (AKA solving IPNS rot).
+  - Node follows IPNS record updates and keeps re-publishing latest one if original author disappears.
+  - Node follows content updates behind the IPNS record, and update content pin every time IPNS record changes. 
+  - It is possible to opt-out from this behavior to re-publish IPNS record for `en.wikipedia-on-ipfs.org` without pinning all the data.
 
 
 #####  What does success look like?
@@ -107,7 +112,8 @@ Provide success criteria. These might include particular metrics, desired change
 -->
 - People and teams are storing IPNS keys in [DNSLink][] records as opposed to CIDs, because that provides a more effective and simpler way to publish updates.
 - We see people storing IPNS addresses in ENS to save on blockchain transactions costs.
-- We see new projects leveraging IPNS (when human readable name is not a concern) instead of working around it wit [DNSLink][].
+- We see new projects leveraging IPNS (when human readable name is not a concern) instead of working around it with [DNSLink][].
+- We see more requests for  `/ipns/{libp2p-key}` paths on our public gateway (dweb.link &  ipfs.io).
 
 
 ##### Counterpoints &amp; pre-mortem
@@ -135,6 +141,7 @@ _How might this project’s intent be realized in other ways (other than this pr
 <!--What future projects/opportunities could this project enable?-->
 
 - [Petname][] system for memorable but non canonical names (kind of how our phones allow us to not remember numbers).
+- IPNS-based autoupdate mechanisms for our own stack (eg. go-ipfs, ipfs-desktop etc)
 - Subscribtion based deny lists (node can subscribe to any endpoint)
 - RSS like systems (In RSS readers memorable namse were not a concern)
 - DAGs revisions carrying IPNS key so that last latest revision or any past revision could be discovered.

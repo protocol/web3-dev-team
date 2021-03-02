@@ -1,6 +1,6 @@
 # `nft.storage` for [NFTHack](https://nfthack.ethglobal.co/)
 
-Authors: @alanshaw
+Authors: [@alanshaw](https://github.com/alanshaw)
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/62
 

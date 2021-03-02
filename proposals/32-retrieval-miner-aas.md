@@ -1,8 +1,8 @@
 # Personal Retrieval Miner as a Service (MaaS)
 
-Authors: @alanshaw
+Authors: [@alanshaw](https://github.com/alanshaw)
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/32
 
 Spin up a retrieval miner like you would a Redis. Charge it up with some FIL. Let it bridge to IPFS.
 
@@ -28,6 +28,9 @@ _Describe the desired state of the world after this project? Why does that matte
 <!--
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
 -->
+
+Tracker for what goes in.
+libp2p discovery module.
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_

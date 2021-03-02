@@ -2,7 +2,7 @@
 
 Authors: @alanshaw
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/62
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.
@@ -137,8 +137,8 @@ _Success means impact. How will we know we did the right thing?_
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
 
-* >25% of NFTHack participants use the service for persisting their NFT data.
-* >50% of NFT data submitted during the week is also stored on Filecoin.
+* \>25% of NFTHack participants use the service for persisting their NFT data.
+* \>50% of NFT data submitted during the week is also stored on Filecoin.
 * Increased adoption of the remote pinning API in developer applications.
 
 #### Counterpoints &amp; pre-mortem

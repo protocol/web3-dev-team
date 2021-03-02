@@ -20,7 +20,7 @@ Projects do not include regular day-to-day maintenance and improvement work, e.g
 For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
 -->
 
-This is a proposal for time limited storage of NFT data on IPFS, backed by Filecoin and provided **free** to NFTHack participants during the hackathon.
+This is a proposal for time limited storage of NFT data on IPFS, backed by Filecoin and provided **free** to NFTHack participants during the hackathon (March 19 2021).
 
 * Register `nft.storage` (or other cool domain name) and expose a [pinning service API](https://blog.ipfs.io/2021-02-19-go-ipfs-0-8-0/#remote-pinning-services).
 
@@ -30,7 +30,7 @@ This is a proposal for time limited storage of NFT data on IPFS, backed by Filec
 
     Here's some of the AWESOME things we could build and deploy in this space:
 
-    * Create a library that automatically makes deals on Filecoin for the pinned data (use/adapt the dealbot?). This is mentioned in the [AWS Facade proposal](https://github.com/protocol/web3-dev-team/pull/34) and could be re-used here and there.
+    * Create a library that automatically makes deals on Filecoin for the pinned data (use/adapt the dealbot?). This is mentioned in the [AWS Facade proposal](https://github.com/protocol/web3-dev-team/pull/34) and could be re-used there.
 
     * Implement a [deal batching service](https://github.com/protocol/web3-dev-team/pull/60) prototype for increased successful deal probability.
 

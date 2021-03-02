@@ -20,7 +20,7 @@ Projects do not include regular day-to-day maintenance and improvement work, e.g
 For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
 -->
 
-This is a proposal for time limited storage of NFT data on IPFS, backed by Filecoin and provided **free** to NFTHack participants during the hack week.
+This is a proposal for time limited storage of NFT data on IPFS, backed by Filecoin and provided **free** to NFTHack participants during the hackathon.
 
 * Register `nft.storage` (or other cool domain name) and expose a [pinning service API](https://blog.ipfs.io/2021-02-19-go-ipfs-0-8-0/#remote-pinning-services).
 
@@ -138,13 +138,13 @@ Provide success criteria. These might include particular metrics, desired change
 -->
 
 * \>25% of NFTHack participants use the service for persisting their NFT data.
-* \>50% of NFT data submitted during the week is also stored on Filecoin.
+* \>50% of NFT data submitted during the hackathon is also stored on Filecoin.
 * Increased adoption of the remote pinning API in developer applications.
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
-There is not a lot of time before the hack week 😬.
+There is not a lot of time before the hackathon 😬.
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_

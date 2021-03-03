@@ -158,6 +158,7 @@ _How might this project’s intent be realized in other ways (other than this pr
 <!--What future projects/opportunities could this project enable?-->
 
 * Extend it as a paid for service and gift it to a pinning service to run/maintain?
+* Add community funding to keep a CID alive. Any member of the community can chose to contribute to the hosting cost for a given CID, and you can see how many years it has on clock.
 
 ## Required resources
 

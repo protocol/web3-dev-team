@@ -69,6 +69,8 @@ _What must be true for this project to matter?_
 
 * NFT users want to store NFT data on IPFS.
 * NFT users want guarantees of data availability.
+* NFT platforms care about their end users being able to take control of their data.
+    * e.g. An artist would be able to retrieve their data even if X app went away tomorrow.
 
 #### User workflow example
 _How would a developer or user use this new capability?_

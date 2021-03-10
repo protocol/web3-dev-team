@@ -1,6 +1,6 @@
 # Effective content and service discovery in JS
 
-Authors: @jacobheun
+Authors: @jacobheun, @vasco-santos
 
 Initial PR: TBD
 
@@ -11,21 +11,40 @@ _Describe the desired state of the world after this project? Why does that matte
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives.
 -->
 
-**Current State**
-- JS projects rely on delegate and preload nodes to be able to interact with the live network
-- PL hosted delegate/preload nodes are often overloaded negatively impact performance of projects
+Currently, all JS Projects rely on delegate and preload nodes to be able to interact with the live network (Browser, node, electron, react native, etc).
+
+Preload/Delegate content makes JS projects bandwidth heavy:
+  - Every piece of data added to a JS node is transferred to a preload node
+  - Every block is republished every hour to the delegates to survive garbage collection
+
+PL provides delegate/preload nodes for out the box usage by JS projects:
+  - These nodes are often overloaded negatively impact performance of projects
+  - These nodes might be blocked by some countries
+
+We need to recommend teams with JS expertise to learn Golang and use go-ipfs, in order to overcome the current content routing limitations, which might make these teams look for other alternatives.
+
+After completing this project it should be possible for users to efficiently and reliably use content and peer routing on at least Node.js and Electron.
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
 <!--(bullet list)-->
 
-TODO
+- A large slice of the developers in the web3 space are JS developers
+- Web3 developers want efficient and reliable content and peer routing in JS
+- Dapps need efficient and reliable service discovery
+  - find relays to bind, in order to accept incoming connections
+  - find pubsub peers with shared interests
+- Dapp developers want to easily discover all the peers running their dapp
 
 #### User workflow example
 _How would a developer or user use this new capability?_
 <!--(short paragraph)-->
 
-TODO
+- Users should interact in the same fashion as using the delegates
+  - use libp2p's contentRouting and peerRouting APIs
+- Out of the box connectivity enabled
+  - Specially in libp2p, where users need to setup delegates themselves
+  - Able to advertise services on the network and discover (connect?) to these peers
 
 #### Impact
 TODO
@@ -82,6 +101,9 @@ _Why might this project be lower impact than expected? How could this project fa
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
+
+- Better support of delegation (libp2p delegation protocol)
+- Rendezvous full support and deployed servers
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->

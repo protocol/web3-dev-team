@@ -115,6 +115,7 @@ Provide success criteria. These might include particular metrics, desired change
   - Nodes are connected to 6 pubsub nodes
   - Nodes are connected to X closest peers
   - Browser nodes are always advertising a multiaddr through a relay
+  - Browser nodes are dialed from go nodes (through a relay)
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

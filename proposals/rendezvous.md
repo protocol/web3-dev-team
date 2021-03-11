@@ -63,7 +63,7 @@ Rendezvous can offer a wide range of scenarios.
 
 1. A developer will start a `js-ipfs` node in the browser (pubsub is enabled by default) and behind the scenes the node will be able to discover and connect to nodes that share the same interestes (pubsub subscriptions)
 2. A developer will start a `js-ipfs` node in the browser and the node will try to find available relays out of the box, so that it can use them to receive incoming dials.
-3. A developer can use the Rendezvous API to register peers under a given namespace, so that other nodes can easily find them. Example: Discover all the peers running in the dapp scope
+3. A developer can use the Rendezvous API to register peers under a given namespace, so that other nodes can easily find them. Example: Discover all the peers running in the dapp scope. A real use case would be Slate, which has this requirement.
 
 
 #### Impact

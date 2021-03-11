@@ -14,7 +14,7 @@ Outline the status quo, including any relevant context on the problem you’re s
 Currently, to make sure data is persistently stored in a decentralized mechanism as an IPFS user is a complicated process.
 In this position, you need to get access to a filecoin node, either by running a full lotus node, or paying someone else, like
 infura to run one for you. Then, on the lotus command line, you can make a 'deal' with a miner to store data.
-The lotus deal process allows the source of the data to be a local IPFS node, and will then retreave and stream the data
+The lotus deal process allows the source of the data to be a local IPFS node, and will then retrieve and stream the data
 to the miner for storage, but there's no way to 'push' this data to the filecoin system from IPFS even though doing
 so is conceptually similar to the existing 'remote pinning' API that does already exist for centralized pinning providers.
 

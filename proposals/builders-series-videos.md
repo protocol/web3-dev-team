@@ -66,10 +66,15 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
 #### What does done look like?
-_What specific deliverables should completed to consider this project done?_
+- Initial video is finished and published to ipfs.io, YouTube, and our social media channels
+- Video is ready for presenting as appropriate to future hackathons
+- Timelines for work on future videos has been determined and agreed upon (or a decision deferral date set)
 
 ####  What does success look like?
-_Success means impact. How will we know we did the right thing?_
+- Positive reception (likes, comments, reposts) on social media
+- Positive reception in hackathons
+- Click-through rate for "additional resources" offered in video end card
+- Other collabs enthusiastically willing to be video subjects
 
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.

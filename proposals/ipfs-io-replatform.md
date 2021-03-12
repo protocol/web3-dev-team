@@ -66,14 +66,14 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
 #### What does done look like?
-_What specific deliverables should completed to consider this project done?_
+- Existing content on ipfs.io is migrated to new platform and deployed via Fleek with no disruption of service, broken links, etc
+- Metrics collection implemented via Countly
 
 ####  What does success look like?
-_Success means impact. How will we know we did the right thing?_
-
-<!--
-Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
--->
+- More granular metrics as a whole
+- Ability to use those metrics to help us impact-prioritize future site enhancements
+- Easier, less "risky" deploys (requires less infra intervention, etc)
+- Door open to future rapid iteration on site improvements without first needing to resolve tech debt
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

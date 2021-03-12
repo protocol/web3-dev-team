@@ -4,50 +4,51 @@ Author: @jessicaschilling
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/73 
 
-Larger-scale proposal for overall ipfs.io work: https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
+Larger-scale proposal for overall ipfs.io work, including this effort: https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
 
 Project tracking board for overall ipfs.io work: https://github.com/orgs/ipfs/projects/11
 
-<!--
-This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.
-The goal of project proposals is to help us decide which work to take on, which things are more valuable than other things.
--->
-<!--
-A proposal should contain enough detail for others to understand how this project contributes to our team’s mission of product-market fit
-for our unified stack of protocols, what is included in scope of the project, where to get started if a project team were to take this on,
-and any other information relevant for prioritizing this project against others.
-It does not need to describe the work in much detail. Most technical design and planning would take place after a proposal is adopted.
-Good project scope aims for ~3-5 engineers for 1-3 months (though feel free to suggest larger-scoped projects anyway). 
-Projects do not include regular day-to-day maintenance and improvement work, e.g. on testing, tooling, validation, code clarity, refactors for future capability, etc.
--->
-<!--
-For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
--->
+Notion tracking board for just this project: https://www.notion.so/protocollabs/058-What-are-People-Building-81d72cdeeda94724a0d1ebb4222eb098
 
 ## Purpose &amp; impact 
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
-<!--
-Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
--->
+
+Prospective w3dt developers — particularly those discovering the stack as part of our "hackathon life" focus — are inspired, informed and empowered by a series of short testimonial/value-demo videos showcasing w3dt builders, their successful projects, and how the stack has enabled their success. They understand how a builder's project is unique, disruptive, or otherwise valuable; how the w3dt stack is critical to the project's success; and where they can go next to learn more and get started themselves.
+
+The first of these videos (featuring Pinata) will be prominently showcased on ipfs.io, on our social channels, and at hackathons for maximum discoverability and impact.
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
-<!--(bullet list)-->
+
+✓ Prospective developers want to know about existing success in areas similar to theirs
+
+✓ Showcasing known wins is essential to inspiring others to adopt the w3dt stack
+
+✓ We have enough known-win builders to be able to make a positive impact by showing them off
 
 #### User workflow example
 _How would a developer or user use this new capability?_
-<!--(short paragraph)-->
+
+1. Prospective developer or other decisionmaker is curious about decentralization/dweb/web3 in general, and/or the w3dt stack or IPFS in particular
+2. They watch one or more Builders Series videos, discovered via ipfs.io, PL-managed social channels, or hackathon welcome materials
+3. They quickly understand the following, relative to their own need at hand:
+     - Other interesting orgs are already building and succeeding with IPFS, Filecoin, and other parts of the w3dt stack
+     - These orgs are unique, disruptive, successful and valuable; they're making the world a better place
+     - The w3dt stack is critical to their projects' success
+     - These orgs are enthusiastic IPFS/Filecoin/w3dt supporters, and encourage others to try them out
+     - Where to go for next steps
+4. They try the stack themselves and progress to the next circle in the Magic State Machine
 
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
 
+These videos are an explicit demonstrator of w3dt product-market fit: They literally lay out how w3dt stack ingredients fit into the functional success of high-value builders.
+
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
-<!--
-Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
--->
+Getting this messaging right enables us to effectively reach a wide range of prospective devs at the very front of the funnel, an area we have historically underserved. With our increased focus on hackathon participants and bettering the "first experience" of our websites and social media, this project is a highly versatile, largely evergreen, widely reusable touchpoint for kicking off the developer acquisition process.
 
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
@@ -59,8 +60,13 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 ## Project definition
 #### Brief plan of attack
-
-<!--Briefly describe the milestones/steps/work needed for this project-->
+1. Determine shortlist of orgs to profile, including first video subject - note this will need to factor in ability to do effective work and still be COVID-safe
+2. Draft, discuss and align on repeatable story outline for series: what needs to be conveyed, in what order, for all videos?
+3. Determine what's available to us visually within our budget, and align on a repeatable plan for shooting/editing reliably within budget
+4. Create story guide and interview questions, determine overall visual aesthetic, etc
+5. Shoot and edit PoC video (Pinata)
+6. Post on ipfs.io, all appropriate social channels, and include in upcoming hackathons; measure and gauge reaction/enthusiasm
+7. Tweak and repeat for remaining videos (including determining how many videos in entire series)
 
 #### What does done look like?
 - Initial video is finished and published to ipfs.io, YouTube, and our social media channels
@@ -72,10 +78,6 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 - Positive reception in hackathons
 - Click-through rate for "additional resources" offered in video end card
 - Other collabs enthusiastically willing to be video subjects
-
-<!--
-Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
--->
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

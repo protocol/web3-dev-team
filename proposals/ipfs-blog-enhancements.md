@@ -66,14 +66,16 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
 #### What does done look like?
-_What specific deliverables should completed to consider this project done?_
+- Existing content on blog.ipfs.io is migrated to new platform and deployed via Fleek with no disruption of service, broken links, etc
+- Workflow and DRI exist for submitting, adding and maintaining non-blog content types
+- Any follow-up work is documented, issue-ized, and assigned
+- Metrics collection implemented via Countly
 
 ####  What does success look like?
-_Success means impact. How will we know we did the right thing?_
-
-<!--
-Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
--->
+- Uptick in overall visitors vs existing blog
+- Public-submitted or labber-submitted links are at a "good" number (TBD - will need to establish baseline since this is new functionality)
+- Internal satisfaction with ease of posting/publishing/deploying
+- Fewer internal fire drills at publishing/revision time; blogging plays a smooth role in overall marketing workflow
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

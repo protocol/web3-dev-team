@@ -2,7 +2,7 @@
 
 Author: @jessicaschilling
 
-Initial PR: TBD 
+Initial PR: https://github.com/protocol/web3-dev-team/pull/74 
 
 Larger-scale proposal for overall ipfs.io work (deprecated, as broken into smaller pieces): https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
 

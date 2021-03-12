@@ -4,7 +4,7 @@ Author: @jessicaschilling
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/73 
 
-Larger-scale proposal for overall ipfs.io work (deprecated, as broken into smaller pieces): https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
+Larger-scale proposal for overall ipfs.io work: https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
 
 Project tracking board for overall ipfs.io work: https://github.com/orgs/ipfs/projects/11
 
@@ -42,11 +42,6 @@ _How would a developer or user use this new capability?_
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
 
-<!--
-Explain how this addresses known challenges or opportunities.
-What awesome potential impact/outcomes/results will we see if we nail this project?
--->
-
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
@@ -57,7 +52,9 @@ Explain the opportunity or leverage point for our subsequent velocity/impact (e.
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
-<!--Explain why this rating-->
+- **Impact = 9** (currently no high-level short videos available showcasing _possibilities_ of the tech; currently no videos on top of ipfs.io, nor specific illustrations of IPFS in action)
+- **Confidence = 8** (user testing specifically revealed need for more high-level video content; also specifically flagged as hackathon need)
+- **Ease = 6** (COVID presents some challenges, but work itself isn't difficult and is somewhat repeatable)
 
 
 ## Project definition

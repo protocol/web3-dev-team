@@ -8,62 +8,64 @@ Larger-scale proposal for overall ipfs.io work (deprecated, as broken into small
 
 Project tracking board for overall ipfs.io work: https://github.com/orgs/ipfs/projects/11
 
-<!--
-This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.
-The goal of project proposals is to help us decide which work to take on, which things are more valuable than other things.
--->
-<!--
-A proposal should contain enough detail for others to understand how this project contributes to our team’s mission of product-market fit
-for our unified stack of protocols, what is included in scope of the project, where to get started if a project team were to take this on,
-and any other information relevant for prioritizing this project against others.
-It does not need to describe the work in much detail. Most technical design and planning would take place after a proposal is adopted.
-Good project scope aims for ~3-5 engineers for 1-3 months (though feel free to suggest larger-scoped projects anyway). 
-Projects do not include regular day-to-day maintenance and improvement work, e.g. on testing, tooling, validation, code clarity, refactors for future capability, etc.
--->
-<!--
-For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
--->
-
 ## Purpose &amp; impact 
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
-<!--
-Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
--->
+
+The existing raster ecosystem diagram (referred to in a number of locations, but primarily from ipfs.io) is replaced by an interactive, information-rich version that more effectively illustrates how IPFS adds critical value and essential tech enablement for our collabs’ orgs, projects, and industries. This information inspires and empowers prospective developers with concrete examples of success within orgs and projects like theirs.
+
+The complete ecosystem directory lives at ecosystem.ipfs.io (or similar), but is also "teased" from a variety of locations via a minimized, visually themeable version that offers a sortable subset of info with a strong CTA to visit the full version.
+
+The directory will initially launch with IPFS data, but is easily forked and customized for other parts of the w3dt stack, or even for showcasing participants at hackathons and similar events.
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
-<!--(bullet list)-->
+
+✓ Prospective developers want to know about existing success in areas similar to theirs
+✓ Showcasing known wins is essential to inspiring others to adopt the w3dt stack
+✓ We have enough known-win builders to be able to make a positive impact by showing them off
 
 #### User workflow example
-_How would a developer or user use this new capability?_
-<!--(short paragraph)-->
+
+1. Developer or other decisionmaker is curious about decentralization/dweb/web3 in general, and/or the w3dt stack or IPFS in particular
+2. They see a "who's building on IPFS" teaser on ipfs.io, docs.ipfs.io, or other high-level locations, and click through to explore the larger directory
+3. They quickly understand the following, *relative to their own need at hand*:
+    - many others are already building and succeeding with IPFS
+    - including existing wins on their own platform/language of choice
+    - existing winners successfully used IPFS to meet their core functional or ideological goals
+    - existing winners have repos, case studies or other resources to view as reference/inspiration
+4. They try IPFS themselves and progress to the next circle in the Magic State Machine
 
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
 
-<!--
-Explain how this addresses known challenges or opportunities.
-What awesome potential impact/outcomes/results will we see if we nail this project?
--->
+This directory is an explicit demonstrator of w3dt product-market fit: It literally lays out how w3dt stack ingredients fit into the functional success of known IPFS builders.
 
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
-<!--
-Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
--->
+By explicitly conveying the benefits of IPFS in real-world use cases, this directory enables more contributors as well as gives them a greater idea of what's specifically possible right off the bat. By pointing to real-world successes, this directory should also help shortcut the path between experimentation and initial success for new devs.
 
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
-<!--Explain why this rating-->
+- **Impact = 10** (top of funnel is presently neglected and fundamentally leaky, and this project acts both as a data source and as a lever for many other developer-adoption efforts)
+- **Confidence = 8** (abundance of internal/external feedback the current diagram is outdated and lacking in clarity)
+- **Ease = 6** (lots of moving parts, but few outright technical challenges in the work itself)
 
 
 ## Project definition
 #### Brief plan of attack
 
-<!--Briefly describe the milestones/steps/work needed for this project-->
+1. Research participants in outdated raster diagram to cull for known-invalid ones, add new ones from existing institutional knowledge, etc; consolidate into database
+2. Survey all participants to ensure data is accurate and inclusion in directory is approved
+3. Spec out information architecture, use cases for "teaser view" vs full view, etc
+4. Spec out modularity needs so work can be forked for other purposes
+5. Wireframe and test wireframes
+6. Build phase, including periodic stakeholder check-ins
+7. Documentation for future fork-ers
+8. Integration in ipfs.io, docs.ipfs.io
+9. Social promotion
 
 #### What does done look like?
 - Initial (IPFS) implementation is live in full view at ecosystem.ipfs.io (or similar), including metrics collection

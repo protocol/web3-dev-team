@@ -100,4 +100,8 @@ Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty i
 -->
 
 #### Roles / skills needed
-<!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
+- Project lead/PM (Jessica Schilling): Coordinate tasks, manage schedule/dependencies, ensure adherence to spec, etc
+- Video team (Zak Robinson, Nick Cucci): Cooordinate video shoot and production, edit, manage approval workflow
+- Video graphics (TBD - may be outsourced): Create any static or motion graphics used in videos
+- Site implementation (Zé Bateira): Add video(s) to ipfs.io, including any additional metrics events if site is replatformed by then
+- Social media implementation (PL marketing team): Disperse via all appropriate social channels

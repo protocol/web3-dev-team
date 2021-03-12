@@ -78,14 +78,21 @@ Provide success criteria. These might include particular metrics, desired change
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
+- Not showcasing the highest-impact builders, builders that offer empathy/identification for potential builders, etc.
+- Not creating enough videos for them to offer useful contrast and counterpoint as a set
+- Not promoting adequately enough via social, hackathons, etc
+
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
+- Adding more case studies scratches a similar itch, but ignores those for whom video is a preferred learning method
+
 #### Dependencies/prerequisites
-<!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
+None. _Note, however, that we won't get as thorough of watch metrics if we embed on existing ipfs.io site than we would on a replatformed, Countly-enabled ipfs.io as described in https://github.com/orgs/ipfs/projects/11._
 
 #### Future opportunities
-<!--What future projects/opportunities could this project enable?-->
+- An expanded series of videos - either just _more_ videos, or _more focused_ videos for audiences like "building NFTs", "building on Ethereum", etc
+- Followup materials for each video — case studies, opportunities for hackathon tie-in talks from the builders, etc
 
 ## Required resources
 

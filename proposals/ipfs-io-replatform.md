@@ -100,4 +100,6 @@ Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty i
 -->
 
 #### Roles / skills needed
-<!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
+- Project lead/PM (Jessica Schilling): Coordinate tasks, manage schedule/dependencies, ensure adherence to spec, etc
+- Build/test team (Zé Bateira, João Peixoto): Replatform, add metrics, pre- and post-launch testing
+- If work expands to include any site enhancements, skills needed may include user research/testing, content writing, visual design

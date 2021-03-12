@@ -90,14 +90,9 @@ _How might this project’s intent be realized in other ways (other than this pr
 ## Required resources
 
 #### Effort estimate
-<!--T-shirt size rating of the size of the project. If the project might require external collaborators/teams, please note in the roles/skills section below). 
-For a team of 3-5 people with the appropriate skills:
-- Small, 1-2 weeks
-- Medium, 3-5 weeks
-- Large, 6-10 weeks
-- XLarge, >10 weeks
-Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
--->
+Shirt size: Large
+
+_Note that sizing is for the initial (IPFS) implementation only; forks (Filecoin, hackathons, etc) will need extra time for customization._
 
 #### Roles / skills needed
 - Project lead/PM/agency liaison (Jessica Schilling): Coordinate tasks, manage schedule/dependencies, ensure adherence to spec, etc

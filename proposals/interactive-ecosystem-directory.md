@@ -66,14 +66,15 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
 #### What does done look like?
-_What specific deliverables should completed to consider this project done?_
+- Initial (IPFS) implementation is live in full view at ecosystem.ipfs.io (or similar), including metrics collection
+- Summary/teaser views are installed on ipfs.io and, if appropriate, docs.ipfs.io
+- Documentation is ready for those who wish to fork
 
 ####  What does success look like?
-_Success means impact. How will we know we did the right thing?_
-
-<!--
-Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
--->
+- Steady and increasing traffic to directory as a whole
+- Measurable engagement with "next steps" throughout directory: repo/case study/outbound links, dwell time in ecosystem as a whole, etc
+- Enthusiasm from other builders who want to be included in directory (TBD if we wish to allow builders to self-submit to be in directory, or if it's by invitation)
+- Ease of forking for other projects
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

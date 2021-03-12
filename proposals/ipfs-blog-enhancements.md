@@ -78,14 +78,21 @@ Provide success criteria. These might include particular metrics, desired change
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
+- Failing to keep content up to date and/or properly tagged
+- Failing to make the most of added content types (e.g. only adding blog posts)
+
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
+- Training all blog writers/editors on Markdown practices
+- Remedying flaws in our existing CI/CD pipeline
+
 #### Dependencies/prerequisites
-<!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
+None
 
 #### Future opportunities
-<!--What future projects/opportunities could this project enable?-->
+- More blog authors or more frequent posts due to ease of publishing
+- Establishment as a central "IPFS news clearinghouse" and IPFS event directory if those content types are consistently updated
 
 ## Required resources
 

@@ -78,14 +78,23 @@ Provide success criteria. These might include particular metrics, desired change
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
+- Failure to make modular enough to easily fork for other future projects
+- Failure to maintain: ecosystem collabs get stale or go out of business, new ones don't get added
+- Risk of dilution of messaging due to "design by committee"
+- Trying to do too much for too many audiences (too long, too complex, not complex enough, etc)
+
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
+- Refocus Awesome IPFS to _only_ include high-impact/high-value collabs (but this leaves us without a showcase for nifty one-off hacker projects and the like)
+- Expand existing raster diagram to include more info (but a code-based solution like this proposal would actually be easier to maintain, particularly because it can be forked for other projects)
+
 #### Dependencies/prerequisites
-<!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
+- Getting enough participants for existing launch (on track for approx 50 participants as of early March)
 
 #### Future opportunities
-<!--What future projects/opportunities could this project enable?-->
+- Already plans to fork this content for Filecoin ecosystem
+- Already plans to fork this content for one-off events, like a showcase of hackathon participants, since data source is JSON rather than an integrated database
 
 ## Required resources
 

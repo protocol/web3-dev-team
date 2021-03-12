@@ -78,14 +78,20 @@ Provide success criteria. These might include particular metrics, desired change
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
+- Stopping just at replatforming and not using it as a launchpad for further PMF iterations and improvements
+
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
+- Rework messaging on existing website (note though that this doesn't save much effort; migrating the existing website is the least worry, and will lead to duplication of work in the future if we decide to replatform at a later date)
+
 #### Dependencies/prerequisites
-<!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
+- Not strictly a dependency, but development work will go smoother if we wrap up IPFS blog replatform first
 
 #### Future opportunities
-<!--What future projects/opportunities could this project enable?-->
+- Easier and quicker to iterate on future site improvements
+- Speedier, easier deployments
+- Enhanced metrics open possibilities for more rapid ore even A/B message testing
 
 ## Required resources
 

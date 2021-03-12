@@ -1,8 +1,12 @@
-# [outcome or objective here] 
+# IPFS blog enhancements
 
-Authors: <!-- List authors' GitHub or other handles -->
+Author: @jessicaschilling
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: TBD 
+
+Larger-scale proposal for overall ipfs.io work (deprecated, as broken into smaller pieces): https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
+
+Project tracking board for overall ipfs.io work: https://github.com/orgs/ipfs/projects/11
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.

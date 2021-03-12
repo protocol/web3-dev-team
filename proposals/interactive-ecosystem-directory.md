@@ -4,7 +4,7 @@ Author: @jessicaschilling
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/72 
 
-Larger-scale proposal for overall ipfs.io work: https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
+Larger-scale proposal for overall ipfs.io work, including this effort: https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
 
 Project tracking board for overall ipfs.io work: https://github.com/orgs/ipfs/projects/11
 

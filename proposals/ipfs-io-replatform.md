@@ -47,8 +47,8 @@ However, this project also lays the groundwork for future enhancements that enab
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
-- **Impact = 10** (top of funnel is presently neglected and fundamentally leaky, and this project gives us a metrics source for prioritizing future front-of-funnel work while providing a stable, up-to-date platform for implementing it)
-- **Confidence = 8** (abundance of internal/external feedback the current site isn't doing its job)
+- **Impact = 8** (top of funnel is presently neglected and fundamentally leaky, and this project gives us a metrics source for prioritizing future front-of-funnel work while providing a stable, up-to-date platform for implementing it)
+- **Confidence = 10** (abundance of internal/external feedback the current site isn't doing its job)
 - **Ease = 5** (lots of moving parts, but few outright technical challenges in the work itself)
 
 ## Project definition
@@ -93,7 +93,7 @@ _How might this project’s intent be realized in other ways (other than this pr
 ## Required resources
 
 #### Effort estimate
-Shirt size: Medium if no work apart from lift-and-shift, large+ if additional site enhancements included in initial work (recommend breaking these out into batches for future proposals)
+Shirt size: Medium 
 
 #### Roles / skills needed
 - Project lead/PM (Jessica Schilling): Coordinate tasks, manage schedule/dependencies, ensure adherence to spec, etc

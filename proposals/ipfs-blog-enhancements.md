@@ -13,14 +13,19 @@ Repo for the new blog: http://github.com/ipfs/ipfs-blog
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
 
-Prospective and current IPFS and w3dt developers have a “one-stop shop” for up-to-date IPFS info that can be easily filtered and searched to meet the specific needs of a wide variety of audiences (technical users, newcomers, press, etc) as well as to optimize cross-item discovery, metrics collection, and inbound SEO. Primary content focus is on our (already frequently updated) blog posts, but includes a mix of other relevant content in a manner that surfaces relevant info without creating an ongoing maintenance/updating burden on our core team. This front-end presentation is matched on the back end by a Markdown-driven content rendering engine that significantly reduces friction for post authors/editors, as well as a content submission form accessible by the public and easily managed by administrators.
+Prospective and current IPFS and w3dt developers have a “one-stop shop” for up-to-date IPFS info that can be easily filtered and searched to meet the specific needs of a wide variety of audiences (technical users, newcomers, etc) as well as to optimize cross-item discovery, metrics collection, and inbound SEO. Primary content focus is on our (already frequently updated) blog posts, but includes a mix of other relevant content in a manner that surfaces relevant info without creating an ongoing maintenance burden on our core team. This front-end presentation is matched on the back end by a Markdown-driven content rendering engine that significantly reduces friction for post authors/editors, as well as a content submission form accessible by the public and easily managed by administrators.
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
+
 ✓ Our blog is a valuable source of content for prospective and current devs
+
 ✓ Those audiences would also benefit from single-source access to other IPFS-related content: news stories, release notes, tutorials, videos, academic papers, event listings, etc
+
 ✓ Not having search or tagging on blog posts is a missed opportunity, both for our readers and for our metrics collection
+
 ✓ We can use readership metrics to better understand our audience and PMF in general
+
 ✓ Labbers would significantly benefit from an easier post-authorship process and smoother deployments
 
 #### User workflow example
@@ -54,7 +59,7 @@ This work lays the foundation for future improvements to ipfs.io as a whole, par
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
-- **Impact = 8** (opportunity to resolve neglected media page with something easy to maintain; making posting significantly easier speeds blog post delivery; tagging and search significantly improve user experience AND add metrics collection points)
+- **Impact = 8** (opportunity to replace neglected ipfs.io/media with something easy to maintain; making posting significantly easier speeds blog post delivery; tagging and search significantly improve user experience AND add metrics collection points)
 - **Confidence = 10** (effort will directly resolve known pain points, including deployment woes, image size, difficulty of posting, no search functionality, etc)
 - **Ease = 5** (lots of moving parts, but few outright technical challenges in the work itself)
 

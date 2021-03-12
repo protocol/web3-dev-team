@@ -4,7 +4,7 @@ Author: @jessicaschilling
 
 Initial PR: https://github.com/protocol/web3-dev-team/pull/72 
 
-Larger-scale proposal for overall ipfs.io work (deprecated, as broken into smaller pieces): https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
+Larger-scale proposal for overall ipfs.io work: https://github.com/protocol/web3-dev-team/blob/ipfsio-modular-rework/proposals/ipfsio-modular-rework.md
 
 Project tracking board for overall ipfs.io work: https://github.com/orgs/ipfs/projects/11
 
@@ -12,7 +12,7 @@ Project tracking board for overall ipfs.io work: https://github.com/orgs/ipfs/pr
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
 
-The existing raster ecosystem diagram (referred to in a number of locations, but primarily from ipfs.io) is replaced by an interactive, information-rich version that more effectively illustrates how IPFS adds critical value and essential tech enablement for our collabs’ orgs, projects, and industries. This information inspires and empowers prospective developers with concrete examples of success within orgs and projects like theirs.
+The existing [raster IPFS ecosystem diagram](https://ipfs.io/images/ipfs-applications-diagram.png) is replaced by an interactive, information-rich version that more effectively illustrates how IPFS adds critical value and essential tech enablement for our collabs’ orgs, projects, and industries. This information inspires and empowers prospective developers with concrete examples of success within orgs and projects like theirs.
 
 The complete ecosystem directory lives at ecosystem.ipfs.io (or similar), but is also "teased" from a variety of locations via a minimized, visually themeable version that offers a sortable subset of info with a strong CTA to visit the full version.
 
@@ -22,7 +22,9 @@ The directory will initially launch with IPFS data, but is easily forked and cus
 _What must be true for this project to matter?_
 
 ✓ Prospective developers want to know about existing success in areas similar to theirs
+
 ✓ Showcasing known wins is essential to inspiring others to adopt the w3dt stack
+
 ✓ We have enough known-win builders to be able to make a positive impact by showing them off
 
 #### User workflow example
@@ -39,12 +41,12 @@ _What must be true for this project to matter?_
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
 
-This directory is an explicit demonstrator of w3dt product-market fit: It literally lays out how w3dt stack ingredients fit into the functional success of known IPFS builders.
+This directory is an explicit demonstrator of w3dt product-market fit: It literally lays out how w3dt stack ingredients fit into the functional success of high-value builders.
 
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
-By explicitly conveying the benefits of IPFS in real-world use cases, this directory enables more contributors as well as gives them a greater idea of what's specifically possible right off the bat. By pointing to real-world successes, this directory should also help shortcut the path between experimentation and initial success for new devs.
+By explicitly conveying the benefits of IPFS in real-world use cases, this directory enables more contributors as well as gives them a greater idea of what's specifically possible right off the bat. By pointing to concrete real-world successes (including repos, case studies, etc), this directory should also help shortcut the path between experimentation and initial success for new devs.
 
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
@@ -57,7 +59,7 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 ## Project definition
 #### Brief plan of attack
 
-1. Research participants in outdated raster diagram to cull for known-invalid ones, add new ones from existing institutional knowledge, etc; consolidate into database
+1. Research participants in outdated raster diagram to cull known-invalid ones, add new ones from existing institutional knowledge, etc; consolidate into database (to be used as JSON data source)
 2. Survey all participants to ensure data is accurate and inclusion in directory is approved
 3. Spec out information architecture, use cases for "teaser view" vs full view, etc
 4. Spec out modularity needs so work can be forked for other purposes
@@ -69,7 +71,7 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 #### What does done look like?
 - Initial (IPFS) implementation is live in full view at ecosystem.ipfs.io (or similar), including metrics collection
-- Summary/teaser views are installed on ipfs.io and, if appropriate, docs.ipfs.io
+- Summary/teaser views are installed on ipfs.io and docs.ipfs.io
 - Documentation is ready for those who wish to fork
 
 ####  What does success look like?

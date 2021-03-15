@@ -11,13 +11,13 @@ There are two pipelines for triaging projects. The first is the "Project Pipelin
 Proposals are managed in a Project board with the following columns.
 
 * Needs Review
-* Needs Assign
-* Assigned
+* Needs Owner
+* In Progres
 
-As new proposals are created they are assigned reviewers. Once the required number of reviewers have approved the proposal it will automatically move from the "Needs Review" column to the "Needs Assign" column. Every Monday the project leads will review pending proposals and decide if they should be:
+As new proposals are created they are assigned reviewers. Once the required number of reviewers have approved the proposal it will automatically move from the "Needs Review" column to the "Needs Owner" column. Every Monday the project leads will review pending proposals and decide if they should be:
 
 * Closed. Any proposal that is not something we can assign resources or grant/contract funding.
-* Approved. The card on the project board will be moved to "Assigned" and the PR will be assigned to the Project Team Lead and Engineering Manager. When the project is finished the PR will be merged.
-* Moved to the "Grant Pipeline"
+* Approved. The card on the project board will be moved to "In Progress" and the PR will be assigned to the Project Team Lead and Engineering Manager. When the project is finished the PR will be merged.
+* Moved to the "Help Wanted"
 
-Proposals in the grant pipeline need to be modified to include any associated funding and points of contact. The full Grant Pipeline approval process is TBD.
+Proposals in the "Help Wanted" pipeline need to be modified to include any associated funding and points of contact. The full Help Wanted approval process is TBD.

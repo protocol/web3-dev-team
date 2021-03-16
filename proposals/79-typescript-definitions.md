@@ -19,6 +19,7 @@ Remaining work to integrate the current set of js-ipfs dependencies into js-ipfs
 Aside from completing the remaining js-ipfs integration work, the scope of this project includes some additional libraries that are not currently part of the js-ipfs dependency tree, including:
 
  * Next-generation IPLD codec libraries (using the js-multiformats pattern)
+ * [js-multiformats legacy interface](https://github.com/multiformats/js-multiformats/issues/67)
  * js-libp2p core types had a first iteration, but there are a few gaps that should be addressed, specially in the configuration, [as follow up](https://github.com/libp2p/js-libp2p/issues/830). There is also a general libp2p typescript [tracking](https://github.com/libp2p/js-libp2p/issues/659) with all the libp2p modules, but these do not seem high priority at the moment, as most users typically only interact with the core API.
  * _TODO: what other non-archived, non-dormant project should we include here to achieve the above value & impact ideals?_
 

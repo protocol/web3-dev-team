@@ -16,7 +16,7 @@ Work on this effort has been largely completed, thanks primarily to @hugomrdias,
 
 Remaining work to integrate the current set of js-ipfs dependencies into js-ipfs and address the typing for code directly in js-ipfs is happening here: https://github.com/ipfs/js-ipfs/pull/3550
 
-Aside from completing the remaining js-ipfs itegration work, the scope of this project includes some additional libraries that re not currently part of the js-ipfs dependency tree, including:
+Aside from completing the remaining js-ipfs integration work, the scope of this project includes some additional libraries that are not currently part of the js-ipfs dependency tree, including:
 
  * Next-generation IPLD codec libraries (using the js-multiformats pattern)
  * _TODO: what other non-archived, non-dormant project should we include here to achieve the above value & impact ideals?_

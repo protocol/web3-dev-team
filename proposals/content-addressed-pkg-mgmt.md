@@ -1,4 +1,4 @@
-# Content Addressed Package Management 
+# Content Addressed Package Management
 
 Authors: [@andrew](https://github.com/andrew)
 
@@ -13,24 +13,24 @@ A proposal should contain enough detail for others to understand how this projec
 for our unified stack of protocols, what is included in scope of the project, where to get started if a project team were to take this on,
 and any other information relevant for prioritizing this project against others.
 It does not need to describe the work in much detail. Most technical design and planning would take place after a proposal is adopted.
-Good project scope aims for ~3-5 engineers for 1-3 months (though feel free to suggest larger-scoped projects anyway). 
+Good project scope aims for ~3-5 engineers for 1-3 months (though feel free to suggest larger-scoped projects anyway).
 Projects do not include regular day-to-day maintenance and improvement work, e.g. on testing, tooling, validation, code clarity, refactors for future capability, etc.
 -->
 <!--
 For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
 -->
 
-## Purpose &amp; impact 
+## Purpose &amp; impact
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
 <!--
-Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
+Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives.
 -->
 
-Package management is an excellent use case for IPFS and Filecoin, as was [explored a couple of years ago](https://github.com/ipfs-inactive/package-managers), 
+Package management is an excellent use case for IPFS and Filecoin, as was [explored a couple of years ago](https://github.com/ipfs-inactive/package-managers),
 but has yet to see major adoption within any large package managers.
 
-Making package managers content addressable would unlock the ability for the data within package management registries to become more portable, 
+Making package managers content addressable would unlock the ability for the data within package management registries to become more portable,
 opening it up to much need innovation in areas such as transport protocols, storage backends and network topologies.
 
 To enable this a specification for a protocol for content addressed package management would be written, along with a [working implementation](https://github.com/forestpm/forest), that outlines a standardized way for consumers, publishers and maintainers to share package management data that allows people to opt-in to various levels of decentralization without sacrificing existing usability, performance and security.
@@ -86,12 +86,22 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
-- TODO
+- Research and document various package manager metadata formats, api endpoints and processes to extract requirements for spec
+- Initial draft of data model and formats for spec
+- Refactor core data model of https://github.com/forestpm/forest to implement draft spec
+- Deploy analytics service for monitoring DHT for package usage
+- Build and deploy marketing website for https://github.com/forestpm/forest and onboard early adopters
+- Reach out to key stakeholders in package management for early thoughts, feedback and requirements
+- Refine and document spec + implementation
+- Publish v1 of https://github.com/forestpm/forest
+- Publish specification
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
-- TODO
+- A published draft of a v0.1 of the content addressed package management protocol specification
+- A functional implementation of the specification with support for multiple package managers
+- Documented discussion of protocol and process with a selection of package manager maintainers, publishers and consumers
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
@@ -99,24 +109,26 @@ _Success means impact. How will we know we did the right thing?_
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
-- increasing number of users sharing packages on the dht
-- projects and package managers adopting and building on the protocol
-- increased discussion around content addressing in software development and tooling
+- Increasing number of users sharing packages on the dht
+- Projects and package managers adopting and building on the protocol
+- Increased discussion around content addressing in software development and tooling
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
-- TODO
+- Content discovery and publishing on the IPFS DHT of millions of packages may affect growth once a certain level of adoption is reached
+- If the user experience is poor or switching costs are too high, reaching critical levels of adoption will be difficult
+- There may be incentives for some package management infrastructure organizations to retain centralized control and choose to avoid adoption
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
-- TODO
+- [Valist](https://github.com/valist-io/valist) is an alternative project, although it appears to be closely tied to Ethereum.
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
-- not directly dependent on, but can helped with https://github.com/protocol/beyond-bitswap/pull/29
+- Whilst not directly dependent on, https://github.com/protocol/beyond-bitswap/pull/29 can help ease onboarding 
 
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
@@ -127,7 +139,7 @@ A standardized package metadata format can enable the development of:
 ## Required resources
 
 #### Effort estimate
-<!--T-shirt size rating of the size of the project. If the project might require external collaborators/teams, please note in the roles/skills section below). 
+<!--T-shirt size rating of the size of the project. If the project might require external collaborators/teams, please note in the roles/skills section below).
 For a team of 3-5 people with the appropriate skills:
 - Small, 1-2 weeks
 - Medium, 3-5 weeks
@@ -144,4 +156,4 @@ Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty i
 - package management knowledge
 - javascript development
 - ipfs experience
-- protocol design/specification experience
+- protocol design/specification writing experience

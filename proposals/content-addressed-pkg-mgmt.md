@@ -39,6 +39,7 @@ To enable this a specification for a protocol for content addressed package mana
 _What must be true for this project to matter?_
 <!--(bullet list)-->
 * package management data is content addressable
+* package manager users care about the verifiablity of their software supply chain
 
 #### User workflow example
 _How would a developer or user use this new capability?_

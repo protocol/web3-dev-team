@@ -86,8 +86,12 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
+- TODO
+
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
+
+- TODO
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
@@ -95,6 +99,9 @@ _Success means impact. How will we know we did the right thing?_
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
+- increasing number of users sharing packages on the dht
+- projects and package managers adopting and building on the protocol
+- increased discussion around content addressing in software development and tooling
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

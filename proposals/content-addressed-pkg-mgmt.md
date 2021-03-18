@@ -116,12 +116,13 @@ _How might this project’s intent be realized in other ways (other than this pr
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
-- TODO
+- not directly dependent on, but can helped with https://github.com/protocol/beyond-bitswap/pull/29
 
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
-
-- TODO
+A standardized package metadata format can enable the development of:
+- a content addressable, public transparency log for all package managers, similar to the ]certificate transparency project](https://certificate.transparency.dev/)
+- package maintainers could publish signed nfts of each release of their packages, enabling alternative sources of funding for open source
 
 ## Required resources
 
@@ -135,9 +136,12 @@ For a team of 3-5 people with the appropriate skills:
 Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
 -->
 
-- TODO
+- Large, 6-10 weeks
 
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
 
-- TODO
+- package management knowledge
+- javascript development
+- ipfs experience
+- protocol design/specification experience

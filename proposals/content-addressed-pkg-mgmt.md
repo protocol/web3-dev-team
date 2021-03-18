@@ -31,7 +31,7 @@ Package management is an excellent use case for IPFS and Filecoin, as was [explo
 but has yet to see major adoption within any large package managers.
 
 Making package managers content addressable would unlock the ability for the data within package management registries to become more portable,
-opening it up to much need innovation in areas such as transport protocols, storage backends and network topologies.
+opening it up to much needed innovation in areas such as transport protocols, storage backends and network topologies.
 
 To enable this a specification for a protocol for content addressed package management would be written, along with a [working implementation](https://github.com/forestpm/forest), that outlines a standardized way for consumers, publishers and maintainers to share package management data that allows people to opt-in to various levels of decentralization without sacrificing existing usability, performance and security.
 

@@ -1,6 +1,6 @@
 # Content Addressed Package Management 
 
-Authors: @andrew
+Authors: [@andrew](https://github.com/andrew)
 
 Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
 
@@ -33,19 +33,20 @@ but has yet to see major adoption within any large package managers.
 Making package managers content addressable would unlock the ability for the data within package management registries to become more portable, 
 opening it up to much need innovation in areas such as transport protocols, storage backends and network topologies.
 
-To enable this a specification for a protocol for content addressed package management would be written, along with a [working implementation](https://github.com/forestpm/forest), 
-that outlines a standardized way for consumers, publishers and maintainers to share package management data that allows people to opt-in to various levels of decentralization without 
-sacrificing existing usability, performance and security.
-
-
+To enable this a specification for a protocol for content addressed package management would be written, along with a [working implementation](https://github.com/forestpm/forest), that outlines a standardized way for consumers, publishers and maintainers to share package management data that allows people to opt-in to various levels of decentralization without sacrificing existing usability, performance and security.
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
 <!--(bullet list)-->
+* package management data is content addressable
 
 #### User workflow example
 _How would a developer or user use this new capability?_
 <!--(short paragraph)-->
+* Developers can quickly and safetly fetch packages directly from other developers, falling back to upstream registry
+* Develoeprs can easily onboard onto content addressed package management without high commitment costs
+* IT teams can easily mirror packages within an internal network with low infrastructure costs
+* Third-parties can co-host packages from a registry in a trustless, permissionless way
 
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
@@ -55,12 +56,24 @@ Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
 
+Past attempts at decentralizing packagement have attempted to import whole registries into IPFS but come with a very high commitment cost and painful onboarding UX, as such have had low adoption so far.
+
+In taking a slightly different approach, focusing on content addressing data from registries, we allow each user to co-host the packages that they use, unlocking resiliance and performance gains without requiring significant infrastructure or upfront buy-in from upstream registry maintainers.
+
+Almost every software developer uses package management in some form, reducing the commitment costs of switching to content addressed packagement could unlock the data from large centralized registries and enable significant innovation in the package management space, enabling innovations like blockchain-based solutions that work seemlessly with existing centralized infrastructure.
+
+
 #### Leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
 <!--
 Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
 -->
+Formalizing the existing patterns in packagement in content addressed terminology will enable other projects and contributors to build on top of those formats in an open form.
+
+Brand new package managers will be able to directly implement the best practices as well as reducing their infrastructure overheads by adhering to a content addressed package management protocol.
+
+Documenting the architecture pattern of how we content addressed and decentralized package management can then be used as a blueprint for other similar internet infrastructure projects.
 
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.

@@ -79,7 +79,7 @@ Documenting the architecture pattern of how we content addressed and decentraliz
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
 <!--Explain why this rating-->
-
+- TODO
 
 ## Project definition
 #### Brief plan of attack
@@ -106,14 +106,22 @@ Provide success criteria. These might include particular metrics, desired change
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
+- TODO
+
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
+
+- TODO
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
+- TODO
+
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
+
+- TODO
 
 ## Required resources
 
@@ -127,5 +135,9 @@ For a team of 3-5 people with the appropriate skills:
 Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
 -->
 
+- TODO
+
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
+
+- TODO

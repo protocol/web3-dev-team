@@ -110,6 +110,13 @@ _How might this project’s intent be realized in other ways (other than this pr
 
 #### Future opportunities
 
+**Protocol integration with Filecoin**
+
+Iteration of this protocol toward a trust-less state, where the user of such a service has guarantees of funds-paid to services-rendered could be achieved by deeper integration with Filecoin. Such as:
+
+* Adding a Filecoin primitive (actor) that can ascertain whether a Piece has been included in one or more sectors with some minimum expiration epoch.
+* Client payments to the broker could be handled via a Filecoin payment channel that releases payment only when a specific piece of data is present in some sectors (using the primitive above).
+
 ## Required resources
 
 #### Effort estimate

@@ -74,7 +74,7 @@ Name publishing becomes also efficient as name owner can notify *name keeper* di
 
 ###### Initial resolution optimization
 
-To make a very first name resolution nearly as efficient as subsequent ones it is propsoed to develop a new **name routing** service and deploy it on boostrap nodes. Name routing nodes will maintain `IPNS name → multiaddrs[]` mapping enabling peers to resolve an address of a name keeper on a first name resolution. Under assumbiton that reassigment of *name keepers* is going to be rare, overhead on name routing nodes should be insignificant as:
+To make a very first name resolution nearly as efficient as subsequent ones it is proposed to develop a new **name routing** service and deploy it on boostrap nodes. Name routing nodes will maintain `IPNS name → multiaddrs[]` mapping enabling peers to resolve an address of a name keeper on a first name resolution. Under assumbiton that reassigment of *name keepers* is going to be rare, overhead on name routing nodes should be insignificant as:
 
 1. Name routers could cache addresses for a long time.
 2. Resolving peers could cache address locally (and require router only first time).

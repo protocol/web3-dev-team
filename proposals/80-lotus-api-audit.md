@@ -20,7 +20,7 @@ This project aims to do a mini audit of the landscape of libraries and the abili
 
 Outputs of this project includes:
 
-* A catalog of existing libraries used to interact with the Lotus RPC API, including (currently known):
+* A catalog of existing libraries used to interact with the Lotus RPC API, including (currently known to be roughly within this category):
   * Those in [filecoin-shipyard](https://github.com/filecoin-shipyard)
   * Those currently published under the [@glif npm namespace](https://github.com/glifio/modules/tree/primary/packages/)
   * Those maintained for/by the [Truffle suite](https://github.com/trufflesuite/ganache-filecoin-alpha-cli)
@@ -28,13 +28,16 @@ Outputs of this project includes:
   * Further documentation in specific areas
   * Deprecation / archival
   * Improvements and feature additions
-* Key information required to create/improve higher-level documentation containing recommendations for users seeking to interact with the Lotus RPC (production of / contribution to is not a necessary part of this project, but generating the resources and/or knowledge to do so it part of this project)
-* A catalog of areas for high-value improvement for the Lotus RPC, including the creation of new project proposals or the provision of more details to existing project proposals
+* Key information required to create/improve higher-level documentation containing recommendations for users seeking to interact with the Lotus RPC (production of / contribution to is not a necessary part of this project, but generating the resources and/or knowledge to do so it part of this project).
+* A catalog of areas for high-value improvement, including the creation of new project proposals or the provision of more details to existing project proposals, for:
+  * The Lotus RPC
+  * Relevant JS libraries
 
 #### Assumptions &amp; hypotheses
 
 _What must be true for this project to matter?_
 
+That developers want to be able to interact with Lotus, and Filecoin more broadly, via JavaScript and that the path to doing this is currently via RPC APIs.
 
 #### User workflow example
 
@@ -44,9 +47,13 @@ _How would a developer or user use this new capability?_
 
 _How would this directly contribute to web3 dev stack product-market fit?_
 
+Maturity of Filecoin depends on a developer ecosystem building layer 1 (and beyond) technologies to serve users. As with IPFS, it is expected that a large portion (possibly a majority) will be leaning on JavaScript application stacks, and dapp developers will be leaning on the browser JavaScript environment. It is critical that we provide a solid foundation for building libraries to interact with Filecoin and the current technical focus for this is Lotus and its RPC. This will evolve over time but the current state suggests high-value will be derived from basic investment in the landscape of JavaScript libraries that interact with (and above) Lotus, and the Lotus RPC itself.
+
 #### Leverage
 
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
+
+This project will serve as a foundation for additional investment in the JS (and general API) layer above Filecoin to unlock additional web3 developer opportunities. Being able to know _what we have_ and what the status of it is critical to understanding where to invest.
 
 #### Confidence
 
@@ -70,7 +77,14 @@ Executing this project would include:
 
 _What specific deliverables should completed to consider this project done?_
 
-See list of outputs above.
+* A clear map of the currently available JavaScript libraries available for interacting with Filecoin (RPC API and other)
+* A clear, and generally complete, pre-documentation catalog of the functionality available:
+  * in those JavaScript libraries
+  * via the Lotus RPC
+  * _Note that producing actual documentation is a further extension of this project to be scoped accordingly._
+* A clear, shared understanding of the quality and state of these libraries and the scope of their utility for achieving basic tasks with Filecoin (wallet transactions, state inspection, deal making, etc.) (i.e. "shared" because it is critical that this is communicated and understood by relevant parties))
+  * An ideal outcome of this would be further project proposals to undertake improvements.
+* Sufficient clarity to be able to rate (and priority sort) proposals for further work on relevant libraries (or non-existing libraries) to interact with Filecoin, and the Lotus RPC itself with regards to its affordances for external users.
 
 ####  What does success look like?
 
@@ -103,12 +117,13 @@ For a team of 3-5 people with the appropriate skills:
 Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
 -->
 
-S / M
+Small for 3-5 FTEs (i.e. lower for smaller investment, as available to Sudo at the time of writing)
 
 #### Roles / skills needed
 
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
 
-* JS
-* Lotus
-* 
+* JavaScript
+* TypeScript
+* Lotus (some Go)
+* Basic Filecoin understanding

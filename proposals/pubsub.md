@@ -31,7 +31,7 @@ Outline the status quo, including any relevant context on the problem you’re s
 Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives.
 -->
 
-As of this writing [pubsub][IPFS pubsub] is considered experimental and is disabled in go-ipfs.
+As of this writing [pubsub][IPFS pubsub] is considered experimental and is disabled in go-ipfs (due to increased resource usage on nodes that do not make use of it).
 
 > Can be enabled by starting a daemon with `--enable-pubsub-experiment` flag
 
@@ -46,7 +46,7 @@ It also fragments network by (JS) nodes having it enabled and nodes that do not 
 
 > IPFS in browsers use IPNS over pubsub (no DHT for browsers) while other nodes do it over DHT.
 
-Enabling PubSub would populate network with more nodes making it more reliable.
+Enabling PubSub would populate network with more nodes, which might make specific popular topics more resilient / reliable.
 
 
 
@@ -141,7 +141,6 @@ _Why might this project be lower impact than expected? How could this project fa
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need ?_
 
 - Alternative messaging primitives (e.g. Federated SSB like pubs)
-- [SMTP][] support in IPFS nodes (you can email any node by email address)
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
@@ -173,7 +172,7 @@ Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty i
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
 
-- go-ipfs contributor
+- go-libp2p contributor (or go-ipfs contributor with some guidance) 
 - someone from infra to help estimate impact
 
 [IPFS pubsub]:https://docs.libp2p.io/concepts/publish-subscribe/

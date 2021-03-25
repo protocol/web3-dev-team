@@ -96,8 +96,9 @@ There will be work on updating IPFS and IPLD documentation to reflect these chan
 
 #### What does done look like?
 
-* P0: I can build IPFS without go-ipld-format
-  * P1: Deprecate go-ipld-format
+* P0: I can develop in IPFS without go-ipld-format
+  * Note: this is scaled back. The intention is that development throughout IPFS can take advantage of ipld-prime APIs to data
+  * P1: Deprecate go-ipld-format (out-of-scoped)
 * P1: I can import structured data (following links of generic codecs) directly from the IPFS command line
 * P1: structured data is importable and can be queried over the IPFS HTTP API 
 * P2: I can query structured data directly from the IPFS command line

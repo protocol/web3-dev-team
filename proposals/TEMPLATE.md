@@ -51,7 +51,7 @@ Explain the opportunity or leverage point for our subsequent velocity/impact (e.
 -->
 
 #### Confidence
-_How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
+_How sure are we that this is the right problem to work on? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
 <!--Explain why this rating-->
 

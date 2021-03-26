@@ -114,7 +114,7 @@ And the ability of this tool to support miner reputation systems can only help i
  - **Phase 1:  Retrieval Bot.**  Reads stdin describing a CID to attempt to retrieve, writes outcome of retrieval attempt to stdout.
  - **Phase 2:  Storage Bot.**  Same idea but for storage deals.
 
-In a subsequent project (out of scope for this PR; see [#TODO](https://github.com/protocol/web3-dev-team/pull/TODO)), we will create a set of bot orchestrators that invoke the r-bot and s-bot programs with inputs suitable for different use cases. For example, a queue of CIDs to test retrieve to verify the Slingshot 2.3 competition.
+In a subsequent project (out of scope for this PR; see [#87](https://github.com/protocol/web3-dev-team/pull/87)), we will create a set of bot orchestrators that invoke the r-bot and s-bot programs with inputs suitable for different use cases. For example, a queue of CIDs to test retrieve to verify the Slingshot 2.3 competition.
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_

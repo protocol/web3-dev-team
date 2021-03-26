@@ -148,6 +148,7 @@ _How might this project’s intent be realized in other ways (other than this pr
 <!--What future projects/opportunities could this project enable?-->
 
  - Miner reputation systems as discussed
+ - IPFS<>Filecoin CID indexing
 
 ## Required resources
 

@@ -77,14 +77,17 @@ Executing this project would include:
 
 _What specific deliverables should completed to consider this project done?_
 
-* A clear map of the currently available JavaScript libraries available for interacting with Filecoin (RPC API and other)
-* A clear, and generally complete, pre-documentation catalog of the functionality available:
+This project will produce a brief report covering:
+
+* A map of the currently available JavaScript libraries available for interacting with Filecoin (RPC API and other)
+* A pre-documentation catalog of the functionality available:
   * in those JavaScript libraries
   * via the Lotus RPC
   * _Note that producing actual documentation is a further extension of this project to be scoped accordingly._
-* A clear, shared understanding of the quality and state of these libraries and the scope of their utility for achieving basic tasks with Filecoin (wallet transactions, state inspection, deal making, etc.) (i.e. "shared" because it is critical that this is communicated and understood by relevant parties))
-  * An ideal outcome of this would be further project proposals to undertake improvements.
-* Sufficient clarity to be able to rate (and priority sort) proposals for further work on relevant libraries (or non-existing libraries) to interact with Filecoin, and the Lotus RPC itself with regards to its affordances for external users.
+
+The report will aim to provide a clear, shared understanding of the quality and state of these libraries and the scope of their utility for achieving basic tasks with Filecoin (wallet transactions, state inspection, deal making, etc.) (i.e. "shared" because it is critical that this is communicated and understood by relevant parties)). An ideal outcome of this would be further project proposals to undertake improvements.
+
+The report should provide sufficient clarity to be able to rate (and priority sort) proposals for further work on relevant libraries (or non-existing libraries) to interact with Filecoin, and the Lotus RPC itself with regards to its affordances for external users.
 
 ####  What does success look like?
 

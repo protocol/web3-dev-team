@@ -2,7 +2,7 @@
 
 Authors: @yusefnapora
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: [#92](https://github.com/protocol/web3-dev-team/pull/92) 
 
 
 ## Purpose &amp; impact 

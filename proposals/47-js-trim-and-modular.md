@@ -2,7 +2,7 @@
 
 Authors: @rvagg @achingbrain @vasco-santos
 
-Initial PR: https://github.com/protocol/web3-dev-team/pull/46
+Initial PR: https://github.com/protocol/web3-dev-team/pull/47
 
 ## Purpose &amp; impact 
 

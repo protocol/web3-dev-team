@@ -25,6 +25,10 @@ Aside from completing the remaining js-ipfs integration work, the scope of this 
    * _Scope:_ the priority for js-libp2p is in the generally exported API, so direct users of js-libp2p have types for that interface.
    * _Out of scope for this project:_ there is also a general libp2p typescript [tracking](https://github.com/libp2p/js-libp2p/issues/659) with all the libp2p modules, but these do not appaer to be high priority at the moment, as most users typically only interact with the core API.
 
+Currently the next-generation IPLD codecs and js-multiformats do not contribute directly to other parts of the JS stack (js-ipfs most notably), however:
+ * There is ongoing [work to integrate these into the js-ipfs stack](https://github.com/ipfs/js-ipfs-unixfs/pull/116) due to a desire to retire old components. Incomplete typing on these new components will be a blocker for easier integration.
+ * Our ecosystem is already consuming these newer components - in particular we advise all new codec development to consume the js-multiformats pattern ([e.g.](https://github.com/ceramicnetwork/js-dag-jose/)), much of which uses TypeScript.
+
 During execution of this project, where questions of scope arise that are not covered above, library-specific decisions will be made regarding the depth of TypeScript definitional work using the following criteria:
   * Projects with greater expected future usage should include full type checking in CI and will therefore require basic inline TypeScript annotations.
   * Projects that are dependencies but are not expected to be actively maintained or developed further into the future may just include basic API type definitions so that dependents can make use of those.
@@ -50,6 +54,8 @@ We have some existing TypeScript in the PL suite of JavaScript. This may expand 
 
 We already have [one example](https://github.com/ipfs/js-dag-service) of code being contributed to the PL stack from a third-party that uses TypeScript and could be improved by typing in the rest of our stack.
 
+Work on typing in the js-ipfs stack has already surfaced a large number of bugs. Typing on complex codebases is a proven method of increasing code quality, both in the codebase and by consumers of the codebases.
+
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 
@@ -60,7 +66,12 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
-See Scope description above.
+By identifying a small number of key downstream projects that consume our libraries and also use TypeScript and counting the use of `@ts-ignore` annotations that exist to deal with lack of exported typing from our libraries we have a metric for degree of success.
+
+* https://github.com/ceramicnetwork/js-ceramic - contains a considerable number of `@ts-ignore` statements that relate to js-ipfs
+* https://github.com/ceramicnetwork/js-dag-jose - is currently unable to consume js-multiformats to properly execute its test suite
+
+Also see Scope description above.
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_

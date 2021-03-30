@@ -101,7 +101,8 @@ _Why might this project be lower impact than expected? How could this project fa
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
-
+- Reuse parts of [rust-libp2p](https://github.com/libp2p/rust-libp2p) compiled for WASM backend.
+- Work with partners (e.g. Igalia) to drive crypto implementation and landing efforts in browsers natively.
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 

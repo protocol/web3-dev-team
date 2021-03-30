@@ -29,12 +29,12 @@ Outline the status quo, including any relevant context on the problem you’re s
 
 With the existing protocols in libp2p, as well as IPFS subsystems built on top of libp2p, such as Pubsub and the DHT, the need for a connection manager overhaul becomes an import work stream, so that these protocols operate as expected by the users, i.e. out of the box solution.
 
-Currently, js nodes have a reactive connection manager that can be decoupled into two parts: establishing new connections and trimming connections. The former relies on an `autoDial` approach, where each time a new node is discovered it will try to establish a connection with that peer. The later consists on blindly trimming connections when reaching a configurable threshold.
+Currently, js nodes have a reactive connection manager that can be decoupled into two parts: establishing new connections and trimming connections. The former relies on an `autoDial` approach, where each time a new node is discovered it will try to establish a connection with that peer, if it has less connections than its desired minimum. The latter consists on blindly trimming connections when reaching a configurable threshold.
 
 From the current solution, there is a lot of space for improvement with tremendous value for the users. Either evolving the current connection manager to the state of the go-implementation or implementing a fully fledged [Connection Manager v2](https://github.com/libp2p/specs/pull/161) (+ [more notes](https://github.com/libp2p/notes/issues/13)).
 
 With the connection manager overhaul in JS we aim to:
-- Find our closest peers on the network, and attempt to stay connected to n to them
+- Find our closest peers on the network, and attempt to stay connected to n of them
 - Finding, connecting to and protecting our gossipsub peers (same topics search)
 - Finding and binding to relays with AutoRelay
 - Finding and binding to application protocol peers (as needed via MulticodecTopology) -- We should clarify what libp2p will handle intrinsically and what users need to do
@@ -49,8 +49,7 @@ _What must be true for this project to matter?_
 
 - Web3 developers want to have a reliable pubsub topology out of the box without relying on star servers
 - Web3 developers want to find and connect to other peers in a given scope
-- Browser developers want to have their nodes reachable via more transports than `webrtcSTAR` out of the box
-- PL wants to decrease the load on bootstrap nodes
+- Reduce the reliance nodes have on Bootstrap nodes outside of joining the network, to reduce the load on those servers
 
 #### User workflow example
 _How would a developer or user use this new capability?_
@@ -108,6 +107,7 @@ _How might this project’s intent be realized in other ways (other than this pr
 
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
+- Propose a spec for JS, that can also be implemented in Go
 
 ## Required resources
 

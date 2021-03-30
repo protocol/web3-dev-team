@@ -82,6 +82,11 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 <!--Briefly describe the milestones/steps/work needed for this project-->
 
+1. Create crypto interface definition (inspiration from prior art in `js-multiformats`)
+2. Use [stablelib](https://github.com/StableLib/stablelib) as the source of all the crypto items needed
+  - `libp2p-crypto` turned into a libp2p spec compliant api on top of that
+3. New `libp2p-crypto` is integrated with all libp2p modules and core
+
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
@@ -96,13 +101,18 @@ _Success means impact. How will we know we did the right thing?_
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
 
+- libp2p and IPFS based web applications load time is not bigger than a regular web application
+
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
+
 - Reuse parts of [rust-libp2p](https://github.com/libp2p/rust-libp2p) compiled for WASM backend.
+  - Look into other WASM alternative
 - Work with partners (e.g. Igalia) to drive crypto implementation and landing efforts in browsers natively.
+
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
@@ -120,6 +130,10 @@ For a team of 3-5 people with the appropriate skills:
 - XLarge, >10 weeks
 Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
 -->
+
+Medium
+
+Uncertainty in the scope until design work and crypto changes are always challenging
 
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->

@@ -141,6 +141,9 @@ _Why might this project be lower impact than expected? How could this project fa
 
 - IPFS aspired to replace URL addressing with path addressing which this proposal is at odds with.
 - Despite our efforts for avarage web user `ipfs://` style links are not clickable so it does not pick up.
+- Adding yet another notation does not solve the problem, but magnifies it.
+- Changing the default paths complicate setup on reverse proxies.
+- Having `://` twice in URL will make IPFS links look even more suspicious (less technical users) or simply wacky (technical) hurting us more than helping.
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_

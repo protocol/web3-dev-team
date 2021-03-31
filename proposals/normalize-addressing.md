@@ -1,4 +1,4 @@
-# Normalize ipfs://${CIDv1}
+# ipfs:// everywhere
 
 Authors:
 - @gozala

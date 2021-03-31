@@ -43,7 +43,7 @@ Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
 
-#### Leverage
+#### Internal leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 
 <!--

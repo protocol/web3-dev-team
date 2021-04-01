@@ -6,18 +6,20 @@ The primary planning mechanism is discussion of proposals for significant projec
 
 # Pipelines
 
-There are two pipelines for triaging projects. The first is the "Project Pipeline" which is where all new proposals are reviewed and triaged. A project will either be closed, approved and assigned to a team, or it will be moved to the "Grant Pipeline."
+There are two overlapping pipelines for triaging projects. The first is the "Project Pipeline" which is where all new proposals are reviewed and triaged. A project will either be closed, approved and assigned to a team, or it will be moved to the "Grant Pipeline."
 
 Proposals are managed in a Project board with the following columns.
 
 * Needs Review
 * Needs Owner
-* In Progres
+* In Progress
+* Grants
+* Completed
 
-As new proposals are created they are assigned reviewers. Once the required number of reviewers have approved the proposal it will automatically move from the "Needs Review" column to the "Needs Owner" column. Every Monday the project leads will review pending proposals and decide if they should be:
+As new proposals are created they are assigned reviewers. Once the required number of reviewers have approved, the proposal it will automatically move from the "Needs Review" column to the "Needs Owner" column. Every Monday, the project leads will review pending proposals and decide if they should be:
 
-* Closed. Any proposal that is not something we can assign resources or grant/contract funding.
-* Approved. The card on the project board will be moved to "In Progress" and the PR will be assigned to the Project Team Lead and Engineering Manager. When the project is finished the PR will be merged.
-* Moved to the "Help Wanted"
+* **Closed**. Any proposal that is not something we can assign resources or grant/contract funding.
+* **Approved**. The card on the project board will be moved to "In Progress" and the PR will be assigned to the Project Team Lead and Engineering Manager. When the project is finished the PR will be merged.
+* **Moved** to the "Grant Pipeline".
 
-Proposals in the "Help Wanted" pipeline need to be modified to include any associated funding and points of contact. The full Help Wanted approval process is TBD.
+Proposals in the "Grant Pipeline" will be separately triaged / scoped / RFP'd and assigned eventual owners when a match is found.

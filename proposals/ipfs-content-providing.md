@@ -95,6 +95,8 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
      - [Not requiring](https://github.com/libp2p/go-libp2p-kad-dht/issues/532) the "followup" phase for puts
      - Not requiring responses from all 20 peers before returning to the user
      - Not requiring responses from the 3 closest peers before aborting the query (e.g. perhaps 5 of the closest 10)
+- Add a function to the DHT for batch providing (and putting) and utilize it in go-ipfs
+   - Tests with https://github.com/libp2p/go-libp2p-kad-dht/pull/709 showed tremendous speedups even in a single threaded provide loop if the provider records were sorted in XOR space
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_

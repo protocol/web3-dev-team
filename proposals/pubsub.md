@@ -100,6 +100,7 @@ Level 3
 
 - We know teams building products that depend pubsub.
 - Features like IPNS over pubsub depends on this.
+- [ENS users complain about IPNS on `eth.link` gateway being slow](https://discuss.ens.domains/t/eth-link-fails-through-gateway-but-ipns-hash-works-fine/375/6?u=lidel)
 
 
 ## Project definition

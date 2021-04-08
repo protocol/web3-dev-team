@@ -68,7 +68,7 @@ The input file `my-tests.json` might look something like this:
 			{
 				"retrievalDelayHours":"72",  // store the file, wait 72 hrs, then try to retrieve it
 			},
-		"miner":"f0xxxx",
+		"miners":["f0xxxx","f0yyyyy"],
 		"dataToStore":"random",  // this could alternatively be a file path
 		"randomDataParameters":
 			{
@@ -89,7 +89,7 @@ The input file `my-tests.json` might look something like this:
 			{
 				"cid":"baf...xyz",
 			},
-		"miner":"f0xxxx",
+		"miner":["f0xxxx","f0yyyyy"],
 		"schedule":
 			{
 				"startDateTime":"yyyy-mm-dd_hh:mm:ss",
@@ -101,7 +101,7 @@ The input file `my-tests.json` might look something like this:
 	// storage-only is a P2 since right now there is no specific use case for this.
 	{
 		"dealType":"storageOnly",
-		"miner":"f0xxxx",
+		"miner":["f0xxxx","f0yyyyy"],
 		"dataToStore":"random",  // this could alternatively be a file path
 		"randomDataParameters":
 			{
@@ -160,6 +160,8 @@ _What specific deliverables should completed to consider this project done?_
 
  - An orchetration program to drive the dealbots exists
  - The orchestration program follows the general usage design described in User Workflow Example above
+ - CI unit tests demonstrate the controller does enqueue deals and does follow up on them
+ - 	The controller process schedules across multiple storage/retrieval bots
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
@@ -212,6 +214,8 @@ For a team of 3-5 people with the appropriate skills:
 - XLarge, >10 weeks
 Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
 -->
+
+Medium
 
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->

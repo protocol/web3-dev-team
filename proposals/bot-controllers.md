@@ -1,4 +1,4 @@
-# Dealbot Orchestrator for Deal Testing and Metrics
+# Dealbot Controller for Deal Testing and Metrics
 
 Authors: @mgoelzer
 
@@ -33,9 +33,9 @@ Currently, we are about to start a project to build [storage and retrieval dealb
 
 For most use cases of these bots, we don't just want to invoke them manually on the command line. Instead, we need a higher-level orchestration system that will carry out a series of storage and retrieval attempts to generate the data we want for that use case.
 
-One such orchestrator will be the one for deal success testing. This PR covers only that orchestrator.  Future orchestrators (in future PRs) will include those for reputation systems, scraping data from other sources and storing it in Filecoin, etc.
+One such controller will be the one for deal success testing. This PR covers only that controller.  Future controllers (in future PRs) will include those for reputation systems, scraping data from other sources and storing it in Filecoin, etc.
 
-The desired state of the world after building this deal success orchestrator is:
+The desired state of the world after building this deal success controller is:
 
  - We will have a long-running daemon program that repeatedly attempts storage and retrieval deals on mainnet
  - This collection of results from many storage and retrieval deals will get aggregated into the log aggregator that the bots output to.
@@ -54,7 +54,7 @@ _How would a developer or user use this new capability?_
 <!--(short paragraph)-->
 
 ```
-$ ./dsr-bot-orchestrator --input my-tests.json start
+$ ./dsr-bot-controller --input my-tests.json start
 ```
 
 The input file `my-tests.json` might look something like this:
@@ -101,8 +101,8 @@ _How much would nailing this project improve our knowledge and ability to execut
 Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
 -->
 
- - We need an orchestrator like this to make the dealbots useful for deal success testing
- - The combination of dealbots and this orchestrator will give us data on deal success rates
+ - We need an controller like this to make the dealbots useful for deal success testing
+ - The combination of dealbots and this controller will give us data on deal success rates
  - Knowledge of deal success rates will help us know where to focus our debugging efforts as we improve the Filecoin network
 
 #### Confidence
@@ -141,14 +141,14 @@ Provide success criteria. These might include particular metrics, desired change
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
- - The orchestrator, which is a long-running daemon program, crashes and no one is available to restart it and debug the cause of the crash
- - The orchestrator tests artificial conditions that do not represent real world usage on the network
- - The orchestrator is not robust enough to handle complex tests like multiple retrievals, storage of a wide range of file sizes -- AND testing these turns out to be important/relevant
+ - The controller, which is a long-running daemon program, crashes and no one is available to restart it and debug the cause of the crash
+ - The controller tests artificial conditions that do not represent real world usage on the network
+ - The controller is not robust enough to handle complex tests like multiple retrievals, storage of a wide range of file sizes -- AND testing these turns out to be important/relevant
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
- - We could build a more informal orchestrator, like a simple bash script that we run on a cron schedule
+ - We could build a more informal controller, like a simple bash script that we run on a cron schedule
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
@@ -158,13 +158,13 @@ _How might this project’s intent be realized in other ways (other than this pr
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
 
-This project will serve as a prototype for how to write other orchestrators that utilize the dealbots in different ways, such as:
+This project will serve as a prototype for how to write other controllers that utilize the dealbots in different ways, such as:
 
  - Reputation systems
  - New kinds of KPIs we want to track
  - Scraping data and persisting it on Filecoin
 
-This project will also provide open source example code that community members can use as a starting point to build their own orchestrators.
+This project will also provide open source example code that community members can use as a starting point to build their own controllers.
 
 ## Required resources
 

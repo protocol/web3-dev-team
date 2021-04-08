@@ -2,7 +2,7 @@
 
 Authors: @mgoelzer
 
-Initial PR: [#94](https://github.com/protocol/web3-dev-team/pull/94)
+Initial PR: [#96](https://github.com/protocol/web3-dev-team/pull/96)
 
 <!--
 This template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.

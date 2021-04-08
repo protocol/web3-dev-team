@@ -61,6 +61,7 @@ The input file `my-tests.json` might look something like this:
 
 ```
 [
+   // storing and then retrieving some time interval later is the most common use case
 	{
 		"dealType":"storeThenRetrieve",
 		"storeThenRetrieveParameters":
@@ -79,7 +80,41 @@ The input file `my-tests.json` might look something like this:
 				"endDateTime":"yyyy-mm-dd_hh:mm:ss",
 				"repeatIntervalDays":"7",  // means the test is re-run every 7 days
 			},
-	}
+	},
+	
+	// retrieval-only is another use-case (eg, Slingshot retrievals)
+	{
+		"dealType":"retrievalOnly",
+		"retrievalOnlyParameters":
+			{
+				"cid":"baf...xyz",
+			},
+		"miner":"f0xxxx",
+		"schedule":
+			{
+				"startDateTime":"yyyy-mm-dd_hh:mm:ss",
+				"endDateTime":"yyyy-mm-dd_hh:mm:ss",
+				"repeatIntervalDays":"7",  // means the test is re-run every 7 days
+			},
+	},
+	
+	// storage-only is a P2 since right now there is no specific use case for this.
+	{
+		"dealType":"storageOnly",
+		"miner":"f0xxxx",
+		"dataToStore":"random",  // this could alternatively be a file path
+		"randomDataParameters":
+			{
+				"sizeBytes":"1073741824",  // 1 GiB
+			},
+		"schedule":
+			{
+				"startDateTime":"yyyy-mm-dd_hh:mm:ss",
+				"endDateTime":"yyyy-mm-dd_hh:mm:ss",
+				"repeatIntervalDays":"7",  // means the test is re-run every 7 days
+			},
+	},
+
 ]
 ```
 

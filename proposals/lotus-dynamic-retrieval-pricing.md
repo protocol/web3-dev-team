@@ -82,6 +82,9 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 data" for.
 
 ## Project definition
+
+![Solution sketch](./sketches/dynamic-retrieval-pricing.png)
+
 #### Brief plan of attack
 
 1. Introduce the ability to query the unsealing status of a piece from the

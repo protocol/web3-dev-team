@@ -12,7 +12,7 @@ this work as "v1" as it sets the scope of the project for the rest of the quarte
 
 Those efforts are:
 
-* Metadata Creation API
+* [Metadata Creation API](https://github.com/ipfs-shipyard/nft.storage/pull/56)
   * Most users don't want to create these metadata files by hand. We can significantly reduce
   errors and inconsistencies by doing this ourselves.
   * This interface also sets us up to extend the metadata for other use cases. Eventually this

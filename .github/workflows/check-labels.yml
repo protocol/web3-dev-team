@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'ISSUE_LABELS.md'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'ISSUE_LABELS.md'
+name: Check Issue Labels
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Check Labels
+        run: |
+          ./.github/scripts/check-labels.sh

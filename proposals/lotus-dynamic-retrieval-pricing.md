@@ -11,17 +11,20 @@ _Describe the desired state of the world after this project? Why does that matte
 A retrieval client asks the miner for a quote before proceeding to retrieve a
 piece or a part therein. The miner quotes:
 
-- minimum price per byte
-- maximum payment interval
-- maximum payment interval increase
-- unseal price
+- unseal price (the price the client must pay if the miner needs to unseal data)
+- minimum price per byte (the price the client must pay for each byte of data)
+- maximum payment interval (the number of bytes that the provider will send
+  before pausing the transfer to wait for payment)
+- maximum payment interval increase (the increase in the payment interval each
+  time payment is received)
 
 The quoted values become part of the deal proposal. Unlike with storage deals,
 retrieval deal proposals don’t go on chain.	
 
-All these values are filled from the “stored ask”. The “stored ask” can be
-changed through JSON-RPC, but it’s statically set. Lotus doesn’t have the
-ability to change the quote based on the piece that’s being requested.
+On the provider side, these values are filled from the “stored ask”.
+The “stored ask” can be changed through JSON-RPC, but it’s statically set.
+Lotus doesn’t have the ability to change the quote based on the piece that’s
+being requested.
 
 This means that fast retrieval and non-fast retrieval deals get the same
 treatment with regards to pricing. In other words, anything that’s set as the
@@ -30,15 +33,17 @@ verified or unverified.
 
 Impact of the blanket policy to unsealing price:
 - If the unsealing price is set to zero, the miner commits to serving all deals
-  at zero cost, even those that require unsealing. Unsealing is a heavy and
-  expensive operations, one that's irrational for miners to offer for free.
+  without requiring an unseal payment from the client, even those that require
+  unsealing. Unsealing is a heavy and expensive operation, one that's irrational
+  for miners to offer for free today.
 - If the unsealing price is set to non-zero, fast retrievals will require the
-  creation of a payment channel, which introduces significant latency and
-  requires chain interaction.
+  creation of a payment channel (even if price per byte is zero), which
+  introduces significant latency and requires chain interaction.
 
 Impact of the blanket policy to price per byte:
 - Miners wanting to provide free retrieval for verified deals would set this
-  value to zero. This has the side-effect of skipping payment channel creation.
+  value to zero. This has the side-effect of skipping payment channel creation 
+  (if unseal price is also zero).
 - However, that same policy would apply to unverified deals, which the miner is
   likely not keen to offer for free.
 
@@ -124,7 +129,8 @@ The pricing function could be hardcoded, but that's too short-sighted.
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
-F3 retrieval stabilisation.
+F3 retrieval stabilisation is not a hard technical dependency, but work needs to
+be coordinated as that project is also heavily touching the codebases in scope.
 
 #### Future opportunities
 

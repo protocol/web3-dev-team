@@ -28,15 +28,16 @@ Indicates priority as a function of standard PL-wide OKR priority rankings. **Im
 ### Kind
 Overarching type of issue or PR. For an additional layer of specificity, use the `area` label.
 
-| Label               | Description                                                             | Color     |
-| -----               | -----------                                                             | -----     |
-| `kind/architecture` | Core architecture of project                                            | `#c7def8` |
-| `kind/bug`          | A bug in existing code (including security flaws)                       | `#fc2929` |
-| `kind/discussion`   | Topical discussion; usually not changes to codebase                     | `#c7def8` |
-| `kind/enhancement`  | A net-new feature or improvement to an existing feature                 | `#c7def8` |
-| `kind/maintenance`  | Work required to avoid breaking changes or harm to project's status quo | `#c7def8` |
-| `kind/support`      | A question or request for support                                       | `#c7def8` |
-| `kind/test`         | Testing work                                                            | `#c7def8` |
+| Label               | Description                                             | Color     |
+| -----               | -----------                                             | -----     |
+| `kind/architecture` | Core architecture of project                            | `#c7def8` |
+| `kind/bug`          | A bug in existing code (including security flaws)       | `#fc2929` |
+| `kind/cleanup`      | Work that's not critical but makes our lives easier     | `#c7def8` |
+| `kind/discussion`   | Topical discussion; usually not changes to codebase     | `#c7def8` |
+| `kind/enhancement`  | A net-new feature or improvement to an existing feature | `#c7def8` |
+| `kind/maintenance`  | Repo maintenance (CI, labeling, etc)                    | `#c7def8` |
+| `kind/support`      | A question or request for support                       | `#c7def8` |
+| `kind/test`         | Testing work                                            | `#c7def8` |
 
 ### Need
 These labels indicate needs that must be met in order for the issue or PR to be completed and closed. These will often appear in conjunction with `status/blocked` to add a layer of specificity to the latter. **Important: ALL new issues in a repo should default to `need/triage`, and this label should be removed once all other relevant labels are assigned.**

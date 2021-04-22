@@ -87,35 +87,6 @@ None
 
 Confidence is a 10 for "nft.storage needs this" but is an 8 or 9 for "this is absolutely the right thin client interface."
 
-## Future opportunities
-### New Thin Clients
-
-Rather than thinking of a thin client as the current IPFS API with less code, let’s consider what a smaller overall API profile looks like for this new interface.
-
-The JS library work we’ve been doing for the last year could be leveraged for a much smaller and higher impact JS library built against the Gateway++ interface.
-
-Since all writes that pass through the CAR file interface are transactional we now have availability guarantees for all of the writes.
-
-We can do file encoding in the client (we’re going to have to write this anyway for [nft.storage](http://nft.storage) in order to get over the 100MB Cloudflare Worker limit) using the latest codecs.
-
-Finally, since the protocol is so simple we should expect to see serveral thin clients designed to meet a variety of user needs and integrations.
-
-### Content Routing for Large Providers
-
-Gateways and large providers need to be directly peered since large providers have too much content to provide in the DHT.
-
-As a stopgap we’re maintaining a list of peers all large providers and gateways should peer to and encouraging large providers to add themselves to it. This is not a viable long term solution.
-
-We need “BGP for Content Routing,” which is to say that we need a federated protocol for efficient content routing in a network of directly peered large providers.
-
-### GraphQL
-
-It's @gozala’s idea to get GraphQL in the Gateway but there has been GraphQL IPLD stuff happening for about a year now.
-
-If we want to reach a lot of developers quickly we should consider ways that we could expose GraphQL access to IPLD data through the Gateway using GraphQL’s standard HTTP protocol.
-
-The amount of tooling that already exists for GraphQL is quite large so this would allow for a number of high impact integrations.
-
 ## Required resources
 
 The first phase of Gateway++ is primarily work in Cluster and Infra, so I'll defer to that team to estimate the resources required. Hector has already made some progress on adding CAR file input to cluster so it would be great if he could continue with this work as well.

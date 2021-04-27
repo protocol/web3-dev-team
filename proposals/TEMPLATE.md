@@ -1,6 +1,6 @@
-# [outcome or objective here] 
+# NFT school
 
-Authors: <!-- List authors' GitHub or other handles -->
+Authors: @atopal
 
 Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
 
@@ -23,20 +23,25 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 ## Purpose &amp; impact 
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
-<!--
-Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
--->
+* Developers in the NFT space have a canonical place to look up how NFTs are handled. That includes addressing, storing, metadata, minting, etc
+* Developers recognize those as best practices
+* 
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
-<!--(bullet list)-->
+* Most people who’ll be active in the NFT space haven’t joined it yet, so there will be a lot of people who need to be convinced that they should care about how NFTs are addressed and stored
+* Most people in this space are not aware of best practices when it comes to addressing, storing, metadatam, minting etc.
+* 
 
 #### User workflow example
 _How would a developer or user use this new capability?_
-<!--(short paragraph)-->
+* Googling "nft minting" and similar keywords bring devs to this website
+* develops use resources to learn about concepts 
+* developers use resources to build their own applications
 
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
+NFT content addressing is a perfect use case for IPFS, establishing it as the default will make it easier to transition to persistence with Filecoin, effectively utilizing the PL stack.
 
 <!--
 Explain how this addresses known challenges or opportunities.
@@ -45,6 +50,7 @@ What awesome potential impact/outcomes/results will we see if we nail this proje
 
 #### Internal leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
+This has the potential to massively increase the community using and experimenting with our stack.
 
 <!--
 Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
@@ -52,7 +58,7 @@ Explain the opportunity or leverage point for our subsequent velocity/impact (e.
 
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
-
+Confidence: 7
 <!--Explain why this rating-->
 
 
@@ -63,9 +69,12 @@ _How sure are we that this impact would be realized? Label from [this scale](htt
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
+The initial milestone is to have set of documents online that cover the basics, backed up by partners.
+
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
+
 
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
@@ -74,18 +83,25 @@ Provide success criteria. These might include particular metrics, desired change
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
+
+
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
+
+We could add the content to protoschool. That way we could focus on the content primarily. 
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
+
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
+There is an opportunity to turn this into a commuity co-owned space in the medium to long term.
 
 ## Required resources
 
 #### Effort estimate
+medium
 <!--T-shirt size rating of the size of the project. If the project might require external collaborators/teams, please note in the roles/skills section below). 
 For a team of 3-5 people with the appropriate skills:
 - Small, 1-2 weeks
@@ -97,3 +113,7 @@ Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty i
 
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
+* PM
+* technical writer
+* web dev
+* design

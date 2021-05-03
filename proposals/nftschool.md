@@ -23,20 +23,19 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 ## Purpose &amp; impact 
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
-* Developers in the NFT space have a canonical place to look up how NFTs are handled. That includes addressing, storing, metadata, minting, etc
-* Developers recognize those as best practices
-* 
+* The NFT space is exploding, people are defining a bunch of practices in the wild, and we want to make sure they encode best practices for addressing and persistence to ensure NFT data is protected
+* We intend this to be a one stop shop for any developer interested in the NFT space. That includes learning about concepts, and  hands on tutorials guides. A cross between a docs site and a marketing site
+
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
 * Most people who’ll be active in the NFT space haven’t joined it yet, so there will be a lot of people who need to be convinced that they should care about how NFTs are addressed and stored
-* Most people in this space are not aware of best practices when it comes to addressing, storing, metadatam, minting etc.
-* 
+* Most people in this space are not aware of best practices when it comes to addressing, storing, metadata, minting etc.
 
 #### User workflow example
 _How would a developer or user use this new capability?_
-* Googling "nft minting" and similar keywords bring devs to this website
-* develops use resources to learn about concepts 
+* Googling "nft metadata" and similar keywords bring devs to this website
+* developers use resources to learn about metadata
 * developers use resources to build their own applications
 
 #### Impact
@@ -60,16 +59,22 @@ Explain the opportunity or leverage point for our subsequent velocity/impact (e.
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 Confidence: 7
 <!--Explain why this rating-->
-
+While the content part of this is fairly straightforward, getting people to the site is not. It will take a significant amount of work in generating enough backlinks for this site to rank in search results, at which point it can become self-sustaining.
 
 ## Project definition
 #### Brief plan of attack
 
 <!--Briefly describe the milestones/steps/work needed for this project-->
+* Agree on mvp content
+* Get started on content
+* In parallel design and set up website
+* Launch with mvp
+* Keep adding content regularly
+
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
-The initial milestone is to have set of documents online that cover the basics, backed up by partners.
+The initial milestone is to have a set of documents online that cover the basics, backed up by partners. We’d then need to agree on follow up milestones. As a product this would be an ongoing concern.
 
 
 ####  What does success look like?
@@ -79,24 +84,42 @@ _Success means impact. How will we know we did the right thing?_
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
+* Lagging indicator:
+  * Ultimately, success is developers choosing to use IPFS for content addressing and Filecoin for storage for all of their NFTs
+* Leading indicator:
+  * Developers linking to this from stack overflow
+* Significant traffic
+
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
+For this to work developers need to actually land on the site either through googling or via backlinks.
+Developers need to believe that this is an unbiased source of actual best practices
+Maintaining an active site like this requires a long term commitment. If we can’t sustain regular new content, it can appear abandoned quickly.
 
 
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
+* We could add the content to protoschool. That way we could focus on the content primarily.
+* We could publish the content in a series of blog posts
+* We could include the content into the current IPFS and Filecoin docs
 
-We could add the content to protoschool. That way we could focus on the content primarily. 
+The downside of all of those alternatives is their close connection to PL, making it potentially harder to come across as unbiased, but also the dilution of focus.
+
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
+* Content
+* Design
+* Some of the standards might not exist yet (metadata schema)
 
 
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
-There is an opportunity to turn this into a commuity co-owned space in the medium to long term.
+There is an opportunity to turn this into a community co-owned space in the medium to long term. NFT hackathons in particular create a lot of opportunity for new tutorials that we can showcase on this site.
+As we create new tools in this space, this site can be leveraged to generate interest and traffic.
+
 
 ## Required resources
 

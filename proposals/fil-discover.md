@@ -78,7 +78,9 @@ Phase 1
 
 Phase 2
 - (block) [Sector spawning bug](https://github.com/filecoin-project/lotus/pull/6041)
+  - Stewards   
 - (soft block) PublishStorageDeal improvements
+  - Note: After HyperDrive release onboarding will be super cheap -> won't need to land the PublishStorageDeal improvements
 - (block) Large Scale DataCap allocations
 - 4-6 weeks
   - 20% time from one engineer (propose Riba)

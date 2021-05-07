@@ -77,7 +77,7 @@ Phase 1
 
 
 Phase 2
-- (soft block) Sector spawning bug
+- (block) [Sector spawning bug](https://github.com/filecoin-project/lotus/pull/6041)
 - (soft block) PublishStorageDeal improvements
 - (block) Large Scale DataCap allocations
 - 4-6 weeks

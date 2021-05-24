@@ -72,14 +72,14 @@ Confidence is a 10 for Discover needs these things to begin onboarding and ramp 
 ## Required resources
 Phase 1
 - (block) Retrieval-bot completion
-- (block - 2 weeks out) NFT.storage tooling being complete
+- (block) NFT.storage tooling being complete
 - 1 week for 1 engineer to modify validation logic and integrate the retrieval-bot components and the NFT.storage components.
 
 
 Phase 2
 - (block) [Sector spawning bug](https://github.com/filecoin-project/lotus/pull/6041)
   - Stewards   
-- (soft block) PublishStorageDeal improvements
+- (block) PublishStorageDeal improvements
   - Note: After HyperDrive release onboarding will be super cheap -> won't need to land the PublishStorageDeal improvements
 - (block) Large Scale DataCap allocations
 - 4-6 weeks

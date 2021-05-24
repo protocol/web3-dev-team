@@ -1,4 +1,4 @@
-# [outcome or objective here] 
+# Filecoin Plus Registry App UX/UI overhaul
 
 Authors: @dkkapur @atopal
 

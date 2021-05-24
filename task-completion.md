@@ -9,7 +9,7 @@ Initial PR: https://github.com/protocol/web3-dev-team/pull/38
 #### Background &amp; intent
 _Describe the desired state of the world after this project? Why does that matter?_
 
-We don't know why people come to our websites and how succesful they are with the things we care about. In order to prioritize our efforts and track progress, we need to survey our users regularly and make that available to the teams that can take action.
+We don't know why people come to our websites and how succesful they are with the things we care about. In order to prioritize our efforts and track progress, we need to survey our users regularly and make that available to the teams that can take action. Our product websites/docs  are a also a good place to gage general satisfaction with PL and our pproducts.
 
 
 #### Assumptions &amp; hypotheses
@@ -26,10 +26,17 @@ _How would a developer or user use this new capability?_
 * survey opens up in separate tab, user is asked to come back when they are done
 * user does what they came to the website to do
 * user takes the survey
-
+* 4 questions (examples, need to be refined)
+    * How satisfied are you with the experience you had today on ipfs.io/filecoin.io?
+    * What task did you want to accomplish on ipfs.io/filecoin.io today? 
+    * Were you able to accomplish the task that brought you to ipfs.io/filecoin.io today?
+        * if not: Can you tell us more about your challenges on ipfs.io/filecoin.io  from today's visit?
+    * How dissapointed would you be, if IPFS/Protocol Labs disappeared?
 * data is collected
 * data is available for all PL teams to slice and dice
 * data is presented regularly as measure of success
+
+Note: we'd probably need a screener question to make sure only actual users answer the "How dissapointed would you be" question.
 
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
@@ -51,8 +58,8 @@ It's a low effort way to stay on top of changing user sentiment, but initial suc
 
 - Identify survey provider
 - construct survey
-- design messaging flow on website
-- implement messaging on website
+- design messaging flow on websites
+- implement messaging on websites
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_

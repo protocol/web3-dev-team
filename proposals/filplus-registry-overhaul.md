@@ -1,6 +1,6 @@
 # Filecoin Plus Registry App UX/UI overhaul
 
-Authors: @dkkapur @atopal
+Authors: @dkkapur @atopal @terichadbourne 
 
 Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
 
@@ -58,15 +58,18 @@ _How would this directly contribute to web3 dev stack product-market fit?_
 Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
-<need input>
+
+- Fil+ part of the golden path / bedrock 
+- key lever to make deals happen for clients with real demand
+- miners want to look good
 
 #### Internal leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
-
 <!--
 Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
 -->
-<need input>
+
+Minimal internal leverage. 
   
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
@@ -91,24 +94,56 @@ UX overhaul
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
+**Revamped Fil+ Registry App**
+- 
+
+**Publicly accessible GitHub repo**
+- through which the development of the application is planned and tracked
+
+
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
-<need input>
+- User should be confident about using this site 
+
+The site should be effective and efficient for all types of users
+- Time to complete intended task 
+  - reducing the amount of time it takes to go through the tutorial goes down (we have the baseline for this)
+- Task completion rate (success rate)
+  - survey? estimation of click through rate? tracking user interaction should be flagged. low numbers == noisy, and no baseline. difficult to show success. 
+
+Workflows for notaries should be more efficient 
+- Time-to-datacap should be reduced by X amount
+
+Workflows for RKHs should be more efficient
+- Notary grant changes should go through in < 1 week 
+
+Identification of deal making miners
+- miners sign up individually to 
+- deal success rate from this 
+
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
+- flag serious risks and mitigants
+
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
+
+- spend time on alternatives (do nothing, do something else from scratch)
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
 
+- LV
+
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
+
+- LV
 
 ## Required resources
 
@@ -121,6 +156,11 @@ For a team of 3-5 people with the appropriate skills:
 - XLarge, >10 weeks
 Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
 -->
+- vague; probably M 
 
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
+
+- PM
+- UX person/team
+- Dev person/team

@@ -58,6 +58,7 @@ _How would this directly contribute to web3 dev stack product-market fit?_
 Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
+<need input>
 
 #### Internal leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
@@ -65,27 +66,37 @@ _How much would nailing this project improve our knowledge and ability to execut
 <!--
 Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
 -->
-
+<need input>
+  
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
-
 <!--Explain why this rating-->
 
 
 ## Project definition
 #### Brief plan of attack
-
 <!--Briefly describe the milestones/steps/work needed for this project-->
+Work should be split into two tracks: near-term UX/UI firefighting to improve usability in the immediate future, and a larger-scale presentation-layer overhaul to inspire user confidence, improve user experience, and lay the groundwork for future growth.
+
+Near-term:
+- Move to managing work planning into a public GitHub repo
+- Issues should be prioritized and scoped, and open to the community for input
+- Get through the list of issues (primarily identified through the user research sessions in the past months)
+
+UX overhaul
+- rework the overall information architecture and UX/UI of the site to create a confidence-inspiring, easy-to-use experience appropriate for the high importance of this site
+- Ideally this work happens in parallel with the near-term firefighting changes, to ensure that those improvements are captured and improved upon. 
+
 
 #### What does done look like?
 _What specific deliverables should completed to consider this project done?_
 
 ####  What does success look like?
 _Success means impact. How will we know we did the right thing?_
-
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
+<need input>
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_

@@ -26,18 +26,34 @@ _Describe the desired state of the world after this project? Why does that matte
 <!--
 Outline the status quo, including any relevant context on the problem you’re seeing that this project should solve. Wherever possible, include pains or problems that you’ve seen users experience to help motivate why solving this problem works towards top-line objectives. 
 -->
+The Filecoin Plus Registry (plus.fil.org/) site was developed with Keyko to ensure there was a way to manage applications for Notaries and clients in Fil+. This eventually grew to include additional flows like helping clients find miners who would store their deals. As a result, while the site has basic functionality, it is extremely difficult to use and does not serve as a strong entry point (either functionally or in terms of mitigating "scam fear") for clients looking to get DataCap and make deals on the Network. Additionally, it does not present UX flows that encourage and enable notaries and root key holders in the Fil+ ecosystem to conduct their work effeciently. This then increases the friction and time it takes for a client to receive DataCap and be enabled to make cheap/free deals on the network.
+
+A list of recommendations for basic fixes has been compiled in UX Improvements for Fil+ App. The Keyko team is currently making its way through this. Though this addresses some of the basic pain points, it still does not address the following:
+- Information presentation on the website is not intuitive for new Clients
+- The website does not give the impression (does not inspire confidence) that it is a central hub for a critical piece of the Filecoin Network's productivity
+- Several aspects of the website's design and architecture do not lend well to scaling its use up in the future (i.e., additional flows added to Fil+, leveraging the Fil+ model and website in other programs)
+
 
 #### Assumptions &amp; hypotheses
 _What must be true for this project to matter?_
 <!--(bullet list)-->
+- the workflows/happy paths identified for this app continue to be applicable for stakeholders in the Fil+ ecosystem
+- Fil+ is a key lever in enabling and enhancing the usefulness of the Filecoin network
 
 #### User workflow example
 _How would a developer or user use this new capability?_
 <!--(short paragraph)-->
 
+4 core types of users have been identified for this app: 
+- clients: make DataCap allocation requests to notaries and find miners to make deals with
+- notaries: view and approve DataCap allocation requests from clients
+- root key holders: view and approve on-chain requests based on Fil+ governance
+- miners: ensure that they are fairly represented to clients looking to onboard valuable data
+
+See [Filecoin Plus Pathways](https://hackmd.io/1h0_cPVyQCSpHlWdPHtKtA?view) for specifics on the workflows and happy paths for each of these user types.
+
 #### Impact
 _How would this directly contribute to web3 dev stack product-market fit?_
-
 <!--
 Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?

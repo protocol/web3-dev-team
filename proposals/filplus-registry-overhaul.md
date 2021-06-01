@@ -58,23 +58,22 @@ _How would this directly contribute to web3 dev stack product-market fit?_
 Explain how this addresses known challenges or opportunities.
 What awesome potential impact/outcomes/results will we see if we nail this project?
 -->
-
-- Fil+ part of the golden path / bedrock 
-- key lever to make deals happen for clients with real demand
-- miners want to look good
+Fil+ is part of Bedrock / the Golden Path for users to onboard data onto Filecoin. It is a key lever for making deals happen for real clients with real use cases for Filecoin. Having a fantastic experience for the Fil+ Registry App will make: 
+- dealmaking for clients easier (by helping them get DataCap, get it faster, and use it)
+- help miners be more discoverable / self-select into being found by verified clients
+- enable notaries to more easily track DataCap applications and approve them for appropriate clients 
 
 #### Internal leverage
 _How much would nailing this project improve our knowledge and ability to execute future projects?_
 <!--
 Explain the opportunity or leverage point for our subsequent velocity/impact (e.g. by speeding up development, enabling more contributors, etc)
 -->
-
-Minimal internal leverage. 
+Unless there is a similar flow we'd like to build out for another project (potentially, re Green mining?), this likely has minimal internal leverage. 
   
 #### Confidence
 _How sure are we that this impact would be realized? Label from [this scale](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)_.
 <!--Explain why this rating-->
-
+5 (Impact: 5, Confidence: 5, Ease: 6)
 
 ## Project definition
 #### Brief plan of attack
@@ -95,10 +94,12 @@ UX overhaul
 _What specific deliverables should completed to consider this project done?_
 
 **Revamped Fil+ Registry App**
-- 
+- confidence-inspiring UI
+- effective for users on the happy paths identified
 
 **Publicly accessible GitHub repo**
-- through which the development of the application is planned and tracked
+- plan and track dev efforts
+- source issues from the community
 
 
 ####  What does success look like?
@@ -106,44 +107,47 @@ _Success means impact. How will we know we did the right thing?_
 <!--
 Provide success criteria. These might include particular metrics, desired changes in the types of bug reports being filed, desired changes in qualitative user feedback (measured via surveys, etc), etc.
 -->
-- User should be confident about using this site 
+
+Users should be confident about using this site 
+- Survey sentiment, collect additional user research
 
 The site should be effective and efficient for all types of users
 - Time to complete intended task 
-  - reducing the amount of time it takes to go through the tutorial goes down (we have the baseline for this)
+  - reducing the amount of time it takes to go through the tutorial goes down by 5min (since we already have the baseline for this)
+  - Fil+ TTD down at least 10% (notaries should be more efficient)
+  - Notary grants and status changes should happen in < 1 week (RKHs should be more efficient)
 - Task completion rate (success rate)
-  - survey? estimation of click through rate? tracking user interaction should be flagged. low numbers == noisy, and no baseline. difficult to show success. 
-
-Workflows for notaries should be more efficient 
-- Time-to-datacap should be reduced by X amount
-
-Workflows for RKHs should be more efficient
-- Notary grant changes should go through in < 1 week 
+  - Could be measured using surveys or click click through rates on happy path flows
 
 Identification of deal making miners
-- miners sign up individually to 
-- deal success rate from this 
-
+- at least 50% of all miners storing verified deals individually sign up to be listed on the site
 
 #### Counterpoints &amp; pre-mortem
 _Why might this project be lower impact than expected? How could this project fail to complete, or fail to be successful?_
 
-- flag serious risks and mitigants
+- users of the site will use it to similar effect regardless of how much effort is put into building a "trustworthy" and "confidence-inspiring" experience
+  - user input should be captured early in the design phase (pre much of the implementation)
+  - tracking user actions and collecting data from the site itself is important
+- clients don't use the site as much as we expect based on alternative paths to getting DataCap being easier (going straight to verify.glif.io, or one of the two GitHub repos where applications can be filed)
+- Fil+ flow changes drastically in the near future, or the current path to receiving DataCap from a notary is not long term valuable (as block rewards decrease, the worthwhileness of a 10x boost in quality adjust power is also going to decrease) 
+
 
 #### Alternatives
 _How might this project’s intent be realized in other ways (other than this project proposal)? What other potential solutions can address the same need?_
 
-- spend time on alternatives (do nothing, do something else from scratch)
+- improve documentation and resources around Fil+ to minimize the expectations for users on the site
+  - this could also include sending first time users straight to verify.glif.io rather than coming to the Fil+ App
+- ignore improving this app and instead spend time on other work that would also improve the general UX to onboarding data onto the network, i.e., other bedrock initiatives 
+
 
 #### Dependencies/prerequisites
 <!--List any other projects that are dependencies/prerequisites for this project that is being pitched.-->
-
-- LV
+None at the moment.
 
 #### Future opportunities
 <!--What future projects/opportunities could this project enable?-->
-
-- LV
+- more efficient tutorials for various user flows around Filecoin and Fil+
+- framework for setting up similar ecosystem programs like Fil+ that require off-chain and on-chain interaction
 
 ## Required resources
 
@@ -156,11 +160,12 @@ For a team of 3-5 people with the appropriate skills:
 - XLarge, >10 weeks
 Describe any choices and uncertainty in this scope estimate. (E.g. Uncertainty in the scope until design work is complete, low uncertainty in execution thereafter.)
 -->
-- vague; probably M 
+M, uncertainty in the scope of the engineering work required until the design work is complete.
 
 #### Roles / skills needed
 <!--Describe the knowledge/skill-sets and team that are needed for this project (e.g. PM, docs, protocol or library expertise, design expertise, etc.). If this project could be externalized to the community or a team outside PL's direct employment, please note that here.-->
-
 - PM
-- UX person/team
-- Dev person/team
+- UX person/small team
+- Dev person/ small team
+
+Some portion of the UX and most of the development effort could and should be externalized. We recommend Agency Undone for the UX work and Keyko to continue on the dev side.

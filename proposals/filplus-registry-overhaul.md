@@ -1,6 +1,6 @@
 # Filecoin Plus Registry App UX/UI overhaul
 
-Authors: @dkkapur @atopal @terichadbourne 
+Authors: @dkkapur @atopal @terichadbourne @jessicaschilling
 
 Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
 

@@ -10,3 +10,5 @@ Break
 Break
 22:25 - resume
 22:50 - wrote REPORT.md
+23:05 - cleaned up and commented oncall-calendar-creation.ipynb
+DONE

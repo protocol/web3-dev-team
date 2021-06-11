@@ -31,6 +31,10 @@ Note: these steps are based on https://google-calendar-simple-api.readthedocs.io
 # Time Spent
 I recorded the steps I took and the time spent in ``worklog.md``.
 
+# Output
+The created Google Calendar id from this excercise is ``c_o8vr815a5uqg6kelc4oj1r7ek0@group.calendar.google.com``.
+It can also be accessed at https://calendar.google.com/calendar/u/0/embed?src=c_o8vr815a5uqg6kelc4oj1r7ek0@group.calendar.google.com&ctz=America/Los_Angeles
+
 # Areas To Improve
 If I had more time, I would invest in itmes like:
 1. Read input data from Google Sheets directly

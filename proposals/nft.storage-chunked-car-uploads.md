@@ -79,7 +79,8 @@ Disadvantages:
 ## Success/acceptance criteria (optional)
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._
 
-Assets larger than 100MB can be uploaded to nft.storage.
+* Assets larger than 100MB can be uploaded to nft.storage.
+* A user uploads a 1GB asset to nft.storage.
 
 ## Detailed plans (optional)
 _Link to more detailed project plans, e.g. product requirements documents (PRDs) and technical design docs, once they have been created for this project._

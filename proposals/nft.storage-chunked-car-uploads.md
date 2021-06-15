@@ -12,7 +12,7 @@ This project proposes a way to work around this limit by sending _multiple_ requ
 ## Impact
 _What goals/OKRs are being addressed (for w3dt, a specific program, etc.)? Why is this project important? What do we get with this project that we can't get without it?_
 
-Allows NFTs uploads of arbitrary size.
+Allows NFT assets over 100MB to be reliably uploaded to nft.strorage.
 
 This has been requested by multiple marketplaces and is necessary for NFTs that contain video content.
 
@@ -59,8 +59,8 @@ For completeness, an alternative was suggested that could also work:
 
 1. Generate a CAR file for the content.
 2. Split the CAR file into chunks of <100MB. Chunks following the first have an ["empty" CID `bafkqaaa`](https://cid.ipfs.io/#bafkqaaa) as their root node. [See recommendation](https://github.com/ipld/specs/blob/master/block-layer/content-addressable-archives.md#number-of-roots).
-4. Upload and pin the root. We'd need to ensure the first CAR contains the root node.
-5. Upload the remaining chunks.
+3. Upload and pin the root. We'd need to ensure the first CAR contains the root node.
+4. Upload the remaining chunks.
 
 Advantages:
 
@@ -77,7 +77,7 @@ Disadvantages:
 ## Success/acceptance criteria (optional)
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._
 
-NFTs of >100MB can be uploaded to nft.storage.
+Assets larger than 100MB can be uploaded to nft.storage.
 
 ## Detailed plans (optional)
 _Link to more detailed project plans, e.g. product requirements documents (PRDs) and technical design docs, once they have been created for this project._

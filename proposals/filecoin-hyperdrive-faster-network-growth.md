@@ -23,11 +23,18 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 ## What is the problem this project solves?
 _Describe the status quo, including any relevant context on the problem you're seeing that this project should solve. Who is the user you're solving for, and why do they care about this problem? Wherever possible, include pain points or problems that you've seen users experience to help motivate why solving this problem works towards top-line objectives._ 
 
+TODO: copy/paste in already-written documentation about this.
+
 ## Impact
 _What goals/OKRs are being addressed (for w3dt, a specific program, etc.)? Why is this project important? What do we get with this project that we can't get without it?_
 
+TODO: copy/paste in already-written documentation about this.
+
 ## The idea
 _Describe the proposed project solution, at a very high level. Stay at the level of the high-level requirements. Diagrams and interface descriptions can be useful, if you have any that help clarify and explain the idea._
+
+https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-0008.md
+https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-0013.md
 
 ## Success/acceptance criteria (optional)
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._
@@ -35,5 +42,9 @@ _How do we know we're done with this project? How do we know we're successful? T
 ## Detailed plans (optional)
 _Link to more detailed project plans, e.g. product requirements documents (PRDs) and technical design docs, once they have been created for this project._
 
+1. https://github.com/filecoin-project/lotus/issues/6185
+
 ## Program (optional)
 _If this project is part of a program, please indicate the relevant program here._
+
+TODO: link to to-be-written program docs on Filecoin Network Growth

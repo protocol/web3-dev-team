@@ -44,6 +44,22 @@ _How do we know we're done with this project? How do we know we're successful? T
 ## Detailed plans (optional)
 _Link to more detailed project plans, e.g. product requirements documents (PRDs) and technical design docs, once they have been created for this project._
 
+Contrived example:
+
+![chunking diagram](https://bafybeiant2d5pghqjtu6xdl2wpr3zfl4wc5k42yh3r6jlx2umraxvfifk4.ipfs.dweb.link/chunking-diagram.png)
+
+DAG in CAR 0:
+
+![chunk 0](https://bafybeiant2d5pghqjtu6xdl2wpr3zfl4wc5k42yh3r6jlx2umraxvfifk4.ipfs.dweb.link/tree-chunk-0.png)
+
+DAG in CAR 1:
+
+![chunk 1](https://bafybeiant2d5pghqjtu6xdl2wpr3zfl4wc5k42yh3r6jlx2umraxvfifk4.ipfs.dweb.link/tree-chunk-1.png)
+
+DAG in CAR 2:
+
+![chunk 2](https://bafybeiant2d5pghqjtu6xdl2wpr3zfl4wc5k42yh3r6jlx2umraxvfifk4.ipfs.dweb.link/tree-chunk-2.png)
+
 ## Program (optional)
 _If this project is part of a program, please indicate the relevant program here._
 

@@ -31,7 +31,8 @@ The purpose of this MPP is to describe the work required to land the homepage + 
 
 ## Impact
 _What goals/OKRs are being addressed (for w3dt, a specific program, etc.)? Why is this project important? What do we get with this project that we can't get without it?_
-- This is a subcomponent of the work that w3dt is working on via Nitro for filecoin.storage. This workstream is required for the overall goals for filecoin.storage and creating user-friendly experiences. 
+
+This is a subcomponent of the work that w3dt is working on via Nitro for filecoin.storage. This workstream is required for the overall goals for filecoin.storage and creating user-friendly experiences. 
 
 ## The idea
 _Describe the proposed project solution, at a very high level. Stay at the level of the high-level requirements. Diagrams and interface descriptions can be useful, if you have any that help clarify and explain the idea._
@@ -41,7 +42,8 @@ Working with the design team to get HighFi mocks would be the second, along with
 
 ## Success/acceptance criteria (optional)
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._
-- Delivery of the items described above. 
+
+Delivery of the items described above. 
 
 ## Detailed plans (optional)
 _Link to more detailed project plans, e.g. product requirements documents (PRDs) and technical design docs, once they have been created for this project._
@@ -52,4 +54,5 @@ Figma: https://www.figma.com/file/826Zurcs6kgWSzQ35it966/filecoin.storage?node-i
 
 ## Program (optional)
 _If this project is part of a program, please indicate the relevant program here._
+
 Nitro

@@ -1,0 +1,55 @@
+# [project name here] 
+
+Authors: <!-- List authors' GitHub or other handles -->
+
+<!--
+This minimal project pitch (MPP) template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.
+The goal of project proposals is to help us decide which work to take on, which things are more valuable than other things.
+-->
+<!--
+A minimal project pitch (MPP) should contain enough detail for others to understand what problem this project solves and why this is important for our
+team's goal of achieving product-market fit, a high-level description of what the idea/proposed solution is, and space to add more detailed technical 
+design and planning information as we develop this information.
+
+The MPP itself does not need to describe the work, technical design, scope, and project plan in much detail.
+
+Projects can include work for major programs (such as Bedrock and Nitro), but they can focus on other areas, e.g. refactors for future capability, 
+improving our testing infrastructure, testing and validation, and other engineering-oriented projects.
+-->
+<!--
+For ease of discussion in PRs, consider breaking lines after every sentence or long phrase.
+-->
+
+## What is the problem this project solves?
+_Describe the status quo, including any relevant context on the problem you're seeing that this project should solve. Who is the user you're solving for, and why do they care about this problem? Wherever possible, include pain points or problems that you've seen users experience to help motivate why solving this problem works towards top-line objectives._ 
+nft.storage was well-adopted in the space, helping marketplaces follow best practices for referencing NFT data and preserve it, in part by (soon) storing it in Filecoin. For NFTs that were not made correctly at minting if the platform did not adopt nft.storage (or before it did), we also are working on scraping the Ethereum chain and storing the assets ourselves to preserve them. This was done in part to mitigate risks to IPFS's reputation, where users assumed storing data on IPFS would make it permanent; even if they were mistaken, IPFS can and was criticized in cases where NFT data was lost.
+
+We can extract further value from these efforts by creating a stats page that shows the results of these efforts. By attracting users to a website displaying interesting facts about the NFT space / their personal NFTs, we can then (1) convince them about the merits of Filecoin and funnel them to using Filecoin, and (2) convince them to use nft.storage (either by developing on it or using marketplaces that use nft.storage).
+
+In the M1 timeframe, we will only have data for NFTs on Ethereum, so the initial page will display stats just for Ethereum.
+
+## Impact
+_What goals/OKRs are being addressed (for w3dt, a specific program, etc.)? Why is this project important? What do we get with this project that we can't get without it?_
+
+By demonstrating the merits of Filecoin to a highly engaged and aligned population, we can accelerate demand for our stack and catalyze PMF.
+
+## The idea
+_Describe the proposed project solution, at a very high level. Stay at the level of the high-level requirements. Diagrams and interface descriptions can be useful, if you have any that help clarify and explain the idea._
+- Stats page that shows interesting information about NFTs to attract interested users, including overall stats about NFTs (e.g., total NFTs on Ethereum), stats about how NFT data was stored and results of the sweep (e.g., % with proper URLs vs improper, % that weren't savable from the sweep), stats by marketplace, etc.
+- Stats available for Filecoin (e.g., % of NFTs in Filecoin, deal info) to demonstrate value proposition of Filecoin
+- Lightweight information about the proper storage of NFTs, making it obvious which marketplaces are better at it (and that these are backed by nft.storage)
+- Pointers to other relevant properties (e.g., web3.storage, nft.storage docs, Filecoin docs, etc.) where appropriate
+
+## Success/acceptance criteria (optional)
+_How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._
+- High usage of the website (exact metric/threshold TBD)
+- High traffic from website to our other properties (exact metric/threshold TBD)
+- Usage of our statistics by 3rd parties
+
+## Detailed plans (optional)
+_Link to more detailed project plans, e.g. product requirements documents (PRDs) and technical design docs, once they have been created for this project._
+https://www.notion.so/protocollabs/nft-storage-niftysave-ecosystem-stats-fbc41f14ab3f4afdbe24dd8e330ceaba
+
+## Program (optional)
+_If this project is part of a program, please indicate the relevant program here._
+Nitro

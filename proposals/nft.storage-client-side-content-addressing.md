@@ -1,6 +1,6 @@
 # NFT.storage - client side content addressing
 
-Authors: @olizilla @vasco
+Authors: [@olizilla](https://github.com/olizilla) [@vasco](https://github.com/vasco-santos)
 
 <!--
 This minimal project pitch (MPP) template is for a proposal/brief/pitch for a significant project to be undertaken by a Web3 Dev project team.

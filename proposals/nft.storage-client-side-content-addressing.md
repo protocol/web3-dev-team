@@ -23,14 +23,16 @@ For ease of discussion in PRs, consider breaking lines after every sentence or l
 ## What is the problem this project solves?
 _Describe the status quo, including any relevant context on the problem you're seeing that this project should solve. Who is the user you're solving for, and why do they care about this problem? Wherever possible, include pain points or problems that you've seen users experience to help motivate why solving this problem works towards top-line objectives._ 
 
-Concurrent upload of NFT content and on-chain minting. In order to mint an NFT, creators typically need to link the token to the content by some URI. The URI must include a CID but currently NFT.storage only provides a CID _after_ content has been uploaded. This change will allow creators to generate a CID prior to uploading their content, enabling them to perform the upload and minting of their NFT concurrently.
+**Concurrent upload of NFT content and on-chain minting.** In order to mint an NFT, creators typically need to link to the content by some URI, and that URI is stored on-chain during the minting process. The URI must include a CID but currently NFT.storage only provides a CID _after_ content has been uploaded. This slows downs the process of minting an NFT, especially for large NFTs.
+
+## Impact
+_What goals/OKRs are being addressed (for w3dt, a specific program, etc.)? Why is this project important? What do we get with this project that we can't get without it?_
+
+This change will allow creators to generate a CID prior to uploading their content, enabling them to perform the upload and minting of their NFT concurrently to speed up the process.
 
 The CID can also be used with the NFT.storage "check API" to see if it is necessary to upload the data at all.
 
 Generating CIDs on the client side is also beneficial in a decentralized future where the client does not need to trust the service is generating a _correct_ CID for their content.
-
-## Impact
-_What goals/OKRs are being addressed (for w3dt, a specific program, etc.)? Why is this project important? What do we get with this project that we can't get without it?_
 
 ## The idea
 _Describe the proposed project solution, at a very high level. Stay at the level of the high-level requirements. Diagrams and interface descriptions can be useful, if you have any that help clarify and explain the idea._

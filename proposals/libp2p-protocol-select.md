@@ -155,6 +155,9 @@ to previous attempts:
 8. Release implementations, promote specification to `Candidate Recommendation`
    and roll out on live network.
 
+Note: At all times should we keep an eye on both code and coordination
+complexity and assess feasibility.
+
 ## Program (optional)
 _If this project is part of a program, please indicate the relevant program here._
 

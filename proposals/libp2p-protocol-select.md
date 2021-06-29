@@ -34,15 +34,17 @@ might negotiate the [Noise] security protocol, followed by negotiating the
 
 ### Problems
 
-- **Roundtrips**: Plain [multistream-select 1.0] requires at least one network
-  round trip for negotiation. While there is an optimization, namely _lazy
-  negotiation_, it is error prone and underspecified. See [go-multistream/20]
-  and [rust-libp2p/1855] to get a grasp of its complexity.
+- **Downgrade attacks** and **censorship resistance**: Given that
+  [multistream-select 1.0] negotiates a connection's security protocol
+  unencrypted and unauthenticated it is prone to [downgrade attack]s. In
+  addition, a man-in-the-middle can detect that a given connection is used
+  to carry libp2p traffic, allowing attackers to censor such connections.
 
-- **Bandwidth**: [multistream-select 1.0] is not as bandwidth efficient as it
-  could be. For example negotiating a protocol requires sending the protocol
-  name back and forth. For human readability protocol names are usually long
-  strings (e.g. `/ipfs/kad/1.0.0`).
+- **Connection Establishment**: In addition to making us vulnerable to downgrade
+  attacks, negotiating the security protocol takes one round-trip in the common
+  case. Protocol Select will design a mechanism that allows us to start the
+  handshake without any delay.
+  Negotiating a stream multiplexer (on TCP) takes another round-trip after that.
 
 - **Plaintext**: The [multistream-select 1.0] protocol is defined as a plaintext
   protocol with no strict schema definition, making both implementation and
@@ -50,11 +52,13 @@ might negotiate the [Noise] security protocol, followed by negotiating the
   showcasing complexity for implementors and [specs/196] to showcase difficulty
   evolving protocol.
 
-- **Downgrade attacks** and **censorship resistance**: Given that
-  [multistream-select 1.0] negotiates a connection's security protocol
-  unencrypted and unauthenticated it is prone to [downgrade attack]s. In
-  addition, a machine-in-the-middle can detect that a given connection is used
-  to carry libp2p traffic, allowing attackers to censor such connections.
+- **Bandwidth**: [multistream-select 1.0] is not as bandwidth efficient as it
+  could be. For example negotiating a protocol requires sending the protocol
+  name back and forth. For human readability protocol names are usually long
+  strings (e.g. `/ipfs/kad/1.0.0`).
+  While Protocol Select might not solve this in the first iteration, the protocol
+  should be designed with this optimization in mind, and allow for a smooth upgrade
+  in a future iteration.
 
 ### Affected users
 
@@ -83,18 +87,26 @@ we set the following high-level goals:
 
 - A simple protocol, easy to extend and evolve in the future.
 
-- Zero-round-trip multiplexer and stream protocol negotiating for optimistic
-  single protocol negotiation.
-
 - Support for TCP simultaneous-open (see [specs/196]).
-
-- Binary data format defined in a machine parseable schema language allowing
-  protocol evolution at the schema level.
 
 - [Downgrade attack] defense as well as prevention of machines-in-the-middle
   detecting connection as libp2p conection for minimal censorship resistance.
 
-- Improved bandwidth efficiency e.g. around protocol names.
+- Security protocols should be advertised, thereby eliminating the need for
+  negotiating them.
+
+- For optimized implementations, stream muxer negotiation will take zero round-trips
+  for the client (depending on the details of the cyrptographic handshake protocol).
+  In that case, the client will be able to immediately open a stream after completing
+  the handshake.
+
+- Zero-round-trip stream protocol negotiating for optimistic
+  single protocol negotiation.
+
+- Binary data format defined in a machine parseable schema language allowing
+  protocol evolution at the schema level.
+
+- The option to improve bandwidth efficiency e.g. around protocol names in the future.
 
 ## Success/acceptance criteria (optional)
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._

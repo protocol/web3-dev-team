@@ -95,10 +95,10 @@ we set the following high-level goals:
 - For optimized implementations, stream muxer negotiation will take zero round-trips
   for the client (depending on the details of the cyrptographic handshake protocol).
   In that case, the client will be able to immediately open a stream after completing
-  the handshake.
+  the cryptographic handshake.
 
-- Zero-round-trip stream protocol negotiating for optimistic
-  single protocol negotiation.
+- Zero-round-trip optimistic stream protocol negotiation when proposing a single
+  protocol.
 
 - Binary data format defined in a machine parseable schema language allowing
   protocol evolution at the schema level.
@@ -118,7 +118,7 @@ _How do we know we're done with this project? How do we know we're successful? T
 - The above specification is implemented and released for two libp2p
   implementations (e.g. go-libp2p and rust-libp2p). The two _Protocol Select_
   implementations have been tested for interoperability.
-  
+
 - _Protocol Select_ has been rolled out on a live network (e.g. IPFS or
   Filecoin).
 

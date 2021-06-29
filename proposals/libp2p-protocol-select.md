@@ -42,9 +42,8 @@ might negotiate the [Noise] security protocol, followed by negotiating the
 
 - **Connection Establishment**: In addition to making us vulnerable to downgrade
   attacks, negotiating the security protocol takes one round-trip in the common
-  case. Protocol Select will design a mechanism that allows us to start the
-  handshake without any delay.
-  Negotiating a stream multiplexer (on TCP) takes another round-trip after that.
+  case. On top of that negotiating a stream multiplexer (on TCP) takes another
+  round-trip.
 
 - **Plaintext**: The [multistream-select 1.0] protocol is defined as a plaintext
   protocol with no strict schema definition, making both implementation and
@@ -56,9 +55,7 @@ might negotiate the [Noise] security protocol, followed by negotiating the
   could be. For example negotiating a protocol requires sending the protocol
   name back and forth. For human readability protocol names are usually long
   strings (e.g. `/ipfs/kad/1.0.0`).
-  While Protocol Select might not solve this in the first iteration, the protocol
-  should be designed with this optimization in mind, and allow for a smooth upgrade
-  in a future iteration.
+
 
 ### Affected users
 
@@ -106,7 +103,10 @@ we set the following high-level goals:
 - Binary data format defined in a machine parseable schema language allowing
   protocol evolution at the schema level.
 
-- The option to improve bandwidth efficiency e.g. around protocol names in the future.
+- The option to improve bandwidth efficiency e.g. around protocol names in the
+  future. While _Protocol Select_ might not solve this in the first iteration,
+  the protocol should be designed with this optimization in mind, and allow for
+  a smooth upgrade in a future iteration.
 
 ## Success/acceptance criteria (optional)
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._

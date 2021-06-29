@@ -40,12 +40,12 @@ might negotiate the [Noise] security protocol, followed by negotiating the
   addition, a man-in-the-middle can detect that a given connection is used
   to carry libp2p traffic, allowing attackers to censor such connections.
 
-- **Connection Establishment**: In addition to making us vulnerable to downgrade
+- **Connection establishment**: In addition to making us vulnerable to downgrade
   attacks, negotiating the security protocol takes one round-trip in the common
   case. On top of that negotiating a stream multiplexer (on TCP) takes another
   round-trip.
 
-- **Plaintext**: The [multistream-select 1.0] protocol is defined as a plaintext
+- **Data schema**: The [multistream-select 1.0] protocol is defined as a plaintext
   protocol with no strict schema definition, making both implementation and
   protocol evolution time consuming and error-prone. See [rust-libp2p/1795]
   showcasing complexity for implementors and [specs/196] to showcase difficulty
@@ -86,27 +86,35 @@ we set the following high-level goals:
 
 - Support for TCP simultaneous-open (see [specs/196]).
 
-- [Downgrade attack] defense as well as prevention of machines-in-the-middle
-  detecting connection as libp2p conection for minimal censorship resistance.
+- **Downgrade attacks** and **censorship resistance**
 
-- Security protocols should be advertised, thereby eliminating the need for
-  negotiating them.
+  - [Downgrade attack] defense as well as prevention of machines-in-the-middle
+    detecting connection as libp2p conection for minimal censorship resistance.
 
-- For optimized implementations, stream muxer negotiation will take zero round-trips
-  for the client (depending on the details of the cyrptographic handshake protocol).
-  In that case, the client will be able to immediately open a stream after completing
-  the cryptographic handshake.
+- **Connection establishment**
 
-- Zero-round-trip optimistic stream protocol negotiation when proposing a single
-  protocol.
+  - Security protocols should be advertised, thereby eliminating the need for
+    negotiating them.
 
-- Binary data format defined in a machine parseable schema language allowing
-  protocol evolution at the schema level.
+  - For optimized implementations, stream muxer negotiation will take zero
+    round-trips for the client (depending on the details of the cyrptographic
+    handshake protocol). In that case, the client will be able to immediately
+    open a stream after completing the cryptographic handshake.
 
-- The option to improve bandwidth efficiency e.g. around protocol names in the
-  future. While _Protocol Select_ might not solve this in the first iteration,
-  the protocol should be designed with this optimization in mind, and allow for
-  a smooth upgrade in a future iteration.
+  - Zero-round-trip optimistic stream protocol negotiation when proposing a
+    single protocol.
+
+- **Data schema**
+
+  - Binary data format defined in a machine parseable schema language allowing
+    protocol evolution at the schema level.
+
+- **Bandwidth**
+
+  - The option to improve bandwidth efficiency e.g. around protocol names in the
+    future. While _Protocol Select_ might not solve this in the first iteration,
+    the protocol should be designed with this optimization in mind, and allow
+    for a smooth upgrade in a future iteration.
 
 ## Success/acceptance criteria (optional)
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._

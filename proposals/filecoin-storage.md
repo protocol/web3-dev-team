@@ -1,4 +1,4 @@
-# filecoin.storage
+# web3.storage
 
 Authors: @pooja
 
@@ -28,7 +28,7 @@ These are core goals that the Bedrock program aims to address.
 ## The idea
 _Describe the proposed project solution, at a very high level. Stay at the level of the high-level requirements. Diagrams and interface descriptions can be useful, if you have any that help clarify and explain the idea._
 
-The high-level idea is to build a getting started aggregator for the Filecoin network... tentatively called filecoin.storage. This is a simple HTTP service/interface that has a JS client library developers can install in their dapp projects. The JS lib has very simple storage/retrieval functions that don't require you to know anything about Filecoin-specific concepts. filecoin.storage doesn't require you to install nodes or speak non-HTTP protocols in order to get your data IPFS content-addressed and persisted on Filecoin. filecoin.storage will leverage many of the core components of the IPFS+Filecoin golden path -- batching smaller data into larger sector-sized chunks for storage on Filecoin, making deals with DataCap, many redundant copies, and (in later milestones) retrieving from Filecoin miners with content routing via indexers.
+The high-level idea is to build a getting started aggregator for the Filecoin network... tentatively called filecoin.storage. This is a simple HTTP service/interface that has a JS client library developers can install in their dapp projects. The JS lib has very simple storage/retrieval functions that don't require you to know anything about Filecoin-specific concepts. filecoin.storage doesn't require you to install nodes or speak non-HTTP protocols in order to get your data IPFS content-addressed and persisted on Filecoin. web3.storage will leverage many of the core components of the IPFS+Filecoin golden path -- batching smaller data into larger sector-sized chunks for storage on Filecoin, making deals with DataCap, many redundant copies, and (in later milestones) retrieving from Filecoin miners with content routing via indexers.
 
 This project will need to be accompanied with EXCELLENT, easy to understand documentation on the Filecoin docs site.
 
@@ -36,8 +36,8 @@ This project will need to be accompanied with EXCELLENT, easy to understand docu
 _How do we know we're done with this project? How do we know we're successful? This field is OPTIONAL for the first draft of an MPP. Sometimes this field needs to be filled out once we have more detail on the shape of the actual solution._
 
 Initial success/acceptance criteria:
-- filecoin.storage has a website landing page
-- filecoin.storage has a JS client lib and is backed by the nft.storage dealmaker/broker
+- web3.storage has a website landing page
+- web3.storage has a JS client lib and is backed by the nft.storage dealmaker/broker
 - 2500 signups by end of Q3
 - 250 weekly active users by end of Q3
 - 1TB data stored by end of Q3

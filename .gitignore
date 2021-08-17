@@ -1,10 +1,10 @@
-# Mac
-.DS_STORE
-
 # Items for interacting with the Google Cloud Platform APIs
 credentials.json
 token.pickle
 token.json
+
+# Operating System files
+.DS_Store
 
 # Stock Python .gitignore below
 

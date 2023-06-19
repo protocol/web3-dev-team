@@ -1,3 +1,6 @@
+# Specifics to this repo
+notebooks/data
+
 # Items for interacting with the Google Cloud Platform APIs
 credentials.json
 token.pickle
